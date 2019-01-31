@@ -7,11 +7,12 @@
 
 #### 软件架构
 软件架构说明
+改项目使用DotNet Core 2.2版本
 
 
 #### 安装教程
 
-1. xxxx
+1. 安装DotNet Core SDK   建议2.2以上
 2. xxxx
 3. xxxx
 

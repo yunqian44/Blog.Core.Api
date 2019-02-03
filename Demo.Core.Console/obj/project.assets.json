@@ -6284,37 +6284,35 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Users\\yunqian\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\persion\\Core\\Demo.Core.Api\\Demo.Core.Console\\Demo.Core.ConsoleDemo.csproj",
+      "projectUniqueName": "f:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Console\\Demo.Core.ConsoleDemo.csproj",
       "projectName": "Demo.Core.ConsoleDemo",
-      "projectPath": "D:\\persion\\Core\\Demo.Core.Api\\Demo.Core.Console\\Demo.Core.ConsoleDemo.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\persion\\Core\\Demo.Core.Api\\Demo.Core.Console\\obj\\",
+      "projectPath": "f:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Console\\Demo.Core.ConsoleDemo.csproj",
+      "packagesPath": "C:\\Users\\yunqian\\.nuget\\packages\\",
+      "outputPath": "f:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Console\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\yunqian\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "D:\\persion\\Core\\Demo.Core.Api\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj": {
-              "projectPath": "D:\\persion\\Core\\Demo.Core.Api\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj"
+            "f:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj": {
+              "projectPath": "f:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj"
             }
           }
         }

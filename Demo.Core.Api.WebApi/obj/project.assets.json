@@ -4714,6 +4714,16 @@
         "runtime": {
           "bin/placeholder/Demo.Core.Api.Data.dll": {}
         }
+      },
+      "Demo.Core.Api.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Demo.Core.Api.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Demo.Core.Api.Model.dll": {}
+        }
       }
     }
   },
@@ -12704,11 +12714,17 @@
       "type": "project",
       "path": "../Demo.Core.Api.Data/Demo.Core.Api.Data.csproj",
       "msbuildProject": "../Demo.Core.Api.Data/Demo.Core.Api.Data.csproj"
+    },
+    "Demo.Core.Api.Model/1.0.0": {
+      "type": "project",
+      "path": "../Demo.Core.Api.Model/Demo.Core.Api.Model.csproj",
+      "msbuildProject": "../Demo.Core.Api.Model/Demo.Core.Api.Model.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
       "Demo.Core.Api.Data >= 1.0.0",
+      "Demo.Core.Api.Model >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
@@ -12716,37 +12732,38 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Users\\yunqian\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\persion\\Core\\Demo.Core.Api\\Demo.Core.Api.WebApi\\Demo.Core.Api.WebApi.csproj",
+      "projectUniqueName": "f:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.WebApi\\Demo.Core.Api.WebApi.csproj",
       "projectName": "Demo.Core.Api.WebApi",
-      "projectPath": "D:\\persion\\Core\\Demo.Core.Api\\Demo.Core.Api.WebApi\\Demo.Core.Api.WebApi.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\persion\\Core\\Demo.Core.Api\\Demo.Core.Api.WebApi\\obj\\",
+      "projectPath": "f:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.WebApi\\Demo.Core.Api.WebApi.csproj",
+      "packagesPath": "C:\\Users\\yunqian\\.nuget\\packages\\",
+      "outputPath": "f:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\yunqian\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "D:\\persion\\Core\\Demo.Core.Api\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj": {
-              "projectPath": "D:\\persion\\Core\\Demo.Core.Api\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj"
+            "f:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj": {
+              "projectPath": "f:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj"
+            },
+            "f:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Model\\Demo.Core.Api.Model.csproj": {
+              "projectPath": "f:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Model\\Demo.Core.Api.Model.csproj"
             }
           }
         }

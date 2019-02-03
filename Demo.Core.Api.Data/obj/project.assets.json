@@ -5812,30 +5812,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Users\\yunqian\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\persion\\Core\\Demo.Core.Api\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj",
+      "projectUniqueName": "F:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj",
       "projectName": "Demo.Core.Api.Data",
-      "projectPath": "D:\\persion\\Core\\Demo.Core.Api\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\persion\\Core\\Demo.Core.Api\\Demo.Core.Api.Data\\obj\\",
+      "projectPath": "F:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj",
+      "packagesPath": "C:\\Users\\yunqian\\.nuget\\packages\\",
+      "outputPath": "F:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\yunqian\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

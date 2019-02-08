@@ -2,7 +2,7 @@ using System;
 using System.ComponentModel;
 using System.Reflection;
 
-namespace Demo.Core.Api
+namespace Demo.Core.Api.Core
 {
     public static class PropertyExtension
     {

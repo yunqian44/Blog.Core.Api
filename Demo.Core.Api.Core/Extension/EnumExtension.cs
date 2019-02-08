@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 
-namespace Demo.Core.Api
+namespace Demo.Core.Api.Core
 {
     public static class EnumExtension
     {

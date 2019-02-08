@@ -2,5 +2,13 @@
   "ProjectFilePath": "f:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Console\\Demo.Core.ConsoleDemo.csproj",
   "TargetFramework": "netcoreapp2.2",
   "TagHelpers": [],
-  "Configuration": null
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  }
 }

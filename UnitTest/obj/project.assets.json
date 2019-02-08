@@ -8830,11 +8830,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "f:\\Code\\Core\\Core.Bolg.Api\\UnitTest\\UnitTest.csproj",
+      "projectUniqueName": "F:\\Code\\Core\\Core.Bolg.Api\\UnitTest\\UnitTest.csproj",
       "projectName": "UnitTest",
-      "projectPath": "f:\\Code\\Core\\Core.Bolg.Api\\UnitTest\\UnitTest.csproj",
+      "projectPath": "F:\\Code\\Core\\Core.Bolg.Api\\UnitTest\\UnitTest.csproj",
       "packagesPath": "C:\\Users\\yunqian\\.nuget\\packages\\",
-      "outputPath": "f:\\Code\\Core\\Core.Bolg.Api\\UnitTest\\obj\\",
+      "outputPath": "F:\\Code\\Core\\Core.Bolg.Api\\UnitTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -8851,8 +8851,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "f:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj": {
-              "projectPath": "f:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj"
+            "F:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj": {
+              "projectPath": "F:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj"
             }
           }
         }

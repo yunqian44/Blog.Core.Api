@@ -38,3 +38,5 @@ F:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Cor
 F:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.pdb
 F:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Model.dll
 F:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Model.pdb
+F:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Core.dll
+F:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Core.pdb

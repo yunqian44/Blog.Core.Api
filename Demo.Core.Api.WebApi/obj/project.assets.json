@@ -4698,6 +4698,16 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
+      "Demo.Core.Api.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Demo.Core.Api.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Demo.Core.Api.Core.dll": {}
+        }
+      },
       "Demo.Core.Api.Data/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -12710,6 +12720,11 @@
         "system.xml.xpath.xdocument.nuspec"
       ]
     },
+    "Demo.Core.Api.Core/1.0.0": {
+      "type": "project",
+      "path": "../Demo.Core.Api.Core/Demo.Core.Api.Core.csproj",
+      "msbuildProject": "../Demo.Core.Api.Core/Demo.Core.Api.Core.csproj"
+    },
     "Demo.Core.Api.Data/1.0.0": {
       "type": "project",
       "path": "../Demo.Core.Api.Data/Demo.Core.Api.Data.csproj",
@@ -12723,6 +12738,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
+      "Demo.Core.Api.Core >= 1.0.0",
       "Demo.Core.Api.Data >= 1.0.0",
       "Demo.Core.Api.Model >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.2.0",
@@ -12759,6 +12775,9 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
+            "F:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Core\\Demo.Core.Api.Core.csproj": {
+              "projectPath": "F:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Core\\Demo.Core.Api.Core.csproj"
+            },
             "F:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj": {
               "projectPath": "F:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj"
             },

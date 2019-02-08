@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Demo.Core.Api.Data;
+using Demo.Core.Api.Core;
 using Demo.Core.Api.Model;
 using Demo.Core.Api.Model.Entity;
+using Demo.Core.Api.Model.ReqModel;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using Demo.Core.Api.Model.Enum;
 
 namespace Demo.Core.Api.WebApi.Controllers
 {
@@ -19,7 +22,7 @@ namespace Demo.Core.Api.WebApi.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        private readonly static string userkey="userList"; 
+        private readonly static string userkey = "userList";
 
         /// <summary>
         /// 获取用户列表
@@ -46,14 +49,18 @@ namespace Demo.Core.Api.WebApi.Controllers
         /// <summary>
         /// 新增用户
         /// </summary>
-        /// <param name="userModel">用户对象</param>
+        /// <param name="req">用户对象</param>
         [HttpPost]
-        public void Post([FromBody]UserModel userModel)
+        public HttpResult Post([FromBody]UserReqModel req)
         {
+            var userModel = req.ToEntity();
+            userModel.Id = IdGenerator.GetTimeStamp();
+            userModel.Status = UserStatusEnum.Enable;
             var json = JsonConvert.SerializeObject(userModel);
 
             var redis = RedisFactory.GetRedisClient(userkey);
-            redis.HashSet(userkey,userModel.Id, json);
+            var exist = redis.HashSet(userkey, userModel.Id, json);
+            return new HttpResult(exist?1:0, exist?string.Empty:"添加失败");
         }
         #endregion
 

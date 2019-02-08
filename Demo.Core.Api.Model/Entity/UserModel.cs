@@ -12,7 +12,7 @@ namespace Demo.Core.Api.Model.Entity
         /// 主键Id
         /// </summary>
         /// <value></value>
-        public int Id { get; set; }
+        public long Id { get; set; }
 
         /// <summary>
         /// 用户名

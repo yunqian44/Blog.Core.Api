@@ -1,0 +1,9 @@
+F:\Code\Core\Core.Bolg.Api\Demo.Core.Api.Model\bin\Debug\netstandard2.0\Demo.Core.Api.Model.deps.json
+F:\Code\Core\Core.Bolg.Api\Demo.Core.Api.Model\bin\Debug\netstandard2.0\Demo.Core.Api.Model.dll
+F:\Code\Core\Core.Bolg.Api\Demo.Core.Api.Model\bin\Debug\netstandard2.0\Demo.Core.Api.Model.pdb
+F:\Code\Core\Core.Bolg.Api\Demo.Core.Api.Model\obj\Debug\netstandard2.0\Demo.Core.Api.Model.csprojAssemblyReference.cache
+F:\Code\Core\Core.Bolg.Api\Demo.Core.Api.Model\obj\Debug\netstandard2.0\Demo.Core.Api.Model.csproj.CoreCompileInputs.cache
+F:\Code\Core\Core.Bolg.Api\Demo.Core.Api.Model\obj\Debug\netstandard2.0\Demo.Core.Api.Model.AssemblyInfoInputs.cache
+F:\Code\Core\Core.Bolg.Api\Demo.Core.Api.Model\obj\Debug\netstandard2.0\Demo.Core.Api.Model.AssemblyInfo.cs
+F:\Code\Core\Core.Bolg.Api\Demo.Core.Api.Model\obj\Debug\netstandard2.0\Demo.Core.Api.Model.dll
+F:\Code\Core\Core.Bolg.Api\Demo.Core.Api.Model\obj\Debug\netstandard2.0\Demo.Core.Api.Model.pdb

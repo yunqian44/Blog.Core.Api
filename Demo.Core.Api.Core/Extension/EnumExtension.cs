@@ -1,10 +1,15 @@
 ﻿using System;
 using System.ComponentModel;
 
-namespace Demo.Core.Api.Core.Extension
+namespace Demo.Core.Api
 {
     public static class EnumExtension
     {
+        /// <summary>
+        /// 获取枚举描述
+        /// </summary>
+        /// <param name="o"></param>
+        /// <returns></returns>
         public static string GetDescription(this Enum o)
         {
             Type enumType = o.GetType();

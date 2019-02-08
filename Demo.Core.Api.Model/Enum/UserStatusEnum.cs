@@ -1,12 +1,12 @@
 ﻿using System;
 using System.ComponentModel;
 
-namespace Demo.Core.Api.Model
+namespace Demo.Core.Api.Model.Enum
 {
     /// <summary>
     /// 用户状态枚举
     /// </summary>
-    public enum StatusEnum
+    public enum UserStatusEnum
     {
         
         [Description("启用")]

@@ -1,6 +1,7 @@
 ﻿using System;
+using Demo.Core.Api.Model.Enum;
 
-namespace Demo.Core.Api.Model
+namespace Demo.Core.Api.Model.Entity
 {
     /// <summary>
     /// 用户对象
@@ -35,6 +36,6 @@ namespace Demo.Core.Api.Model
         /// 状态
         /// </summary>
         /// <value></value>
-        public int Status { get; set; }
+        public UserStatusEnum Status { get; set; }
     }
 }

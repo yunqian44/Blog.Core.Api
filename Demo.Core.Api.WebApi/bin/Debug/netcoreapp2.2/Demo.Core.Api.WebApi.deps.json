@@ -25,6 +25,7 @@
       "Demo.Core.Api.WebApi/1.0.0": {
         "dependencies": {
           "Demo.Core.Api.Data": "1.0.0",
+          "Demo.Core.Api.Model": "1.0.0",
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
@@ -451,6 +452,14 @@
         },
         "compile": {
           "Demo.Core.Api.Data.dll": {}
+        }
+      },
+      "Demo.Core.Api.Model/1.0.0": {
+        "runtime": {
+          "Demo.Core.Api.Model.dll": {}
+        },
+        "compile": {
+          "Demo.Core.Api.Model.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3622,6 +3631,11 @@
       "hashPath": "system.threading.timer.4.0.1.nupkg.sha512"
     },
     "Demo.Core.Api.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Demo.Core.Api.Model/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

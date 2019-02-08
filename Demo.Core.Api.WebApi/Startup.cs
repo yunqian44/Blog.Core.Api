@@ -40,6 +40,20 @@ namespace Demo.Core.Api.WebApi
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 c.IncludeXmlComments(xmlPath);
             });
+
+
+            string[] urls = Configuration.GetSection("AllowCors:AllowAllOrigin").Value.Split(',');
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAllOrigin", builder =>
+                {
+                    builder.WithOrigins(urls)
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .AllowAnyOrigin()//允许所有来源的主机访问
+                    .AllowCredentials();//允许出来cookie
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -67,6 +81,9 @@ namespace Demo.Core.Api.WebApi
 
             app.UseHttpsRedirection();
             app.UseMvc();
+
+
+            app.UseCors("AllowAllOrigin");
         }
     }
 }

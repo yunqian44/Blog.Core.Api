@@ -12738,11 +12738,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "f:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.WebApi\\Demo.Core.Api.WebApi.csproj",
+      "projectUniqueName": "F:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.WebApi\\Demo.Core.Api.WebApi.csproj",
       "projectName": "Demo.Core.Api.WebApi",
-      "projectPath": "f:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.WebApi\\Demo.Core.Api.WebApi.csproj",
+      "projectPath": "F:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.WebApi\\Demo.Core.Api.WebApi.csproj",
       "packagesPath": "C:\\Users\\yunqian\\.nuget\\packages\\",
-      "outputPath": "f:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.WebApi\\obj\\",
+      "outputPath": "F:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12759,11 +12759,11 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "f:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj": {
-              "projectPath": "f:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj"
+            "F:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj": {
+              "projectPath": "F:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj"
             },
-            "f:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Model\\Demo.Core.Api.Model.csproj": {
-              "projectPath": "f:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Model\\Demo.Core.Api.Model.csproj"
+            "F:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Model\\Demo.Core.Api.Model.csproj": {
+              "projectPath": "F:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Model\\Demo.Core.Api.Model.csproj"
             }
           }
         }

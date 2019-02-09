@@ -12,6 +12,7 @@ namespace Demo.Core.Api.Model
         /// </summary>
         public HttpResult()
         {
+            this.Status = 1;
         }
         /// <summary>
         /// 本构造函数 默认为 处理成功，且将返回数据传入

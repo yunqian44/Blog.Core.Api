@@ -26,10 +26,11 @@ namespace Demo.Core.Api.WebApi.Controllers
     {
         private readonly static string userkey = "userList";
 
-        #region 01，获取用户列表
+        #region 01，获取用户列表+HttpResult Get([FromQuery]UserReqQuery reqQuery)
         /// <summary>
         /// 获取用户列表
         /// </summary>
+        /// <param name="reqQuery">筛选条件</param>
         /// <returns></returns>
         [HttpGet]
         public HttpResult Get([FromQuery]UserReqQuery reqQuery)

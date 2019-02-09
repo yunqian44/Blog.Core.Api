@@ -11,8 +11,8 @@
         <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.0"/>
     </ItemGroup>
     <ItemGroup>
-        <ProjectReference Include="..\Demo.Core.Api.Core\Demo.Core.Api.Core.csproj" />
         <ProjectReference Include="..\Demo.Core.Api.Data\Demo.Core.Api.Data.csproj" />
         <ProjectReference Include="..\Demo.Core.Api.Model\Demo.Core.Api.Model.csproj" />
+        <ProjectReference Include="..\Demo.Core.Api.Core\Demo.Core.Api.Core.csproj" />
     </ItemGroup>
 </Project>

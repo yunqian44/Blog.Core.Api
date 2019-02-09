@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Demo.Core.Api.Data;
 using Microsoft.AspNetCore.Mvc;
+using Demo.Core.Api.Core.Common;
 
 namespace Demo.Core.Api.WebApi.Controllers
 {
@@ -22,7 +23,8 @@ namespace Demo.Core.Api.WebApi.Controllers
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
         {
-            return "value";
+            throw new RequestException("我是被创建的");
+            //return "value";
         }
 
         // POST api/values

@@ -61,15 +61,14 @@ namespace Demo.Core.Api.WebApi.Controllers
             var modelList = userList.AsQueryable().Where(where)
                                 .Skip(reqQuery.PageSize * (reqQuery.PageIndex - 1))
                                 .Take(reqQuery.PageSize).ToList();
-            var result=new UserListViewModel().ToEntities(modelList);                  
+            var result = new UserListViewModel().ToEntities(modelList);
             return new HttpResult(new
             {
                 userList = result,
-                total=userList.Count                
+                total = userList.Count
             });
         }
         #endregion
-
 
         #region 02，获取单个用户根据主键Id+HttpResult Get(long id)
         /// <summary>
@@ -93,7 +92,6 @@ namespace Demo.Core.Api.WebApi.Controllers
         }
         #endregion
 
-
         #region 03，新增用户+HttpResult Post([FromBody]UserModel userModel)
         /// <summary>
         /// 新增用户
@@ -114,20 +112,31 @@ namespace Demo.Core.Api.WebApi.Controllers
         }
         #endregion
 
+        #region 04，修改用户信息+HttpResult Put([FromBody]UserModel req)
         /// <summary>
-        /// 根据Id和用户实体修改用户对象
+        /// 修改用户信息
+        /// </summary>
+        /// <param name="req">用户信息</param>
+        [HttpPut("{id}")]
+        public HttpResult Put([FromBody]UserModel req)
+        {
+
+            return new HttpResult();
+        }
+        #endregion
+
+        #region 05，删除用户信息根据主键Id+HttpResult Delete(long id)
+        /// <summary>
+        /// 删除用户信息根据主键Id
         /// </summary>
         /// <param name="id">主键Id</param>
-        /// <param name="value"></param>
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody]UserModel value)
-        {
-        }
-
-        // DELETE api/values/5
+        /// <returns></returns>
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public HttpResult Delete(long id)
         {
+            return new HttpResult();
         }
+        #endregion
+
     }
 }

@@ -13,6 +13,7 @@
             <summary>
             获取用户列表
             </summary>
+            <param name="reqQuery">筛选条件</param>
             <returns></returns>
         </member>
         <member name="M:Demo.Core.Api.WebApi.Controllers.UserController.Get(System.Int64)">
@@ -28,12 +29,18 @@
             </summary>
             <param name="req">用户对象</param>
         </member>
-        <member name="M:Demo.Core.Api.WebApi.Controllers.UserController.Put(System.Int32,Demo.Core.Api.Model.Entity.UserModel)">
+        <member name="M:Demo.Core.Api.WebApi.Controllers.UserController.Put(Demo.Core.Api.Model.Entity.UserModel)">
             <summary>
-            根据Id和用户实体修改用户对象
+            修改用户信息
+            </summary>
+            <param name="req">用户信息</param>
+        </member>
+        <member name="M:Demo.Core.Api.WebApi.Controllers.UserController.Delete(System.Int64)">
+            <summary>
+            删除用户信息根据主键Id
             </summary>
             <param name="id">主键Id</param>
-            <param name="value"></param>
+            <returns></returns>
         </member>
     </members>
 </doc>

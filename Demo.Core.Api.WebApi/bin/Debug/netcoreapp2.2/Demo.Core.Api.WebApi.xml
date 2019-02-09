@@ -9,17 +9,17 @@
             用户管理Api
             </summary>
         </member>
-        <member name="M:Demo.Core.Api.WebApi.Controllers.UserController.Get">
+        <member name="M:Demo.Core.Api.WebApi.Controllers.UserController.Get(Demo.Core.Api.Model.ReqModel.UserReqQuery)">
             <summary>
             获取用户列表
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Demo.Core.Api.WebApi.Controllers.UserController.Get(System.Int32)">
+        <member name="M:Demo.Core.Api.WebApi.Controllers.UserController.Get(System.Int64)">
             <summary>
             获取单个用户根据主键Id
             </summary>
-            <param name="id"></param>
+            <param name="id">主键Id</param>
             <returns></returns>
         </member>
         <member name="M:Demo.Core.Api.WebApi.Controllers.UserController.Post(Demo.Core.Api.Model.ReqModel.UserReqModel)">

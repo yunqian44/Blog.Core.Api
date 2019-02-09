@@ -11,6 +11,8 @@ using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Demo.Core.Api.Model.Enum;
+using Demo.Core.Api.Model.ViewModel;
+using System.Linq.Expressions;
 
 namespace Demo.Core.Api.WebApi.Controllers
 {
@@ -24,28 +26,74 @@ namespace Demo.Core.Api.WebApi.Controllers
     {
         private readonly static string userkey = "userList";
 
+        #region 01，获取用户列表
         /// <summary>
         /// 获取用户列表
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public HttpResult Get([FromQuery]UserReqQuery reqQuery)
         {
-            return new string[] { "value1", "value2" };
-        }
+            var redis = RedisFactory.GetRedisClient(userkey);
+            var redisValue = redis.HashGetAll(userkey);
+            var userList = new List<UserModel>();
+            if (redisValue != null && redisValue.Count() > 0)
+            {
+                for (int i = 0; i < redisValue.Count(); i++)
+                {
+                    userList.Add(JsonConvert.DeserializeObject<UserModel>(redisValue[i].Value));
+                }
 
+            }
+            Expression<Func<UserModel, bool>> where = c1 => true;
+            if (!string.IsNullOrWhiteSpace(reqQuery.Name))
+            {
+                Expression<Func<UserModel, bool>> query = c1 => c1.UserName.Contains(reqQuery.Name);
+                where = where.AndJoin(query);
+            }
+            if (reqQuery.Date != null)
+            {
+                var date = reqQuery.Date.GetValueOrDefault().Date.AddDays(1);
+                Expression<Func<UserModel, bool>> query = c1 => c1.Brithday <= date;
+                where = where.AndJoin(query);
+            }
+            var modelList = userList.AsQueryable().Where(where)
+                                .Skip(reqQuery.PageSize * (reqQuery.PageIndex - 1))
+                                .Take(reqQuery.PageSize).ToList();
+            var result=new UserListViewModel().ToEntities(modelList);                  
+            return new HttpResult(new
+            {
+                userList = result,
+                total=userList.Count                
+            });
+        }
+        #endregion
+
+
+        #region 02，获取单个用户根据主键Id+HttpResult Get(long id)
         /// <summary>
         /// 获取单个用户根据主键Id
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="id">主键Id</param>
         /// <returns></returns>
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public HttpResult Get(long id)
         {
-            return "value";
+            var redis = RedisFactory.GetRedisClient(userkey);
+            var redisValue = redis.HashGet(userkey, id);
+            if (!redisValue.IsNull)
+            {
+                return new HttpResult(JsonConvert.DeserializeObject<UserModel>(redisValue));
+            }
+            else
+            {
+                return new HttpResult();
+            }
         }
+        #endregion
 
-        #region 02，新增用户+void Post([FromBody]UserModel userModel)
+
+        #region 03，新增用户+HttpResult Post([FromBody]UserModel userModel)
         /// <summary>
         /// 新增用户
         /// </summary>
@@ -60,7 +108,8 @@ namespace Demo.Core.Api.WebApi.Controllers
 
             var redis = RedisFactory.GetRedisClient(userkey);
             var exist = redis.HashSet(userkey, userModel.Id, json);
-            return new HttpResult(exist?1:0, exist?string.Empty:"添加失败");
+            return new HttpResult(exist ? 1 : 0, exist ? string.Empty : "添加失败");
+            //return new HttpResult(0, "添加失败");
         }
         #endregion
 

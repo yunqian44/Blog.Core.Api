@@ -34,6 +34,7 @@ namespace Demo.Core.Api.WebApi
                   options.Filters.Add<ApiErrorHandleFilter>();
             }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
+            
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(c =>
             {
@@ -82,6 +83,8 @@ namespace Demo.Core.Api.WebApi
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
             });
+
+            
 
             app.UseHttpsRedirection();
             app.UseMvc();

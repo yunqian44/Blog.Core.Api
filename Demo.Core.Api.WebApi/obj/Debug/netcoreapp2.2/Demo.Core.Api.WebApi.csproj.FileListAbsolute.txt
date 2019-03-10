@@ -40,3 +40,7 @@ F:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Cor
 F:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Model.pdb
 F:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Core.dll
 F:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Core.pdb
+D:\persion\Core\Demo.Core.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Core.dll
+D:\persion\Core\Demo.Core.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Model.dll
+D:\persion\Core\Demo.Core.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Model.pdb
+D:\persion\Core\Demo.Core.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Core.pdb

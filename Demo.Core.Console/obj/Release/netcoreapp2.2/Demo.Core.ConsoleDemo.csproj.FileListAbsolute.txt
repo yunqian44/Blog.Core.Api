@@ -1,0 +1,15 @@
+D:\persion\Core\Demo.Core.Api\Demo.Core.Console\bin\Release\netcoreapp2.2\appsettings.json
+D:\persion\Core\Demo.Core.Api\Demo.Core.Console\bin\Release\netcoreapp2.2\Demo.Core.ConsoleDemo.deps.json
+D:\persion\Core\Demo.Core.Api\Demo.Core.Console\bin\Release\netcoreapp2.2\Demo.Core.ConsoleDemo.runtimeconfig.json
+D:\persion\Core\Demo.Core.Api\Demo.Core.Console\bin\Release\netcoreapp2.2\Demo.Core.ConsoleDemo.runtimeconfig.dev.json
+D:\persion\Core\Demo.Core.Api\Demo.Core.Console\bin\Release\netcoreapp2.2\Demo.Core.ConsoleDemo.dll
+D:\persion\Core\Demo.Core.Api\Demo.Core.Console\bin\Release\netcoreapp2.2\Demo.Core.ConsoleDemo.pdb
+D:\persion\Core\Demo.Core.Api\Demo.Core.Console\bin\Release\netcoreapp2.2\Demo.Core.Api.Data.dll
+D:\persion\Core\Demo.Core.Api\Demo.Core.Console\bin\Release\netcoreapp2.2\Demo.Core.Api.Data.pdb
+D:\persion\Core\Demo.Core.Api\Demo.Core.Console\obj\Release\netcoreapp2.2\Demo.Core.ConsoleDemo.csprojAssemblyReference.cache
+D:\persion\Core\Demo.Core.Api\Demo.Core.Console\obj\Release\netcoreapp2.2\Demo.Core.ConsoleDemo.csproj.CoreCompileInputs.cache
+D:\persion\Core\Demo.Core.Api\Demo.Core.Console\obj\Release\netcoreapp2.2\Demo.Core.ConsoleDemo.AssemblyInfoInputs.cache
+D:\persion\Core\Demo.Core.Api\Demo.Core.Console\obj\Release\netcoreapp2.2\Demo.Core.ConsoleDemo.AssemblyInfo.cs
+D:\persion\Core\Demo.Core.Api\Demo.Core.Console\obj\Release\netcoreapp2.2\Demo.Core.ConsoleDemo.csproj.CopyComplete
+D:\persion\Core\Demo.Core.Api\Demo.Core.Console\obj\Release\netcoreapp2.2\Demo.Core.ConsoleDemo.dll
+D:\persion\Core\Demo.Core.Api\Demo.Core.Console\obj\Release\netcoreapp2.2\Demo.Core.ConsoleDemo.pdb

@@ -1,0 +1,9 @@
+D:\persion\Core\Demo.Core.Api\Demo.Core.Api.Model\bin\Release\netstandard2.0\Demo.Core.Api.Model.deps.json
+D:\persion\Core\Demo.Core.Api\Demo.Core.Api.Model\bin\Release\netstandard2.0\Demo.Core.Api.Model.dll
+D:\persion\Core\Demo.Core.Api\Demo.Core.Api.Model\bin\Release\netstandard2.0\Demo.Core.Api.Model.pdb
+D:\persion\Core\Demo.Core.Api\Demo.Core.Api.Model\obj\Release\netstandard2.0\Demo.Core.Api.Model.csproj.CoreCompileInputs.cache
+D:\persion\Core\Demo.Core.Api\Demo.Core.Api.Model\obj\Release\netstandard2.0\Demo.Core.Api.Model.AssemblyInfoInputs.cache
+D:\persion\Core\Demo.Core.Api\Demo.Core.Api.Model\obj\Release\netstandard2.0\Demo.Core.Api.Model.AssemblyInfo.cs
+D:\persion\Core\Demo.Core.Api\Demo.Core.Api.Model\obj\Release\netstandard2.0\Demo.Core.Api.Model.dll
+D:\persion\Core\Demo.Core.Api\Demo.Core.Api.Model\obj\Release\netstandard2.0\Demo.Core.Api.Model.pdb
+D:\persion\Core\Demo.Core.Api\Demo.Core.Api.Model\obj\Release\netstandard2.0\Demo.Core.Api.Model.csprojAssemblyReference.cache

@@ -7,3 +7,12 @@ F:\Code\Core\Core.Bolg.Api\Demo.Core.Api.Core\bin\Debug\netstandard2.0\Demo.Core
 F:\Code\Core\Core.Bolg.Api\Demo.Core.Api.Core\bin\Debug\netstandard2.0\Demo.Core.Api.Core.pdb
 F:\Code\Core\Core.Bolg.Api\Demo.Core.Api.Core\obj\Debug\netstandard2.0\Demo.Core.Api.Core.dll
 F:\Code\Core\Core.Bolg.Api\Demo.Core.Api.Core\obj\Debug\netstandard2.0\Demo.Core.Api.Core.pdb
+D:\persion\Core\Demo.Core.Api\Demo.Core.Api.Core\bin\Debug\netstandard2.0\Demo.Core.Api.Core.deps.json
+D:\persion\Core\Demo.Core.Api\Demo.Core.Api.Core\bin\Debug\netstandard2.0\Demo.Core.Api.Core.dll
+D:\persion\Core\Demo.Core.Api\Demo.Core.Api.Core\bin\Debug\netstandard2.0\Demo.Core.Api.Core.pdb
+D:\persion\Core\Demo.Core.Api\Demo.Core.Api.Core\obj\Debug\netstandard2.0\Demo.Core.Api.Core.csprojAssemblyReference.cache
+D:\persion\Core\Demo.Core.Api\Demo.Core.Api.Core\obj\Debug\netstandard2.0\Demo.Core.Api.Core.csproj.CoreCompileInputs.cache
+D:\persion\Core\Demo.Core.Api\Demo.Core.Api.Core\obj\Debug\netstandard2.0\Demo.Core.Api.Core.AssemblyInfoInputs.cache
+D:\persion\Core\Demo.Core.Api\Demo.Core.Api.Core\obj\Debug\netstandard2.0\Demo.Core.Api.Core.AssemblyInfo.cs
+D:\persion\Core\Demo.Core.Api\Demo.Core.Api.Core\obj\Debug\netstandard2.0\Demo.Core.Api.Core.dll
+D:\persion\Core\Demo.Core.Api\Demo.Core.Api.Core\obj\Debug\netstandard2.0\Demo.Core.Api.Core.pdb

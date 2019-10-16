@@ -3,3 +3,6 @@
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+/.vs/Demo.Core.Api
+/Demo.Core.Api.WebApi/bin/Debug/netcoreapp2.2
+/Demo.Core.Api.WebApi/obj

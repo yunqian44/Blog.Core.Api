@@ -13,6 +13,8 @@ using Newtonsoft.Json;
 using Demo.Core.Api.Model.Enum;
 using Demo.Core.Api.Model.ViewModel;
 using System.Linq.Expressions;
+using Demo.Core.Api.WebApi.AuthHelper.OverWrite;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Demo.Core.Api.WebApi.Controllers
 {
@@ -20,7 +22,7 @@ namespace Demo.Core.Api.WebApi.Controllers
     /// 用户管理Api
     /// </summary>
     [Route("api/[controller]")]
-    [EnableCors("AllowAllOrigin")]
+    [Authorize(Roles ="Admin")]
     [ApiController]
     public class UserController : ControllerBase
     {
@@ -137,6 +139,5 @@ namespace Demo.Core.Api.WebApi.Controllers
             return new HttpResult();
         }
         #endregion
-
     }
 }

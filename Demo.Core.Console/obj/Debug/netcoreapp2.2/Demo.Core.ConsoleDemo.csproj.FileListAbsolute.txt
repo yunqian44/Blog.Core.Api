@@ -13,3 +13,17 @@ D:\persion\Core\Demo.Core.Api\Demo.Core.Console\bin\Debug\netcoreapp2.2\Demo.Cor
 D:\persion\Core\Demo.Core.Api\Demo.Core.Console\obj\Debug\netcoreapp2.2\Demo.Core.ConsoleDemo.csprojAssemblyReference.cache
 D:\persion\Core\Demo.Core.Api\Demo.Core.Console\obj\Debug\netcoreapp2.2\Demo.Core.ConsoleDemo.csproj.CopyComplete
 D:\persion\Core\Demo.Core.Api\Demo.Core.Console\bin\Debug\netcoreapp2.2\appsettings.json
+E:\persion\Blog\Demo.Core.Console\bin\Debug\netcoreapp2.2\appsettings.json
+E:\persion\Blog\Demo.Core.Console\bin\Debug\netcoreapp2.2\Demo.Core.ConsoleDemo.deps.json
+E:\persion\Blog\Demo.Core.Console\bin\Debug\netcoreapp2.2\Demo.Core.ConsoleDemo.runtimeconfig.json
+E:\persion\Blog\Demo.Core.Console\bin\Debug\netcoreapp2.2\Demo.Core.ConsoleDemo.runtimeconfig.dev.json
+E:\persion\Blog\Demo.Core.Console\bin\Debug\netcoreapp2.2\Demo.Core.ConsoleDemo.dll
+E:\persion\Blog\Demo.Core.Console\bin\Debug\netcoreapp2.2\Demo.Core.ConsoleDemo.pdb
+E:\persion\Blog\Demo.Core.Console\bin\Debug\netcoreapp2.2\Demo.Core.Api.Data.dll
+E:\persion\Blog\Demo.Core.Console\bin\Debug\netcoreapp2.2\Demo.Core.Api.Data.pdb
+E:\persion\Blog\Demo.Core.Console\obj\Debug\netcoreapp2.2\Demo.Core.ConsoleDemo.csprojAssemblyReference.cache
+E:\persion\Blog\Demo.Core.Console\obj\Debug\netcoreapp2.2\Demo.Core.ConsoleDemo.AssemblyInfoInputs.cache
+E:\persion\Blog\Demo.Core.Console\obj\Debug\netcoreapp2.2\Demo.Core.ConsoleDemo.AssemblyInfo.cs
+E:\persion\Blog\Demo.Core.Console\obj\Debug\netcoreapp2.2\Demo.Core.ConsoleDemo.csproj.CopyComplete
+E:\persion\Blog\Demo.Core.Console\obj\Debug\netcoreapp2.2\Demo.Core.ConsoleDemo.dll
+E:\persion\Blog\Demo.Core.Console\obj\Debug\netcoreapp2.2\Demo.Core.ConsoleDemo.pdb

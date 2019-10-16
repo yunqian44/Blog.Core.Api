@@ -4,6 +4,53 @@
         <name>Demo.Core.Api.WebApi</name>
     </assembly>
     <members>
+        <member name="M:Demo.Core.Api.WebApi.AuthHelper.OverWrite.JwtHelper.IssueJwt(Demo.Core.Api.WebApi.AuthHelper.OverWrite.TokenModelJwt)">
+            <summary>
+            颁发JWT字符串
+            </summary>
+            <param name="tokenModel">令牌</param>
+            <returns></returns>
+        </member>
+        <member name="M:Demo.Core.Api.WebApi.AuthHelper.OverWrite.JwtHelper.SerializeJwt(System.String)">
+            <summary>
+            解析
+            </summary>
+            <param name="jwtStr"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Demo.Core.Api.WebApi.AuthHelper.OverWrite.TokenModelJwt">
+            <summary>
+            令牌
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.WebApi.AuthHelper.OverWrite.TokenModelJwt.Uid">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.WebApi.AuthHelper.OverWrite.TokenModelJwt.Role">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.WebApi.AuthHelper.OverWrite.TokenModelJwt.Work">
+            <summary>
+            职能
+            </summary>
+        </member>
+        <member name="T:Demo.Core.Api.WebApi.Controllers.LoginController">
+            <summary>
+            登陆管理
+            </summary>
+        </member>
+        <member name="M:Demo.Core.Api.WebApi.Controllers.LoginController.GetJwtStr(System.String,System.String)">
+            <summary>
+            获取令牌
+            </summary>
+            <param name="name">用户名</param>
+            <param name="pass">密码</param>
+            <returns></returns>
+        </member>
         <member name="T:Demo.Core.Api.WebApi.Controllers.UserController">
             <summary>
             用户管理Api

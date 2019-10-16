@@ -1,7 +1,5 @@
 {
-  "ProjectFilePath": "d:\\persion\\Core\\Demo.Core.Api\\Demo.Core.Api.WebApi\\Demo.Core.Api.WebApi.csproj",
-  "TargetFramework": "netcoreapp2.2",
-  "TagHelpers": [],
+  "FilePath": "e:\\persion\\Blog\\Demo.Core.Api.WebApi\\Demo.Core.Api.WebApi.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-2.1",
     "LanguageVersion": "2.1",
@@ -10,5 +8,12 @@
         "ExtensionName": "MVC-2.1"
       }
     ]
-  }
+  },
+  "ProjectWorkspaceState": {
+    "TagHelpers": [],
+    "CSharpLanguageVersion": 703
+  },
+  "RootNamespace": "Demo.Core.Api.WebApi",
+  "Documents": [],
+  "SerializationFormat": "0.2"
 }

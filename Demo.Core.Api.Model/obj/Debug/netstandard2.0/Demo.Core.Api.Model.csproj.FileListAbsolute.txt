@@ -16,3 +16,10 @@ D:\persion\Core\Demo.Core.Api\Demo.Core.Api.Model\obj\Debug\netstandard2.0\Demo.
 D:\persion\Core\Demo.Core.Api\Demo.Core.Api.Model\obj\Debug\netstandard2.0\Demo.Core.Api.Model.dll
 D:\persion\Core\Demo.Core.Api\Demo.Core.Api.Model\obj\Debug\netstandard2.0\Demo.Core.Api.Model.pdb
 D:\persion\Core\Demo.Core.Api\Demo.Core.Api.Model\obj\Debug\netstandard2.0\Demo.Core.Api.Model.csprojAssemblyReference.cache
+E:\persion\Blog\Demo.Core.Api.Model\bin\Debug\netstandard2.0\Demo.Core.Api.Model.deps.json
+E:\persion\Blog\Demo.Core.Api.Model\bin\Debug\netstandard2.0\Demo.Core.Api.Model.dll
+E:\persion\Blog\Demo.Core.Api.Model\bin\Debug\netstandard2.0\Demo.Core.Api.Model.pdb
+E:\persion\Blog\Demo.Core.Api.Model\obj\Debug\netstandard2.0\Demo.Core.Api.Model.AssemblyInfoInputs.cache
+E:\persion\Blog\Demo.Core.Api.Model\obj\Debug\netstandard2.0\Demo.Core.Api.Model.AssemblyInfo.cs
+E:\persion\Blog\Demo.Core.Api.Model\obj\Debug\netstandard2.0\Demo.Core.Api.Model.dll
+E:\persion\Blog\Demo.Core.Api.Model\obj\Debug\netstandard2.0\Demo.Core.Api.Model.pdb

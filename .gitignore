@@ -17,3 +17,4 @@ Demo.Core.Api.Console/bin
 Demo.Core.Api.Console/obj
 UnitTest/bin
 UnitTest/obj
+Demo.Core.Console/obj/

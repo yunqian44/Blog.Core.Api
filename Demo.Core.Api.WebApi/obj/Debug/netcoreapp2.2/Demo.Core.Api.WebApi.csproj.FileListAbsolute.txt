@@ -124,3 +124,83 @@ E:\persion\Blog\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebAp
 E:\persion\Blog\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.dll
 E:\persion\Blog\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.xml
 E:\persion\Blog\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.pdb
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api --configuration release\web.config
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web.config
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\web.config
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web.config
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\web.config
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web.config
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\web.config
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web.config
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\web.config
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web.config
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\web.config
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\appsettings.Development.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\appsettings.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api --configuration release\appsettings.Development.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api --configuration release\appsettings.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api --configuration release\Demo.Core.Api.WebApi.deps.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api --configuration release\Demo.Core.Api.WebApi.runtimeconfig.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\appsettings.Development.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\appsettings.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\Demo.Core.Api.WebApi.deps.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\Demo.Core.Api.WebApi.runtimeconfig.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\appsettings.Development.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\appsettings.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\Demo.Core.Api.WebApi.deps.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\Demo.Core.Api.WebApi.runtimeconfig.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\appsettings.Development.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\appsettings.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\Demo.Core.Api.WebApi.deps.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\Demo.Core.Api.WebApi.runtimeconfig.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\appsettings.Development.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\appsettings.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\Demo.Core.Api.WebApi.deps.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\Demo.Core.Api.WebApi.runtimeconfig.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\appsettings.Development.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\appsettings.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\Demo.Core.Api.WebApi.deps.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\Demo.Core.Api.WebApi.runtimeconfig.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\appsettings.Development.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\appsettings.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\Demo.Core.Api.WebApi.deps.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\Demo.Core.Api.WebApi.runtimeconfig.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\appsettings.Development.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\appsettings.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\Demo.Core.Api.WebApi.deps.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\Demo.Core.Api.WebApi.runtimeconfig.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\appsettings.Development.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\appsettings.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\Demo.Core.Api.WebApi.deps.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\Demo.Core.Api.WebApi.runtimeconfig.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\appsettings.Development.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\appsettings.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\Demo.Core.Api.WebApi.deps.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\Demo.Core.Api.WebApi.runtimeconfig.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\appsettings.Development.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\appsettings.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\Demo.Core.Api.WebApi.deps.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\Demo.Core.Api.WebApi.runtimeconfig.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.deps.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.runtimeconfig.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.runtimeconfig.dev.json
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.dll
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.pdb
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.xml
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Core.dll
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Data.dll
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Model.dll
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Data.pdb
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Model.pdb
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Core.pdb
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.csprojAssemblyReference.cache
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.RazorAssemblyInfo.cache
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.RazorAssemblyInfo.cs
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.AssemblyInfoInputs.cache
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.AssemblyInfo.cs
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.RazorTargetAssemblyInfo.cache
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.csproj.CopyComplete
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.dll
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.xml
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.pdb

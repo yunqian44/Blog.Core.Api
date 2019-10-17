@@ -30,4 +30,3 @@ E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.Model\obj\Debug\netstandard2.0\Demo.Cor
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.Model\obj\Debug\netstandard2.0\Demo.Core.Api.Model.AssemblyInfo.cs
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.Model\obj\Debug\netstandard2.0\Demo.Core.Api.Model.dll
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.Model\obj\Debug\netstandard2.0\Demo.Core.Api.Model.pdb
-E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.Model\obj\Debug\netstandard2.0\Demo.Core.Api.Model.csprojAssemblyReference.cache

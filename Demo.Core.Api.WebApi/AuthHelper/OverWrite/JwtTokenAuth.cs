@@ -20,7 +20,6 @@ namespace Demo.Core.Api.WebApi.AuthHelper.OverWrite
 
         public Task Invoke(HttpContext httpContext)
         {
-
             //检测是否包含'Authorization'请求头
             if (!httpContext.Request.Headers.ContainsKey("Authorization"))
             {

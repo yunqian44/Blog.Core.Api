@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Text;
 using System.Threading.Tasks;
 using Demo.Core.Api.Core.Helper;
+using Demo.Core.Api.Data;
 using Demo.Core.Api.WebApi.App_Start;
 using Demo.Core.Api.WebApi.AuthHelper.OverWrite;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -16,6 +19,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace Demo.Core.Api.WebApi
@@ -61,9 +65,9 @@ namespace Demo.Core.Api.WebApi
                            TermsOfService = "None",
                            Contact = new Contact()
                            {
-                              Name="刺客",
-                              Email="yunqian8@live.com",
-                              Url="暂时没有"
+                               Name = "刺客",
+                               Email = "yunqian8@live.com",
+                               Url = "暂时没有"
                            }
                        });
 
@@ -93,8 +97,64 @@ namespace Demo.Core.Api.WebApi
                });
             #endregion
 
+            #region Authorize 权限认证
+
+            #region 授权
+
+            #region 参数
+            //读取配置文件
+            var audienceConfig = Configuration.GetSection("Audience");
+            var symmetricKeyAsBase64 = audienceConfig["Secret"];
+            var keyByteArray = Encoding.ASCII.GetBytes(symmetricKeyAsBase64);
+            var signingKey = new SymmetricSecurityKey(keyByteArray);
+
+            var signingCredentials = new SigningCredentials(signingKey, SecurityAlgorithms.HmacSha256);
+
+            // 如果要数据库动态绑定，这里先留个空，后边处理器里动态赋值
+            //var permission = new List<PermissionItem>();
+
+            // 角色与接口的权限要求参数
+            //var permissionRequirement = new PermissionRequirement(
+            //    "/api/denied",// 拒绝授权的跳转地址（目前无用）
+            //    permission,
+            //    ClaimTypes.Role,//基于角色的授权
+            //    audienceConfig["Issuer"],//发行人
+            //    audienceConfig["Audience"],//听众
+            //    signingCredentials,//签名凭据
+            //    expiration: TimeSpan.FromSeconds(60 * 60)//接口的过期时间
+            //    );
+            #endregion
+
+            #region 认证
+            services.AddAuthentication(x =>
+                {
+                //看这个单词熟悉么？没错，就是上边错误里的那个。
+                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                })
+                 .AddJwtBearer(o =>
+                 {
+                     o.TokenValidationParameters = new TokenValidationParameters
+                     {
+                         ValidateIssuerSigningKey = true,
+                         IssuerSigningKey = signingKey,//参数配置在下边
+                     ValidateIssuer = true,
+                         ValidIssuer = audienceConfig["Issuer"],//发行人
+                     ValidateAudience = true,
+                         ValidAudience = audienceConfig["Audience"],//订阅人
+                     ValidateLifetime = true,
+                         ClockSkew = TimeSpan.Zero,
+                         RequireExpirationTime = true,
+                     };
+
+                 }); 
+            #endregion
+            #endregion
+
+            #endregion
 
             services.AddSingleton(new Appsettings(Env.ContentRootPath));
+            services.AddSingleton(new RedisConfigInfo(Env.ContentRootPath));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -113,7 +173,7 @@ namespace Demo.Core.Api.WebApi
                 app.UseSwaggerUI(c =>
                 {
                     c.SwaggerEndpoint($"/swagger/{ApiName}/swagger.json", $"{ApiName}");
-                    
+
                     // 将swagger设置成首页
                     c.RoutePrefix = "";
                     //路径配置，设置为空，表示直接访问该文件，
@@ -154,7 +214,10 @@ namespace Demo.Core.Api.WebApi
 
             #region 开启认证中间件
             //自定义认证中间件
-            app.UseJwtTokenAuth(); //也可以app.UseMiddleware<JwtTokenAuth>(); 
+            //app.UseJwtTokenAuth(); //也可以app.UseMiddleware<JwtTokenAuth>(); 
+
+            //如果你想使用官方认证，必须在上边ConfigureService 中，配置JWT的认证服务 (.AddAuthentication 和 .AddJwtBearer 二者缺一不可)
+            app.UseAuthentication();
             #endregion
 
             app.UseMvc();

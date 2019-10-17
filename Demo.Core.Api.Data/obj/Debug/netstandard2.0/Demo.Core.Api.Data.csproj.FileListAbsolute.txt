@@ -27,8 +27,8 @@ E:\persion\Blog\Demo.Core.Api.Data\obj\Debug\netstandard2.0\Demo.Core.Api.Data.c
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.Data\bin\Debug\netstandard2.0\Demo.Core.Api.Data.deps.json
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.Data\bin\Debug\netstandard2.0\Demo.Core.Api.Data.dll
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.Data\bin\Debug\netstandard2.0\Demo.Core.Api.Data.pdb
-E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.Data\obj\Debug\netstandard2.0\Demo.Core.Api.Data.csprojAssemblyReference.cache
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.Data\obj\Debug\netstandard2.0\Demo.Core.Api.Data.AssemblyInfoInputs.cache
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.Data\obj\Debug\netstandard2.0\Demo.Core.Api.Data.AssemblyInfo.cs
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.Data\obj\Debug\netstandard2.0\Demo.Core.Api.Data.dll
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.Data\obj\Debug\netstandard2.0\Demo.Core.Api.Data.pdb
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.Data\obj\Debug\netstandard2.0\Demo.Core.Api.Data.csprojAssemblyReference.cache

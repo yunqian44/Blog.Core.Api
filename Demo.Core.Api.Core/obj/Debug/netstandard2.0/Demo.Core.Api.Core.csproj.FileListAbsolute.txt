@@ -27,7 +27,6 @@ E:\persion\Blog\Demo.Core.Api.Core\obj\Debug\netstandard2.0\Demo.Core.Api.Core.c
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.Core\bin\Debug\netstandard2.0\Demo.Core.Api.Core.deps.json
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.Core\bin\Debug\netstandard2.0\Demo.Core.Api.Core.dll
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.Core\bin\Debug\netstandard2.0\Demo.Core.Api.Core.pdb
-E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.Core\obj\Debug\netstandard2.0\Demo.Core.Api.Core.csprojAssemblyReference.cache
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.Core\obj\Debug\netstandard2.0\Demo.Core.Api.Core.AssemblyInfoInputs.cache
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.Core\obj\Debug\netstandard2.0\Demo.Core.Api.Core.AssemblyInfo.cs
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.Core\obj\Debug\netstandard2.0\Demo.Core.Api.Core.dll

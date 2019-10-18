@@ -2,4 +2,13 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
     </PropertyGroup>
+    <ItemGroup>
+      <Folder Include="ReqModel\" />
+    </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="sqlSugarCore" Version="5.0.0.10" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\Demo.Core.Api.Core\Demo.Core.Api.Core.csproj" />
+    </ItemGroup>
 </Project>

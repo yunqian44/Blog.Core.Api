@@ -38,6 +38,14 @@
             职能
             </summary>
         </member>
+        <member name="M:Demo.Core.Api.WebApi.Controllers.BlogController.Get(System.Int32,System.Int32)">
+            <summary>
+            Sum接口
+            </summary>
+            <param name="i">参数i</param>
+            <param name="j">参数j</param>
+            <returns></returns>
+        </member>
         <member name="T:Demo.Core.Api.WebApi.Controllers.LoginController">
             <summary>
             登陆管理
@@ -56,25 +64,12 @@
             用户管理Api
             </summary>
         </member>
-        <member name="M:Demo.Core.Api.WebApi.Controllers.UserController.Get(Demo.Core.Api.Model.ReqModel.UserReqQuery)">
-            <summary>
-            获取用户列表
-            </summary>
-            <param name="reqQuery">筛选条件</param>
-            <returns></returns>
-        </member>
         <member name="M:Demo.Core.Api.WebApi.Controllers.UserController.Get(System.Int64)">
             <summary>
             获取单个用户根据主键Id
             </summary>
             <param name="id">主键Id</param>
             <returns></returns>
-        </member>
-        <member name="M:Demo.Core.Api.WebApi.Controllers.UserController.Post(Demo.Core.Api.Model.ReqModel.UserReqModel)">
-            <summary>
-            新增用户
-            </summary>
-            <param name="req">用户对象</param>
         </member>
         <member name="M:Demo.Core.Api.WebApi.Controllers.UserController.Put(Demo.Core.Api.Model.Entity.UserModel)">
             <summary>

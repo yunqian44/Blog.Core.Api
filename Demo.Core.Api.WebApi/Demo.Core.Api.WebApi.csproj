@@ -13,7 +13,9 @@
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\Demo.Core.Api.Data\Demo.Core.Api.Data.csproj" />
+        <ProjectReference Include="..\Demo.Core.Api.IService\Demo.Core.Api.IService.csproj" />
         <ProjectReference Include="..\Demo.Core.Api.Model\Demo.Core.Api.Model.csproj" />
         <ProjectReference Include="..\Demo.Core.Api.Core\Demo.Core.Api.Core.csproj" />
+        <ProjectReference Include="..\Demo.Core.Api.Service\Demo.Core.Api.Service.csproj" />
     </ItemGroup>
 </Project>

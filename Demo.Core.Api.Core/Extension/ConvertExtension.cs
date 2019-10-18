@@ -22,5 +22,15 @@ namespace Demo.Core.Api.Core.Extension
             if (thisValue != null) return thisValue.ToString().Trim();
             return string.Empty;
         }
+
+        public static bool ObjToBool(this object thisValue)
+        {
+            bool reval = false;
+            if (thisValue != null && thisValue != DBNull.Value && bool.TryParse(thisValue.ToString(), out reval))
+            {
+                return reval;
+            }
+            return reval;
+        }
     }
 }

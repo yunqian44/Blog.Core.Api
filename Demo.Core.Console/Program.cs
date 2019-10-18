@@ -11,9 +11,9 @@ namespace Demo.Core.ConsoleDemo
         static void Main(string[] args)
         {
 
-            var conf = new ConfigurationBuilder()
-                .AddJsonFile("appsettings.json")
-                .Build();
+            //var conf = new ConfigurationBuilder()
+            //    .AddJsonFile("appsettings.json")
+            //    .Build();
 
 
             //string key = "123";

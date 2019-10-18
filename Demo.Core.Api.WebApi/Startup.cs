@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Demo.Core.Api.Core.Helper;
 using Demo.Core.Api.Data;
+using Demo.Core.Api.Model.Seed;
 using Demo.Core.Api.WebApi.App_Start;
 using Demo.Core.Api.WebApi.AuthHelper.OverWrite;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -51,7 +52,11 @@ namespace Demo.Core.Api.WebApi
                 //options.OutputFormatters.Add(new XmlDataContractSerializerOutputFormatter());
             }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
+            #region 初始化DB
+            services.AddScoped<DBSeed>();
+            services.AddScoped<MyContext>();
 
+            #endregion
             // Register the Swagger generator, defining 1 or more Swagger documents
             #region Swagger
             services.AddSwaggerGen(c =>
@@ -100,6 +105,12 @@ namespace Demo.Core.Api.WebApi
             #region Authorize 权限认证
 
             #region 参数
+            services.AddAuthorization(option =>
+            {
+                option.AddPolicy("Admin", policy => policy.RequireRole("Admin").Build());
+            });
+
+
             //读取配置文件
             var audienceConfig = Configuration.GetSection("Audience");
             var symmetricKeyAsBase64 = audienceConfig["Secret"];

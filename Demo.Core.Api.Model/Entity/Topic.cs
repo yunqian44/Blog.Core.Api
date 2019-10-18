@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SqlSugar;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -9,6 +10,7 @@ namespace Demo.Core.Api.Model.Entity
     /// </summary>
     public class Topic
     {
+        [SugarColumn(IsNullable = false, IsPrimaryKey = true, IsIdentity = true)]
         public int Id { get; set; }
 
         public string Logo { get; set; }
@@ -32,7 +34,8 @@ namespace Demo.Core.Api.Model.Entity
         public DateTime Createtime { get; set; } = DateTime.Now;
 
         public DateTime Modifytime { get; set; } = DateTime.Now;
-
+        
+        [SugarColumn(IsIgnore = true)]
         public virtual IEnumerable<TopicDetail> TopicDetail { get; set; } = new List<TopicDetail>();
     }
 }

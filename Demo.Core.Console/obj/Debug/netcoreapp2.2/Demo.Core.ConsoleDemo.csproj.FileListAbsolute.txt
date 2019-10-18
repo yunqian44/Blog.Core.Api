@@ -41,3 +41,7 @@ E:\persion\Blog\Demo.Core.Console\obj\Debug\netcoreapp2.2\Demo.Core.ConsoleDemo.
 E:\persion\Blog\Demo.Core.Console\obj\Debug\netcoreapp2.2\Demo.Core.ConsoleDemo.csproj.CopyComplete
 E:\persion\Blog\Demo.Core.Console\obj\Debug\netcoreapp2.2\Demo.Core.ConsoleDemo.dll
 E:\persion\Blog\Demo.Core.Console\obj\Debug\netcoreapp2.2\Demo.Core.ConsoleDemo.pdb
+E:\persion\Blog\Demo.Core.Console\bin\Debug\netcoreapp2.2\Demo.Core.Api.Core.dll
+E:\persion\Blog\Demo.Core.Console\bin\Debug\netcoreapp2.2\Demo.Core.Api.Model.dll
+E:\persion\Blog\Demo.Core.Console\bin\Debug\netcoreapp2.2\Demo.Core.Api.Model.pdb
+E:\persion\Blog\Demo.Core.Console\bin\Debug\netcoreapp2.2\Demo.Core.Api.Core.pdb

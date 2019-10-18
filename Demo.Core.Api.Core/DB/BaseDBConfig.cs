@@ -33,7 +33,7 @@ namespace Demo.Core.Api.Core.DB
             }
             else
             {
-                return "server=.;uid=sa;pwd=sa;database=WMBlogDB";
+                return "server=127.0.0.1;uid=root;pwd=qwer1234!;database=BlogDB;Character Set=utf8";
             }
 
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SqlSugar;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -9,6 +10,7 @@ namespace Demo.Core.Api.Model.Entity
     /// </summary>
     public class Guestbook
     {
+        [SugarColumn(IsNullable = false, IsPrimaryKey = true, IsIdentity = true)]
         public int Id { get; set; }
 
         /// <summary>
@@ -19,7 +21,7 @@ namespace Demo.Core.Api.Model.Entity
         /// <summary>
         /// 创建时间
         /// </summary>
-        public DateTime CreateDate { get; set; }
+        public DateTime CreateTime { get; set; }
 
         /// <summary>
         /// 联系人姓名
@@ -49,11 +51,12 @@ namespace Demo.Core.Api.Model.Entity
         /// <summary>
         /// 是否显示在前台,0否1是
         /// </summary>
-        public bool Isshow { get; set; }
+        public bool IsShow { get; set; }
 
         /// <summary>
         /// 博客文章
         /// </summary>
-        public BlogArticle BlogArticle { get; set; }
+        [SugarColumn(IsIgnore = true)]
+        public virtual BlogArticle BlogArticle { get; set; }
     }
 }

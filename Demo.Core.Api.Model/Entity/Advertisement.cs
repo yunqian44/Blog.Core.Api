@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SqlSugar;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,10 +7,8 @@ namespace Demo.Core.Api.Model.Entity
 {
     public class Advertisement
     {
-        /// <summary>
-        /// 主键Id
-        /// </summary>
-        public int Id { get; set; } = 0;
+        [SugarColumn(IsNullable = false, IsPrimaryKey = true, IsIdentity = true)]
+        public int Id { get; set; }
 
         /// <summary>
         /// 广告图片

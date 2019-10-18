@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SqlSugar;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -9,9 +10,7 @@ namespace Demo.Core.Api.Model.Entity
     /// </summary>
     public class BlogArticle
     {
-        /// <summary>
-        /// 主键
-        /// </summary>
+        [SugarColumn(IsNullable = false, IsPrimaryKey = true, IsIdentity = true)]
         public int Id { get; set; }
 
         /// <summary>
@@ -47,12 +46,12 @@ namespace Demo.Core.Api.Model.Entity
         /// <summary> 
         /// 修改时间
         /// </summary>
-        public DateTime ModifyTime { get; set; }
+        public DateTime ModifyTime { get; set; } = DateTime.Now;
 
         /// <summary>
         /// 创建时间
         /// </summary>
-        public System.DateTime CreateTime { get; set; }
+        public DateTime CreateTime { get; set; } = DateTime.Now;
         /// <summary>
         /// 备注
         /// </summary>

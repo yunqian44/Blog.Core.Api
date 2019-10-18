@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SqlSugar;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -9,9 +10,7 @@ namespace Demo.Core.Api.Model.Entity
     /// </summary>
     public class OperateLog
     {
-        /// <summary>
-        /// 
-        /// </summary>
+        [SugarColumn(IsNullable = false, IsPrimaryKey = true, IsIdentity = true)]
         public int Id { get; set; }
 
         /// <summary>
@@ -59,6 +58,7 @@ namespace Demo.Core.Api.Model.Entity
         /// </summary>
         public int UserId { get; set; }
 
+        [SugarColumn(IsIgnore = true)]
         public virtual UserModel User { get; set; }
     }
 }

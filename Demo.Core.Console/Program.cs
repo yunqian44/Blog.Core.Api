@@ -1,4 +1,5 @@
 ﻿using Demo.Core.Api.Data;
+using Demo.Core.Api.Model.Seed;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using System;
@@ -11,6 +12,11 @@ namespace Demo.Core.ConsoleDemo
         static void Main(string[] args)
         {
 
+            var myContext = new MyContext();
+            DBSeed.SeedAsync(myContext).Wait();
+
+
+            #region Redis
             //var conf = new ConfigurationBuilder()
             //    .AddJsonFile("appsettings.json")
             //    .Build();
@@ -25,7 +31,9 @@ namespace Demo.Core.ConsoleDemo
             //    var redis = RedisFactory.GetRedisClient(key);
             //    redis.StringSet(key, json);
 
-            //}
+            //} 
+            #endregion
+
             Console.ReadKey();
         }
     }

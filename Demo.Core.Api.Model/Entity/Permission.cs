@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SqlSugar;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -9,6 +10,7 @@ namespace Demo.Core.Api.Model.Entity
     /// </summary>
     public class Permission
     {
+        [SugarColumn(IsNullable = false, IsPrimaryKey = true, IsIdentity = true)]
         public int Id { get; set; }
 
         /// <summary>
@@ -104,11 +106,14 @@ namespace Demo.Core.Api.Model.Entity
         ///获取或设置是否禁用，逻辑上的删除，非物理删除
         /// </summary>
         public bool? IsDeleted { get; set; }
-
-        public List<int> PidArr { get; set; }
-
-        public List<string> PnameArr { get; set; } = new List<string>();
-
-        public List<string> PCodeArr { get; set; } = new List<string>();
+        
+        [SugarColumn(IsIgnore = true)]
+        public virtual List<int> PidArr { get; set; } = new List<int>();
+        
+        [SugarColumn(IsIgnore = true)]
+        public virtual List<string> PnameArr { get; set; } = new List<string>();
+        
+        [SugarColumn(IsIgnore = true)]
+        public virtual List<string> PCodeArr { get; set; } = new List<string>();
     }
 }

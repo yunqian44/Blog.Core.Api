@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SqlSugar;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -9,6 +10,7 @@ namespace Demo.Core.Api.Model.Entity
     /// </summary>
     public class TopicDetail 
     {
+        [SugarColumn(IsNullable = false, IsPrimaryKey = true, IsIdentity = true)]
         public int Id { get; set; }
 
         public int TopicId { get; set; }
@@ -39,6 +41,7 @@ namespace Demo.Core.Api.Model.Entity
 
         public string Author { get; set; }
 
+        [SugarColumn(IsIgnore = true)]
         public virtual Topic Topic { get; set; }
     }
 }

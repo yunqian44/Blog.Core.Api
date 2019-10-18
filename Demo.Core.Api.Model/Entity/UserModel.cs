@@ -1,5 +1,6 @@
 ﻿using System;
 using Demo.Core.Api.Model.Enum;
+using SqlSugar;
 
 namespace Demo.Core.Api.Model.Entity
 {
@@ -13,6 +14,7 @@ namespace Demo.Core.Api.Model.Entity
             
         }
 
+        [SugarColumn(IsNullable = false, IsPrimaryKey = true, IsIdentity = true)]
         public long Id { get; set; }
 
         public string LoginName { get; set; }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SqlSugar;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,6 +7,7 @@ namespace Demo.Core.Api.Model.Entity
 {
     public class RoleModulePermission
     {
+        [SugarColumn(IsNullable = false, IsPrimaryKey = true, IsIdentity = true)]
         public int Id { get; set; }
 
         /// <summary>
@@ -59,10 +61,11 @@ namespace Demo.Core.Api.Model.Entity
         public DateTime? ModifyTime { get; set; } = DateTime.Now;
 
         // 下边三个实体参数，只是做传参作用，所以忽略下
-        public Role Role { get; set; }
-
-        public Module Module { get; set; }
-
-        public Permission Permission { get; set; }
+        [SugarColumn(IsIgnore = true)]
+        public virtual Role Role { get; set; }
+        [SugarColumn(IsIgnore = true)]
+        public virtual Module Module { get; set; }
+        [SugarColumn(IsIgnore = true)]
+        public virtual Permission Permission { get; set; }
     }
 }

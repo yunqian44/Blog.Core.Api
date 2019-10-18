@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Demo.Core.Api.Data\Demo.Core.Api.Data.csproj" />
+    <ProjectReference Include="..\Demo.Core.Api.Model\Demo.Core.Api.Model.csproj" />
   </ItemGroup>
 
 </Project>

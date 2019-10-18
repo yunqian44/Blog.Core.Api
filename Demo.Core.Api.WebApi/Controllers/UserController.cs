@@ -22,7 +22,6 @@ namespace Demo.Core.Api.WebApi.Controllers
     /// 用户管理Api
     /// </summary>
     [Route("api/[controller]")]
-    [Authorize(Roles ="Admin")]
     [ApiController]
     public class UserController : ControllerBase
     {
@@ -35,6 +34,7 @@ namespace Demo.Core.Api.WebApi.Controllers
         /// <param name="reqQuery">筛选条件</param>
         /// <returns></returns>
         [HttpGet]
+        [Authorize]//无状态授权
         public HttpResult Get([FromQuery]UserReqQuery reqQuery)
         {
             var redis = RedisFactory.GetRedisClient(userkey);
@@ -79,6 +79,7 @@ namespace Demo.Core.Api.WebApi.Controllers
         /// <param name="id">主键Id</param>
         /// <returns></returns>
         [HttpGet("{id}")]
+        [Authorize(Roles = "Admin")]//有角色授权
         public HttpResult Get(long id)
         {
             var redis = RedisFactory.GetRedisClient(userkey);

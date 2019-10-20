@@ -44,3 +44,8 @@
 
 Demo.Core.Console/bin/
 Demo.Core.Console/obj/
+/Demo.Core.Api.Core/obj/Debug/netstandard2.0/
+/Demo.Core.Api.Data/obj/Debug/netstandard2.0/
+/Demo.Core.Api.Model/obj/Debug/netstandard2.0/
+/Demo.Core.Api.WebApi/obj/Debug/netcoreapp2.2/
+/Demo.Core.Console/obj/Debug/netcoreapp2.2/

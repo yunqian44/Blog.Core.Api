@@ -6,6 +6,9 @@
         <NoWarn>$(NoWarn);1591</NoWarn>
     </PropertyGroup>
     <ItemGroup>
+        <PackageReference Include="Autofac" Version="4.9.4" />
+        <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="5.0.1" />
+        <PackageReference Include="Autofac.Extras.DynamicProxy" Version="4.5.0" />
         <PackageReference Include="Microsoft.AspNetCore.App" />
         <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
         <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
@@ -16,6 +19,5 @@
         <ProjectReference Include="..\Demo.Core.Api.IService\Demo.Core.Api.IService.csproj" />
         <ProjectReference Include="..\Demo.Core.Api.Model\Demo.Core.Api.Model.csproj" />
         <ProjectReference Include="..\Demo.Core.Api.Core\Demo.Core.Api.Core.csproj" />
-        <ProjectReference Include="..\Demo.Core.Api.Service\Demo.Core.Api.Service.csproj" />
     </ItemGroup>
 </Project>

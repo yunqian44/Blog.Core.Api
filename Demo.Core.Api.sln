@@ -15,13 +15,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.Core.Api.Model", "Demo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.Core.Api.Core", "Demo.Core.Api.Core\Demo.Core.Api.Core.csproj", "{FC7909D8-1739-46D9-8450-EF5877E3A443}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Core.Api.IRepository", "Demo.Core.Api.IRepository\Demo.Core.Api.IRepository.csproj", "{59C4CADE-1B50-4F08-BDEA-24B976B9A040}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.Core.Api.IRepository", "Demo.Core.Api.IRepository\Demo.Core.Api.IRepository.csproj", "{59C4CADE-1B50-4F08-BDEA-24B976B9A040}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Core.Api.Repository", "Demo.Core.Api.Repository\Demo.Core.Api.Repository.csproj", "{9F977668-ABD2-4A10-8E90-C36755E4BB49}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.Core.Api.Repository", "Demo.Core.Api.Repository\Demo.Core.Api.Repository.csproj", "{9F977668-ABD2-4A10-8E90-C36755E4BB49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Core.Api.IService", "Demo.Core.Api.IService\Demo.Core.Api.IService.csproj", "{9CD3690D-EF33-438D-9E44-9350E9DF3C56}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.Core.Api.IService", "Demo.Core.Api.IService\Demo.Core.Api.IService.csproj", "{9CD3690D-EF33-438D-9E44-9350E9DF3C56}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Core.Api.Service", "Demo.Core.Api.Service\Demo.Core.Api.Service.csproj", "{E9D9F2D8-FA2E-4004-B81F-B0B55011E6C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.Core.Api.Service", "Demo.Core.Api.Service\Demo.Core.Api.Service.csproj", "{E9D9F2D8-FA2E-4004-B81F-B0B55011E6C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -5,8 +5,12 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
+using Autofac.Extras.DynamicProxy;
 using Demo.Core.Api.Core.Helper;
 using Demo.Core.Api.Data;
+using Demo.Core.Api.IService;
 using Demo.Core.Api.Model.Seed;
 using Demo.Core.Api.WebApi.App_Start;
 using Demo.Core.Api.WebApi.AuthHelper.OverWrite;
@@ -41,7 +45,7 @@ namespace Demo.Core.Api.WebApi
         private const string ApiName = "Blog.Core";
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
+        public IServiceProvider ConfigureServices(IServiceCollection services)
         {
 
             services.AddMvc(options =>
@@ -58,6 +62,7 @@ namespace Demo.Core.Api.WebApi
 
             #endregion
             // Register the Swagger generator, defining 1 or more Swagger documents
+
             #region Swagger
             services.AddSwaggerGen(c =>
                {
@@ -82,8 +87,6 @@ namespace Demo.Core.Api.WebApi
                    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                    c.IncludeXmlComments(xmlPath, true);//默认的第二个参数是false，这个是controller的注释，记得修改 
                    #endregion
-
-
 
                    #region Token绑定到ConfigureServices
                    //添加header验证信息
@@ -149,6 +152,93 @@ namespace Demo.Core.Api.WebApi
 
             services.AddSingleton(new Appsettings(Env.ContentRootPath));
             services.AddSingleton(new RedisConfigInfo(Env.ContentRootPath));
+
+            #region AutoFac DI
+
+            var basePath = Microsoft.DotNet.PlatformAbstractions.ApplicationEnvironment.ApplicationBasePath;
+
+            //实例化 AutoFac  容器   
+            var builder = new ContainerBuilder();
+
+            //注册要通过反射创建的组件
+
+            //builder.RegisterType<AdvertisementService>().As<IAdvertisementService>();
+            //builder.RegisterType<BlogCacheAOP>();//可以直接替换其他拦截器
+            //builder.RegisterType<BlogRedisCacheAOP>();//可以直接替换其他拦截器
+            //builder.RegisterType<BlogLogAOP>();//这样可以注入第二个
+
+            // ※※★※※ 如果你是第一次下载项目，请先F6编译，然后再F5执行，※※★※※
+
+            #region 带有接口层的服务注入
+
+            #region Service.dll 注入，有对应接口
+            //获取项目绝对路径，请注意，这个是实现类的dll文件，不是接口 IService.dll ，注入容器当然是Activatore
+            try
+            {
+                var servicesDllFile = Path.Combine(basePath, "Demo.Core.Api.Service.dll");
+                var assemblysServices = Assembly.LoadFrom(servicesDllFile);//直接采用加载文件的方法  ※※★※※ 如果你是第一次下载项目，请先F6编译，然后再F5执行，※※★※※
+
+                //builder.RegisterAssemblyTypes(assemblysServices).AsImplementedInterfaces();//指定已扫描程序集中的类型注册为提供所有其实现的接口。
+
+
+                //// AOP 开关，如果想要打开指定的功能，只需要在 appsettigns.json 对应对应 true 就行。
+                //var cacheType = new List<Type>();
+                //if (Appsettings.app(new string[] { "AppSettings", "RedisCachingAOP", "Enabled" }).ObjToBool())
+                //{
+                //    cacheType.Add(typeof(BlogRedisCacheAOP));
+                //}
+                //if (Appsettings.app(new string[] { "AppSettings", "MemoryCachingAOP", "Enabled" }).ObjToBool())
+                //{
+                //    cacheType.Add(typeof(BlogCacheAOP));
+                //}
+                //if (Appsettings.app(new string[] { "AppSettings", "LogAOP", "Enabled" }).ObjToBool())
+                //{
+                //    cacheType.Add(typeof(BlogLogAOP));
+                //}
+
+                builder.RegisterAssemblyTypes(assemblysServices)
+                          .AsImplementedInterfaces()
+                          .InstancePerLifetimeScope()
+                          .EnableInterfaceInterceptors();
+                //引用Autofac.Extras.DynamicProxy;
+                // 如果你想注入两个，就这么写  InterceptedBy(typeof(BlogCacheAOP), typeof(BlogLogAOP));
+                // 如果想使用Redis缓存，请必须开启 redis 服务，端口号我的是6319，如果不一样还是无效，否则请使用memory缓存 BlogCacheAOP
+                //.InterceptedBy(cacheType.ToArray());//允许将拦截器服务的列表分配给注册。 
+                #endregion
+
+                #region Repository.dll 注入，有对应接口
+                var repositoryDllFile = Path.Combine(basePath, "Demo.Core.Api.Repository.dll");
+                var assemblysRepository = Assembly.LoadFrom(repositoryDllFile);
+                builder.RegisterAssemblyTypes(assemblysRepository).AsImplementedInterfaces();
+                #endregion
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("※※★※※ 如果你是第一次下载项目，请先对整个解决方案dotnet build（F6编译），然后再对api层 dotnet run（F5执行），\n因为解耦了，如果你是发布的模式，请检查bin文件夹是否存在Repository.dll和service.dll ※※★※※" + ex.Message + "\n" + ex.InnerException);
+            }
+           
+            #endregion
+
+
+            #region 没有接口层的服务层注入
+
+            ////因为没有接口层，所以不能实现解耦，只能用 Load 方法。
+            ////注意如果使用没有接口的服务，并想对其使用 AOP 拦截，就必须设置为虚方法
+            ////var assemblysServicesNoInterfaces = Assembly.Load("Blog.Core.Services");
+            ////builder.RegisterAssemblyTypes(assemblysServicesNoInterfaces);
+
+            #endregion
+
+            //将services填充到Autofac容器生成器中
+            builder.Populate(services);
+
+            //使用已进行的组件登记创建新容器
+            var ApplicationContainer = builder.Build();
+
+            #endregion
+
+            return new AutofacServiceProvider(ApplicationContainer);//第三方IOC接管 core内置DI容器
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

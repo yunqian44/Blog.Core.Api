@@ -5,7 +5,7 @@ using System;
 namespace Demo.Core.Api.IRepository
 {
     public interface IAdvertisementRepository:
-        IBaseServices<Advertisement>
+        IBaseRepository<Advertisement>
     {
         int Sum(int i, int j);
     }

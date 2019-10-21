@@ -1,0 +1,10 @@
+--------------------------------
+2019/10/21 18:36:09|
+【当前执行方法】：getBlogs 
+【携带的参数有】：  
+【执行完成结果】：System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[Demo.Core.Api.Model.Entity.BlogArticle]]
+--------------------------------
+2019/10/21 18:37:49|
+【当前执行方法】：getBlogs 
+【携带的参数有】：  
+【执行完成结果】：System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[Demo.Core.Api.Model.Entity.BlogArticle]]

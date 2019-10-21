@@ -95,7 +95,11 @@
         },
         "frameworks": {
           "netstandard2.0": {
-            "projectReferences": {}
+            "projectReferences": {
+              "E:\\persion\\Blog\\Demo.Core.Api.Core\\Demo.Core.Api.Core.csproj": {
+                "projectPath": "E:\\persion\\Blog\\Demo.Core.Api.Core\\Demo.Core.Api.Core.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -114,6 +118,10 @@
             "Microsoft.AspNetCore": {
               "target": "Package",
               "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.SignalR.Core": {
+              "target": "Package",
+              "version": "[1.1.0, )"
             },
             "Microsoft.Extensions.Caching.Abstractions": {
               "target": "Package",
@@ -140,6 +148,10 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "log4net": {
+              "target": "Package",
+              "version": "[2.0.8, )"
             }
           },
           "imports": [

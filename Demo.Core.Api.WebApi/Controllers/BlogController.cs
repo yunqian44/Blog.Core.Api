@@ -17,13 +17,29 @@ namespace Demo.Core.Api.WebApi.Controllers
     {
         readonly IAdvertisementService _advertisementService;
 
+        readonly IBlogArticleService _blogArticleService;
+
         /// <summary>
         /// 构造函数
         /// </summary>
         /// <param name="advertisementService"></param>
-        public BlogController(IAdvertisementService advertisementService)
+        /// <param name="blogArticleService"></param>
+        public BlogController(IAdvertisementService advertisementService,
+            IBlogArticleService blogArticleService)
         {
             _advertisementService = advertisementService;
+            _blogArticleService = blogArticleService;
+        }
+
+        /// <summary>
+        /// 获取博客列表
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("GetBlogs")]
+        public async Task<List<BlogArticle>> GetBlogs()
+        {
+            return await _blogArticleService.getBlogs();
         }
 
 

@@ -10,8 +10,12 @@ using Autofac.Extensions.DependencyInjection;
 using Autofac.Extras.DynamicProxy;
 using Demo.Core.Api.Core.Helper;
 using Demo.Core.Api.Data;
+using Demo.Core.Api.Data.Hubs;
+using Demo.Core.Api.Data.LogHelper;
+using Demo.Core.Api.Data.MemoryCache;
 using Demo.Core.Api.IService;
 using Demo.Core.Api.Model.Seed;
+using Demo.Core.Api.WebApi.AOP;
 using Demo.Core.Api.WebApi.App_Start;
 using Demo.Core.Api.WebApi.AuthHelper.OverWrite;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -55,13 +59,19 @@ namespace Demo.Core.Api.WebApi
                 //返回xml格式 asp.net core 默认提供的是json格式
                 //options.OutputFormatters.Add(new XmlDataContractSerializerOutputFormatter());
             }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            
+            // log日志注入
+            services.AddSingleton<ILoggerHelper, LogHelper>();
+
+            // 缓存注入
+            services.AddScoped<ICaching, MemoryCaching>();
 
             #region 初始化DB
             services.AddScoped<DBSeed>();
             services.AddScoped<MyContext>();
 
             #endregion
-            // Register the Swagger generator, defining 1 or more Swagger documents
+
 
             #region Swagger
             services.AddSwaggerGen(c =>
@@ -103,6 +113,10 @@ namespace Demo.Core.Api.WebApi
                    });
                    #endregion
                });
+            #endregion
+
+            #region SignalR 通讯
+            services.AddSignalR();
             #endregion
 
             #region Authorize 权限认证
@@ -163,9 +177,9 @@ namespace Demo.Core.Api.WebApi
             //注册要通过反射创建的组件
 
             //builder.RegisterType<AdvertisementService>().As<IAdvertisementService>();
-            //builder.RegisterType<BlogCacheAOP>();//可以直接替换其他拦截器
+            builder.RegisterType<BlogCacheAOP>();//可以直接替换其他拦截器
             //builder.RegisterType<BlogRedisCacheAOP>();//可以直接替换其他拦截器
-            //builder.RegisterType<BlogLogAOP>();//这样可以注入第二个
+            builder.RegisterType<BlogLogAOP>();//这样可以注入第二个
 
             // ※※★※※ 如果你是第一次下载项目，请先F6编译，然后再F5执行，※※★※※
 
@@ -199,7 +213,8 @@ namespace Demo.Core.Api.WebApi
                 builder.RegisterAssemblyTypes(assemblysServices)
                           .AsImplementedInterfaces()
                           .InstancePerLifetimeScope()
-                          .EnableInterfaceInterceptors();
+                          .EnableInterfaceInterceptors()
+                          .InterceptedBy(typeof(BlogLogAOP));
                 //引用Autofac.Extras.DynamicProxy;
                 // 如果你想注入两个，就这么写  InterceptedBy(typeof(BlogCacheAOP), typeof(BlogLogAOP));
                 // 如果想使用Redis缓存，请必须开启 redis 服务，端口号我的是6319，如果不一样还是无效，否则请使用memory缓存 BlogCacheAOP

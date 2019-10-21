@@ -32,5 +32,16 @@ namespace Demo.Core.Api.Core.Extension
             }
             return reval;
         }
+
+        public static DateTime ObjToDate(this object thisValue)
+        {
+            DateTime reval = DateTime.MinValue;
+            if (thisValue != null && thisValue != DBNull.Value && DateTime.TryParse(thisValue.ToString(), out reval))
+            {
+                reval = Convert.ToDateTime(thisValue);
+            }
+            return reval;
+        }
+
     }
 }

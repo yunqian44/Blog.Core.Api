@@ -44,88 +44,6 @@ D:\persion\Core\Demo.Core.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.
 D:\persion\Core\Demo.Core.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Model.dll
 D:\persion\Core\Demo.Core.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Model.pdb
 D:\persion\Core\Demo.Core.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Core.pdb
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api --configuration release\web.config
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web.config
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\web.config
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web.config
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\web.config
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web.config
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\web.config
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web.config
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\web.config
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web.config
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\web.config
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\appsettings.Development.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\appsettings.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api --configuration release\appsettings.Development.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api --configuration release\appsettings.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api --configuration release\Demo.Core.Api.WebApi.deps.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api --configuration release\Demo.Core.Api.WebApi.runtimeconfig.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\appsettings.Development.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\appsettings.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\Demo.Core.Api.WebApi.deps.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\Demo.Core.Api.WebApi.runtimeconfig.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\appsettings.Development.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\appsettings.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\Demo.Core.Api.WebApi.deps.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\Demo.Core.Api.WebApi.runtimeconfig.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\appsettings.Development.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\appsettings.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\Demo.Core.Api.WebApi.deps.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\Demo.Core.Api.WebApi.runtimeconfig.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\appsettings.Development.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\appsettings.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\Demo.Core.Api.WebApi.deps.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\Demo.Core.Api.WebApi.runtimeconfig.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\appsettings.Development.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\appsettings.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\Demo.Core.Api.WebApi.deps.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\Demo.Core.Api.WebApi.runtimeconfig.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\appsettings.Development.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\appsettings.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\Demo.Core.Api.WebApi.deps.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\Demo.Core.Api.WebApi.runtimeconfig.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\appsettings.Development.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\appsettings.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\Demo.Core.Api.WebApi.deps.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\Demo.Core.Api.WebApi.runtimeconfig.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\appsettings.Development.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\appsettings.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\Demo.Core.Api.WebApi.deps.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\Demo.Core.Api.WebApi.runtimeconfig.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\appsettings.Development.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\appsettings.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\Demo.Core.Api.WebApi.deps.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\Demo.Core.Api.WebApi.runtimeconfig.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\appsettings.Development.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\appsettings.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\Demo.Core.Api.WebApi.deps.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\Demo.Core.Api.WebApi.runtimeconfig.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.deps.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.runtimeconfig.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.runtimeconfig.dev.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.dll
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.pdb
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.xml
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Core.dll
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Data.dll
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.IService.dll
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Model.dll
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Data.pdb
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.IService.pdb
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Model.pdb
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Core.pdb
-E:\persion\Blog\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.csprojAssemblyReference.cache
-E:\persion\Blog\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.RazorAssemblyInfo.cache
-E:\persion\Blog\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.RazorAssemblyInfo.cs
-E:\persion\Blog\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.AssemblyInfoInputs.cache
-E:\persion\Blog\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.AssemblyInfo.cs
-E:\persion\Blog\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.RazorTargetAssemblyInfo.cache
-E:\persion\Blog\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.csproj.CopyComplete
-E:\persion\Blog\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.dll
-E:\persion\Blog\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.xml
-E:\persion\Blog\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.pdb
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api --configuration release\web.config
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web.config
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\web.config
@@ -214,3 +132,85 @@ E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Cor
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.dll
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.xml
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.pdb
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api --configuration release\web.config
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web.config
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\web.config
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web.config
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\web.config
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web.config
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\web.config
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web.config
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\web.config
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web.config
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\web.config
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\appsettings.Development.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\appsettings.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api --configuration release\appsettings.Development.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api --configuration release\appsettings.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api --configuration release\Demo.Core.Api.WebApi.deps.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api --configuration release\Demo.Core.Api.WebApi.runtimeconfig.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\appsettings.Development.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\appsettings.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\Demo.Core.Api.WebApi.deps.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\Demo.Core.Api.WebApi.runtimeconfig.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\appsettings.Development.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\appsettings.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\Demo.Core.Api.WebApi.deps.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\Demo.Core.Api.WebApi.runtimeconfig.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\appsettings.Development.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\appsettings.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\Demo.Core.Api.WebApi.deps.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\Demo.Core.Api.WebApi.runtimeconfig.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\appsettings.Development.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\appsettings.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\Demo.Core.Api.WebApi.deps.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\Demo.Core.Api.WebApi.runtimeconfig.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\appsettings.Development.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\appsettings.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\Demo.Core.Api.WebApi.deps.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\Demo.Core.Api.WebApi.runtimeconfig.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\appsettings.Development.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\appsettings.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\Demo.Core.Api.WebApi.deps.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\Demo.Core.Api.WebApi.runtimeconfig.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\appsettings.Development.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\appsettings.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\Demo.Core.Api.WebApi.deps.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\Demo.Core.Api.WebApi.runtimeconfig.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\appsettings.Development.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\appsettings.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\Demo.Core.Api.WebApi.deps.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\Demo.Core.Api.WebApi.runtimeconfig.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\appsettings.Development.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\appsettings.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\Demo.Core.Api.WebApi.deps.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\Demo.Core.Api.WebApi.runtimeconfig.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\appsettings.Development.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\appsettings.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\Demo.Core.Api.WebApi.deps.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api\web\Demo.Core.Api --configuration release\Demo.Core.Api.WebApi.runtimeconfig.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.deps.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.runtimeconfig.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.runtimeconfig.dev.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.dll
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.pdb
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.xml
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Core.dll
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Data.dll
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.IService.dll
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Model.dll
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Data.pdb
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.IService.pdb
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Model.pdb
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Core.pdb
+E:\persion\Blog\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.csprojAssemblyReference.cache
+E:\persion\Blog\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.RazorAssemblyInfo.cache
+E:\persion\Blog\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.RazorAssemblyInfo.cs
+E:\persion\Blog\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.AssemblyInfoInputs.cache
+E:\persion\Blog\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.AssemblyInfo.cs
+E:\persion\Blog\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.RazorTargetAssemblyInfo.cache
+E:\persion\Blog\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.csproj.CopyComplete
+E:\persion\Blog\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.dll
+E:\persion\Blog\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.xml
+E:\persion\Blog\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.pdb

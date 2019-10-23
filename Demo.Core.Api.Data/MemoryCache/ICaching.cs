@@ -12,5 +12,13 @@ namespace Demo.Core.Api.Data.MemoryCache
         object Get(string cacheKey);
 
         void Set(string cacheKey, object cacheValue);
+
+        /// <summary>
+        /// 设置缓存
+        /// </summary>
+        /// <param name="cacheKey">键</param>
+        /// <param name="cacheValue">值</param>
+        /// <param name="overTime">过期时间（毫秒）/param>
+        void Set(string cacheKey, object cacheValue, TimeSpan cacheTime);
     }
 }

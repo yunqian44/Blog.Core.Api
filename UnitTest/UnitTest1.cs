@@ -16,8 +16,8 @@ namespace UnitTest
                 var msg = new { Name = "你好" + i, Status = 1, Gender = 0, Image = "http://localhost:7779/Image/driver.png", Remark = "我是测试的redis", IdCard = 610124199303083650, Title = "测试" };
 
                 string json = JsonConvert.SerializeObject(msg);
-                var redis= RedisFactory.GetRedisClient(key);
-                redis.HashSet(key,i,json);
+                //var redis= RedisFactory.GetRedisClient(key);
+                //redis.HashSet(key,i,json);
             }
         }
     }

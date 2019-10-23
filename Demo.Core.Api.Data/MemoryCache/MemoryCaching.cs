@@ -25,7 +25,12 @@ namespace Demo.Core.Api.Data.MemoryCache
 
         public void Set(string cacheKey, object cacheValue)
         {
-            _cache.Set(cacheKey, cacheValue, TimeSpan.FromSeconds(7200));
+            _cache.Set(cacheKey, cacheValue, TimeSpan.FromSeconds(7200));//默认是两个小时
+        }
+
+        public void Set(string cacheKey, object cacheValue, TimeSpan cacheTime)
+        {
+            _cache.Set(cacheKey, cacheValue, cacheTime);
         }
     }
 }

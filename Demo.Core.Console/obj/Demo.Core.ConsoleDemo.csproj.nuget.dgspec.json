@@ -127,10 +127,6 @@
               "target": "Package",
               "version": "[2.2.0, )"
             },
-            "Microsoft.Extensions.Caching.Redis.Core": {
-              "target": "Package",
-              "version": "[1.0.3, )"
-            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[2.2.0, )"
@@ -148,6 +144,10 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "StackExchange.Redis": {
+              "target": "Package",
+              "version": "[2.0.601, )"
             },
             "log4net": {
               "target": "Package",

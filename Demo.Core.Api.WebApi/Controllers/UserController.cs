@@ -81,16 +81,17 @@ namespace Demo.Core.Api.WebApi.Controllers
         [Authorize(Roles = "Admin")]//有角色授权
         public HttpResult Get(long id)
         {
-            var redis = RedisFactory.GetRedisClient(userkey);
-            var redisValue = redis.HashGet(userkey, id);
-            if (!redisValue.IsNull)
-            {
-                return new HttpResult(JsonConvert.DeserializeObject<UserModel>(redisValue));
-            }
-            else
-            {
-                return new HttpResult();
-            }
+            //var redis = RedisFactory.GetRedisClient(userkey);
+            // var redisValue = redis.HashGet(userkey, id);
+            //if (!redisValue.IsNull)
+            //{
+            //    return new HttpResult(JsonConvert.DeserializeObject<UserModel>(redisValue));
+            //}
+            //else
+            //{
+            //    return new HttpResult();
+            //}
+            return null;
         }
         #endregion
 

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Demo.Core.Api.Core.CachingAttribute;
+using Demo.Core.Api.Data;
 using Demo.Core.Api.IService;
 using Demo.Core.Api.Model.Entity;
 using Microsoft.AspNetCore.Authorization;
@@ -16,7 +18,7 @@ namespace Demo.Core.Api.WebApi.Controllers
     public class BlogController : ControllerBase
     {
         readonly IAdvertisementService _advertisementService;
-
+        readonly IRedisCacheManager _redisCacheManager;
         readonly IBlogArticleService _blogArticleService;
 
         /// <summary>
@@ -24,11 +26,14 @@ namespace Demo.Core.Api.WebApi.Controllers
         /// </summary>
         /// <param name="advertisementService"></param>
         /// <param name="blogArticleService"></param>
+        /// <param name="redisCacheManager"></param>
         public BlogController(IAdvertisementService advertisementService,
-            IBlogArticleService blogArticleService)
+            IBlogArticleService blogArticleService,
+            IRedisCacheManager redisCacheManager)
         {
             _advertisementService = advertisementService;
             _blogArticleService = blogArticleService;
+            _redisCacheManager = redisCacheManager;
         }
 
         /// <summary>
@@ -39,7 +44,19 @@ namespace Demo.Core.Api.WebApi.Controllers
         [Route("GetBlogs")]
         public async Task<List<BlogArticle>> GetBlogs()
         {
-            return await _blogArticleService.getBlogs();
+            var blogArticleList = new List<BlogArticle>();
+
+            if (_redisCacheManager.Get<object>("Redis.Blog") != null)
+            {
+                blogArticleList = _redisCacheManager.Get<List<BlogArticle>>("Redis.Blog");
+            }
+            else
+            {
+                blogArticleList = await _blogArticleService.getBlogs();
+                _redisCacheManager.Set("Redis.Blog", blogArticleList, TimeSpan.FromHours(2));//缓存2小时
+            }
+
+            return blogArticleList;
         }
 
 

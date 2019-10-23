@@ -30,6 +30,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Swashbuckle.AspNetCore.Swagger;
+using Demo.Core.Api.Core.Extension;
 
 namespace Demo.Core.Api.WebApi
 {
@@ -165,7 +166,7 @@ namespace Demo.Core.Api.WebApi
             #endregion
 
             services.AddSingleton(new Appsettings(Env.ContentRootPath));
-            services.AddSingleton(new RedisConfigInfo(Env.ContentRootPath));
+            services.AddSingleton<IRedisCacheManager, RedisCacheManager>();
 
             #region AutoFac DI
 
@@ -195,26 +196,26 @@ namespace Demo.Core.Api.WebApi
                 //builder.RegisterAssemblyTypes(assemblysServices).AsImplementedInterfaces();//指定已扫描程序集中的类型注册为提供所有其实现的接口。
 
 
-                //// AOP 开关，如果想要打开指定的功能，只需要在 appsettigns.json 对应对应 true 就行。
-                //var cacheType = new List<Type>();
+                // AOP 开关，如果想要打开指定的功能，只需要在 appsettigns.json 对应对应 true 就行。
+                var cacheType = new List<Type>();
                 //if (Appsettings.app(new string[] { "AppSettings", "RedisCachingAOP", "Enabled" }).ObjToBool())
                 //{
                 //    cacheType.Add(typeof(BlogRedisCacheAOP));
                 //}
-                //if (Appsettings.app(new string[] { "AppSettings", "MemoryCachingAOP", "Enabled" }).ObjToBool())
-                //{
-                //    cacheType.Add(typeof(BlogCacheAOP));
-                //}
-                //if (Appsettings.app(new string[] { "AppSettings", "LogAOP", "Enabled" }).ObjToBool())
-                //{
-                //    cacheType.Add(typeof(BlogLogAOP));
-                //}
+                if (Appsettings.app(new string[] { "AppSettings", "MemoryCachingAOP", "Enabled" }).ObjToBool())
+                {
+                    cacheType.Add(typeof(BlogCacheAOP));
+                }
+                if (Appsettings.app(new string[] { "AppSettings", "LogAOP", "Enabled" }).ObjToBool())
+                {
+                    cacheType.Add(typeof(BlogLogAOP));
+                }
 
                 builder.RegisterAssemblyTypes(assemblysServices)
                           .AsImplementedInterfaces()
                           .InstancePerLifetimeScope()
                           .EnableInterfaceInterceptors()
-                          .InterceptedBy(typeof(BlogLogAOP));
+                          .InterceptedBy(cacheType.ToArray());
                 //引用Autofac.Extras.DynamicProxy;
                 // 如果你想注入两个，就这么写  InterceptedBy(typeof(BlogCacheAOP), typeof(BlogLogAOP));
                 // 如果想使用Redis缓存，请必须开启 redis 服务，端口号我的是6319，如果不一样还是无效，否则请使用memory缓存 BlogCacheAOP

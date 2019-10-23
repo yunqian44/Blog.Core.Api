@@ -24,7 +24,6 @@ namespace Demo.Core.Api.WebApi.AOP
 
         }
 
-
         /// <summary>
         /// 实例化IInterceptor唯一方法 
         /// </summary>

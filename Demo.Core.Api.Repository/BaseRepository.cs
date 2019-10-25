@@ -51,7 +51,6 @@ namespace Demo.Core.Api.Repository
         /// <returns>数据实体</returns>
         public async Task<TEntity> QueryById(object objId, bool blnUseCache = false)
         {
-            //return await Task.Run(() => _db.Queryable<TEntity>().WithCacheIF(blnUseCache).InSingle(objId));
             return await _db.Queryable<TEntity>().WithCacheIF(blnUseCache).In(objId).SingleAsync();
         }
 

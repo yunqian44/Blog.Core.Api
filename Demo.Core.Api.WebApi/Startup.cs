@@ -31,6 +31,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Swashbuckle.AspNetCore.Swagger;
 using Demo.Core.Api.Core.Extension;
+using AutoMapper;
 
 namespace Demo.Core.Api.WebApi
 {
@@ -73,6 +74,39 @@ namespace Demo.Core.Api.WebApi
 
             #endregion
 
+            #region Automapper
+            services.AddAutoMapper(typeof(Startup));//这是AutoMapper的2.0新特性
+            #endregion
+
+            #region CORS
+            //跨域第二种方法，声明策略，记得下边app中配置
+            services.AddCors(c =>
+            {
+                //↓↓↓↓↓↓↓注意正式环境不要使用这种全开放的处理↓↓↓↓↓↓↓↓↓↓
+                //c.AddPolicy("AllRequests", policy =>
+                //{
+                //    policy
+                //    .AllowAnyOrigin()//允许任何源
+                //    .AllowAnyMethod()//允许任何方式
+                //    .AllowAnyHeader()//允许任何头
+                //    .AllowCredentials();//允许cookie
+                //});
+                //↑↑↑↑↑↑↑注意正式环境不要使用这种全开放的处理↑↑↑↑↑↑↑↑↑↑
+
+
+                //一般采用这种方法
+                c.AddPolicy("LimitRequests", policy =>
+                {
+                    policy
+                    .WithOrigins("http://127.0.0.1:1818", "http://localhost:8080", "http://localhost:8021", "http://localhost:8081", "http://localhost:1818")//支持多个域名端口，注意端口号后不要带/斜杆：比如localhost:8000/，是错的
+                    .AllowAnyHeader()//Ensures that the policy allows any header.
+                    .AllowAnyMethod();
+                });
+            });
+
+            //跨域第一种办法，注意下边 Configure 中进行配置 
+            //services.AddCors();
+            #endregion
 
             #region Swagger
             services.AddSwaggerGen(c =>
@@ -292,11 +326,11 @@ namespace Demo.Core.Api.WebApi
             //跨域第一种版本，启用跨域策略  不推荐使用
             //app.UseCors("AllowAllOrigin"); 
 
-            //跨域第一种版本，请要ConfigureService中配置服务 services.AddCors();
+            //跨域第二种版本，请要ConfigureService中配置服务 services.AddCors();
             //    app.UseCors(options => options.WithOrigins("http://localhost:8021").AllowAnyHeader()
             //.AllowAnyMethod()); 
 
-            //跨域第二种方法，使用策略，详细策略信息在ConfigureService中
+            //跨域第三种方法，使用策略，详细策略信息在ConfigureService中
             app.UseCors("LimitRequests");//将 CORS 中间件添加到 web 应用程序管线中, 以允许跨域请求。
             #endregion
 
@@ -307,6 +341,9 @@ namespace Demo.Core.Api.WebApi
 
             //跳转https
             app.UseHttpsRedirection();
+
+            //使用cookie
+            app.UseCookiePolicy();
 
             //返回错误码
             app.UseStatusCodePages();//将错误码返回给前台，比如404 

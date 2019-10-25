@@ -77,7 +77,7 @@ namespace Demo.Core.Api.Model.ViewModel
         /// <summary> 
         /// 修改时间
         /// </summary>
-        public DateTime MotifyTime { get; set; }
+        public DateTime ModifyTime { get; set; }
 
 
         /// <summary>

@@ -14,7 +14,7 @@ namespace Demo.Core.Api.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(Policy ="Admin")]
+    [Authorize(Policy = "Admin")]
     public class BlogController : ControllerBase
     {
         readonly IAdvertisementService _advertisementService;
@@ -68,17 +68,21 @@ namespace Demo.Core.Api.WebApi.Controllers
         /// <param name="j">参数j</param>
         /// <returns></returns>
         [HttpGet]
-        public int Get(int i,int j)
+        public int Get(int i, int j)
         {
             return _advertisementService.Sum(i, j);
         }
 
         // GET: api/Blog/5
+
         [HttpGet("{id}", Name = "Get")]
-        public async Task<List<Advertisement>> Get(int id)
+        public async Task<object> Get(int id)
         {
-            return await _advertisementService.Query(d => d.Id == id);
+            var model = await _blogArticleService.getBlogDetails(id);//调用该方法
+            var data = new { success = true, data = model };
+            return data;
         }
+
 
         // POST: api/Blog
         [HttpPost]

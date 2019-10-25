@@ -1,0 +1,1200 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Demo.Core.Api.Model</name>
+    </assembly>
+    <members>
+        <member name="P:Demo.Core.Api.Model.Entity.Advertisement.ImgUrl">
+            <summary>
+            广告图片
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Advertisement.Title">
+            <summary>
+            广告标题
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Advertisement.Url">
+            <summary>
+            广告链接
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Advertisement.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Advertisement.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:Demo.Core.Api.Model.Entity.BlogArticle">
+            <summary>
+            博客文章
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.BlogArticle.Submitter">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.BlogArticle.Title">
+            <summary>
+            标题blog
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.BlogArticle.Category">
+            <summary>
+            类别
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.BlogArticle.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.BlogArticle.Traffic">
+            <summary>
+            访问量
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.BlogArticle.CommentNum">
+            <summary>
+            评论数量
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.BlogArticle.ModifyTime">
+            <summary> 
+            修改时间
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.BlogArticle.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.BlogArticle.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.BlogArticle.IsDeleted">
+            <summary>
+            逻辑删除
+            </summary>
+        </member>
+        <member name="T:Demo.Core.Api.Model.Entity.Guestbook">
+            <summary>
+            留言表
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Guestbook.BlogId">
+            <summary>
+            博客Id
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Guestbook.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Guestbook.UserName">
+            <summary>
+            联系人姓名
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Guestbook.Phone">
+            <summary>
+            手机
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Guestbook.QQ">
+            <summary>
+            qq
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Guestbook.Body">
+            <summary>
+            留言内容
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Guestbook.IP">
+            <summary>
+            ip地址
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Guestbook.IsShow">
+            <summary>
+            是否显示在前台,0否1是
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Guestbook.BlogArticle">
+            <summary>
+            博客文章
+            </summary>
+        </member>
+        <member name="T:Demo.Core.Api.Model.Entity.Module">
+            <summary>
+            接口API地址信息表
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Module.IsDeleted">
+             <summary>
+            获取或设置是否禁用，逻辑上的删除，非物理删除
+             </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Module.ParentId">
+            <summary>
+            父ID
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Module.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Module.LinkUrl">
+            <summary>
+            菜单链接地址
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Module.Area">
+            <summary>
+            区域名称
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Module.Controller">
+            <summary>
+            控制器名称
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Module.Action">
+            <summary>
+            Action名称
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Module.Icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Module.Code">
+            <summary>
+            菜单编号
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Module.OrderSort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Module.Description">
+            <summary>
+            /描述
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Module.IsMenu">
+            <summary>
+            是否是右侧菜单
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Module.Enabled">
+            <summary>
+            是否激活
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Module.CreateId">
+            <summary>
+            创建ID
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Module.CreateBy">
+            <summary>
+            创建者
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Module.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Module.ModifyId">
+            <summary>
+            修改ID
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Module.ModifyBy">
+            <summary>
+            修改者
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Module.ModifyTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="T:Demo.Core.Api.Model.Entity.ModulePermission">
+            <summary>
+            菜单与按钮关系表
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.ModulePermission.IsDeleted">
+             <summary>
+            获取或设置是否禁用，逻辑上的删除，非物理删除
+             </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.ModulePermission.ModuleId">
+            <summary>
+            菜单ID
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.ModulePermission.PermissionId">
+            <summary>
+            按钮ID
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.ModulePermission.CreateId">
+            <summary>
+            创建ID
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.ModulePermission.CreateBy">
+            <summary>
+            创建者
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.ModulePermission.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.ModulePermission.ModifyId">
+            <summary>
+            修改ID
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.ModulePermission.ModifyBy">
+            <summary>
+            修改者
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.ModulePermission.ModifyTime">
+             <summary>
+            修改时间
+             </summary>
+        </member>
+        <member name="T:Demo.Core.Api.Model.Entity.OperateLog">
+            <summary>
+            日志记录
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.OperateLog.IsDeleted">
+             <summary>
+            获取或设置是否禁用，逻辑上的删除，非物理删除
+             </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.OperateLog.Area">
+            <summary>
+            区域名
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.OperateLog.Controller">
+            <summary>
+            区域控制器名
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.OperateLog.Action">
+            <summary>
+            Action名称
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.OperateLog.IPAddress">
+            <summary>
+            IP地址
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.OperateLog.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.OperateLog.LogTime">
+            <summary>
+            登录时间
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.OperateLog.LoginName">
+            <summary>
+            登录名称
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.OperateLog.UserId">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="T:Demo.Core.Api.Model.Entity.PasswordLib">
+            <summary>
+            密码库表
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.PasswordLib.IsDeleted">
+             <summary>
+            获取或设置是否禁用，逻辑上的删除，非物理删除
+             </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.PasswordLib.Url">
+            <summary>
+            连接
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.PasswordLib.Pwd">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.PasswordLib.AccountName">
+            <summary>
+            账号名称
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.PasswordLib.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.PasswordLib.ErrorCount">
+            <summary>
+            错误次数
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.PasswordLib.HintPwd">
+            <summary>
+            提示密码
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.PasswordLib.HintQuestion">
+            <summary>
+            密码提示问题
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.PasswordLib.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.PasswordLib.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.PasswordLib.LastErrTime">
+            <summary>
+            最后一次输入错误时间
+            </summary>
+        </member>
+        <member name="T:Demo.Core.Api.Model.Entity.Permission">
+            <summary>
+            路由菜单表
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Permission.Code">
+            <summary>
+            菜单执行Action名
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Permission.Name">
+            <summary>
+            菜单显示名（如用户页、编辑(按钮)、删除(按钮)）
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Permission.IsButton">
+            <summary>
+            是否是按钮
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Permission.IsHide">
+            <summary>
+            是否是隐藏菜单
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Permission.PId">
+            <summary>
+            上一级菜单（0表示上一级无菜单）
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Permission.Func">
+            <summary>
+            按钮事件
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Permission.ModuleId">
+            <summary>
+            接口api
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Permission.ModuleName">
+            <summary>
+            接口名称
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Permission.OrderSort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Permission.Icon">
+            <summary>
+            菜单图标
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Permission.Description">
+            <summary>
+            菜单描述    
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Permission.Enabled">
+            <summary>
+            激活状态
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Permission.CreateId">
+            <summary>
+            创建ID
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Permission.CreateBy">
+            <summary>
+            创建者
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Permission.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Permission.ModifyId">
+            <summary>
+            修改ID
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Permission.ModifyBy">
+            <summary>
+            修改者
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Permission.ModifyTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Permission.IsDeleted">
+             <summary>
+            获取或设置是否禁用，逻辑上的删除，非物理删除
+             </summary>
+        </member>
+        <member name="T:Demo.Core.Api.Model.Entity.Role">
+            <summary>
+            角色表
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Role.IsDeleted">
+             <summary>
+            获取或设置是否禁用，逻辑上的删除，非物理删除
+             </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Role.Name">
+            <summary>
+            角色名
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Role.Description">
+             <summary>
+            描述
+             </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Role.OrderSort">
+             <summary>
+            排序
+             </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Role.Enabled">
+            <summary>
+            是否激活
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Role.CreateId">
+            <summary>
+            创建ID
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Role.CreateBy">
+            <summary>
+            创建者
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Role.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Role.ModifyId">
+            <summary>
+            修改ID
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Role.ModifyBy">
+            <summary>
+            修改者
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.Role.ModifyTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.RoleModulePermission.IsDeleted">
+             <summary>
+            获取或设置是否禁用，逻辑上的删除，非物理删除
+             </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.RoleModulePermission.RoleId">
+            <summary>
+            角色ID
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.RoleModulePermission.ModuleId">
+            <summary>
+            菜单ID
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.RoleModulePermission.PermissionId">
+            <summary>
+            按钮ID
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.RoleModulePermission.CreateId">
+            <summary>
+            创建ID
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.RoleModulePermission.CreateBy">
+            <summary>
+            创建者
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.RoleModulePermission.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.RoleModulePermission.ModifyId">
+            <summary>
+            修改ID
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.RoleModulePermission.ModifyBy">
+            <summary>
+            修改者
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.RoleModulePermission.ModifyTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="T:Demo.Core.Api.Model.Entity.Topic">
+            <summary>
+            Tibug 类别
+            </summary>
+        </member>
+        <member name="T:Demo.Core.Api.Model.Entity.TopicDetail">
+            <summary>
+            Tibug 博文
+            </summary>
+        </member>
+        <member name="T:Demo.Core.Api.Model.Entity.UserModel">
+            <summary>
+            用户对象
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.UserModel.Status">
+            <summary>
+            状态
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.UserModel.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.UserModel.ModifyTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.UserModel.LastErrTime">
+             <summary>
+            最后登录时间 
+             </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.UserModel.ErrorCount">
+             <summary>
+            错误次数 
+             </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.UserModel.IsDeleted">
+            <summary>
+            获取或设置是否禁用，逻辑上的删除，非物理删除
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.UserModel.UserName">
+            <summary>
+            用户名
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.UserModel.Brithday">
+            <summary>
+            出生年月
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.UserModel.Sex">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.UserModel.Age">
+            <summary>
+            年龄
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.UserModel.Address">
+            <summary>
+            地址
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:Demo.Core.Api.Model.Entity.UserRole">
+            <summary>
+            用户跟角色关联表
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.UserRole.IsDeleted">
+             <summary>
+            获取或设置是否禁用，逻辑上的删除，非物理删除
+             </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.UserRole.UserId">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.UserRole.RoleId">
+            <summary>
+            角色ID
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.UserRole.CreateId">
+            <summary>
+            创建ID
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.UserRole.CreateBy">
+            <summary>
+            创建者
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.UserRole.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.UserRole.ModifyId">
+            <summary>
+            修改ID
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.UserRole.ModifyBy">
+            <summary>
+            修改者
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Entity.UserRole.ModifyTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="T:Demo.Core.Api.Model.Enum.UserStatusEnum">
+            <summary>
+            用户状态枚举
+            </summary>
+        </member>
+        <member name="T:Demo.Core.Api.Model.HttpResult">
+            <summary>
+            Api返回数据格式
+            </summary>
+        </member>
+        <member name="M:Demo.Core.Api.Model.HttpResult.#ctor">
+            <summary>
+            本构造函数 默认为 处理成功
+            </summary>
+        </member>
+        <member name="M:Demo.Core.Api.Model.HttpResult.#ctor(System.Object)">
+            <summary>
+            本构造函数 默认为 处理成功，且将返回数据传入
+            </summary>
+            <param name="d">返回数据</param>
+        </member>
+        <member name="M:Demo.Core.Api.Model.HttpResult.#ctor(System.Int32,System.String)">
+            <summary>
+            默认作为出现错误时使用；
+            </summary>
+            <param name="Status">状态</param>
+            <param name="Message">错误信息</param>
+        </member>
+        <member name="T:Demo.Core.Api.Model.HttpResult`1">
+            <summary>
+            Api返回数据格式
+            </summary>
+        </member>
+        <member name="T:Demo.Core.Api.Model.PageModel">
+            <summary>
+            通用分页信息类
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.PageModel.page">
+            <summary>
+            当前页标
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.PageModel.pageCount">
+            <summary>
+            总页数
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.PageModel.dataCount">
+            <summary>
+            数据总数
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.PageModel.PageSize">
+            <summary>
+            每页大小
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.PageModel.data">
+            <summary>
+            返回数据
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.PageModel`1.page">
+            <summary>
+            当前页标
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.PageModel`1.pageCount">
+            <summary>
+            总页数
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.PageModel`1.dataCount">
+            <summary>
+            数据总数
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.PageModel`1.PageSize">
+            <summary>
+            每页大小
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.PageModel`1.data">
+            <summary>
+            返回数据
+            </summary>
+        </member>
+        <member name="M:Demo.Core.Api.Model.Seed.DBSeed.SeedAsync(Demo.Core.Api.Model.Seed.MyContext)">
+            <summary>
+            异步添加种子数据
+            </summary>
+            <param name="myContext"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Seed.MyContext.ConnectionString">
+            <summary>
+            连接字符串 
+            Blog.Core
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Seed.MyContext.DbType">
+            <summary>
+            数据库类型 
+            Blog.Core 
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Seed.MyContext.Db">
+            <summary>
+            数据连接对象 
+            Blog.Core 
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.Seed.MyContext.Context">
+            <summary>
+            数据库上下文实例（自动关闭连接）
+            Blog.Core 
+            </summary>
+        </member>
+        <member name="M:Demo.Core.Api.Model.Seed.MyContext.#ctor">
+            <summary>
+            功能描述:构造函数
+            </summary>
+        </member>
+        <member name="M:Demo.Core.Api.Model.Seed.MyContext.GetEntityDB``1">
+            <summary>
+            功能描述:获取数据库处理对象
+            </summary>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:Demo.Core.Api.Model.Seed.MyContext.GetEntityDB``1(SqlSugar.SqlSugarClient)">
+            <summary>
+            功能描述:获取数据库处理对象
+            </summary>
+            <param name="db">db</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:Demo.Core.Api.Model.Seed.MyContext.CreateClassFileByDBTalbe(System.String)">
+            <summary>
+            功能描述:根据数据库表生产实体类
+            </summary>       
+            <param name="strPath">实体类存放路径</param>
+        </member>
+        <member name="M:Demo.Core.Api.Model.Seed.MyContext.CreateClassFileByDBTalbe(System.String,System.String)">
+            <summary>
+            功能描述:根据数据库表生产实体类
+            作　　者:Blog.Core
+            </summary>
+            <param name="strPath">实体类存放路径</param>
+            <param name="strNameSpace">命名空间</param>
+        </member>
+        <member name="M:Demo.Core.Api.Model.Seed.MyContext.CreateClassFileByDBTalbe(System.String,System.String,System.String[])">
+            <summary>
+            功能描述:根据数据库表生产实体类
+            作　　者:Blog.Core
+            </summary>
+            <param name="strPath">实体类存放路径</param>
+            <param name="strNameSpace">命名空间</param>
+            <param name="lstTableNames">生产指定的表</param>
+        </member>
+        <member name="M:Demo.Core.Api.Model.Seed.MyContext.CreateClassFileByDBTalbe(System.String,System.String,System.String[],System.String,System.Boolean)">
+            <summary>
+            功能描述:根据数据库表生产实体类
+            作　　者:Blog.Core
+            </summary>
+            <param name="strPath">实体类存放路径</param>
+            <param name="strNameSpace">命名空间</param>
+            <param name="lstTableNames">生产指定的表</param>
+            <param name="strInterface">实现接口</param>
+            <param name="blnSerializable">是否序列化</param>
+        </member>
+        <member name="M:Demo.Core.Api.Model.Seed.MyContext.CreateTableByEntity``1(System.Boolean,``0[])">
+            <summary>
+            功能描述:根据实体类生成数据库表
+            作　　者:Blog.Core
+            </summary>
+            <param name="blnBackupTable">是否备份表</param>
+            <param name="lstEntitys">指定的实体</param>
+        </member>
+        <member name="M:Demo.Core.Api.Model.Seed.MyContext.CreateTableByEntity(System.Boolean,System.Type[])">
+            <summary>
+            功能描述:根据实体类生成数据库表
+            </summary>
+            <param name="blnBackupTable">是否备份表</param>
+            <param name="lstEntitys">指定的实体</param>
+        </member>
+        <member name="M:Demo.Core.Api.Model.Seed.MyContext.GetDbContext">
+            <summary>
+            功能描述:获得一个DbContext
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Demo.Core.Api.Model.Seed.MyContext.Init(System.String,SqlSugar.DbType)">
+            <summary>
+            功能描述:设置初始化参数
+            </summary>
+            <param name="strConnectionString">连接字符串</param>
+            <param name="enmDbType">数据库类型</param>
+        </member>
+        <member name="M:Demo.Core.Api.Model.Seed.MyContext.GetConnectionConfig(System.Boolean,System.Boolean)">
+            <summary>
+            功能描述:创建一个链接配置
+            </summary>
+            <param name="blnIsAutoCloseConnection">是否自动关闭连接</param>
+            <param name="blnIsShardSameThread">是否夸类事务</param>
+            <returns>ConnectionConfig</returns>
+        </member>
+        <member name="M:Demo.Core.Api.Model.Seed.MyContext.GetCustomDB(SqlSugar.ConnectionConfig)">
+            <summary>
+            功能描述:获取一个自定义的DB
+            </summary>
+            <param name="config">config</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:Demo.Core.Api.Model.Seed.MyContext.GetCustomEntityDB``1(SqlSugar.SqlSugarClient)">
+            <summary>
+            功能描述:获取一个自定义的数据库处理对象
+            </summary>
+            <param name="sugarClient">sugarClient</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:Demo.Core.Api.Model.Seed.MyContext.GetCustomEntityDB``1(SqlSugar.ConnectionConfig)">
+            <summary>
+            功能描述:获取一个自定义的数据库处理对象
+            </summary>
+            <param name="config">config</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="T:Demo.Core.Api.Model.TableModel">
+            <summary>
+            表格数据，支持分页
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.TableModel.Code">
+            <summary>
+            返回编码
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.TableModel.Msg">
+            <summary>
+            返回信息
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.TableModel.Count">
+            <summary>
+            记录总数
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.TableModel.Data">
+            <summary>
+            返回的数据集
+            </summary>
+        </member>
+        <member name="T:Demo.Core.Api.Model.ViewModel.AdvertisementViewModels">
+            <summary>
+            广告类
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.ViewModel.AdvertisementViewModels.Id">
+            <summary>
+            分类ID
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.ViewModel.AdvertisementViewModels.Createdate">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.ViewModel.AdvertisementViewModels.ImgUrl">
+            <summary>
+            广告图片
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.ViewModel.AdvertisementViewModels.Title">
+            <summary>
+            广告标题
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.ViewModel.AdvertisementViewModels.Url">
+            <summary>
+            广告链接
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.ViewModel.AdvertisementViewModels.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="T:Demo.Core.Api.Model.ViewModel.BlogViewModels">
+            <summary>
+            博客信息展示类
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.ViewModel.BlogViewModels.Id">
+            <summary>
+            博客Id
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.ViewModel.BlogViewModels.Submitter">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.ViewModel.BlogViewModels.Title">
+            <summary>
+            博客标题
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.ViewModel.BlogViewModels.Digest">
+            <summary>摘要
+            
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.ViewModel.BlogViewModels.Previous">
+            <summary>
+            上一篇
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.ViewModel.BlogViewModels.PreviousId">
+            <summary>
+            上一篇id
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.ViewModel.BlogViewModels.Next">
+            <summary>
+            下一篇
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.ViewModel.BlogViewModels.NextId">
+            <summary>
+            下一篇id
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.ViewModel.BlogViewModels.Category">
+            <summary>
+            类别
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.ViewModel.BlogViewModels.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.ViewModel.BlogViewModels.Traffic">
+            <summary>
+            访问量
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.ViewModel.BlogViewModels.CommentNum">
+            <summary>
+            评论数量
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.ViewModel.BlogViewModels.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.ViewModel.BlogViewModels.ModifyTime">
+            <summary> 
+            修改时间
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.ViewModel.BlogViewModels.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="T:Demo.Core.Api.Model.ViewModel.GuestbookViewModels">
+            <summary>
+            留言信息展示类
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.ViewModel.GuestbookViewModels.Id">
+            <summary>留言表
+            
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.ViewModel.GuestbookViewModels.BlogId">
+            <summary>博客ID
+            
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.ViewModel.GuestbookViewModels.createTime">
+            <summary>创建时间
+            
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.ViewModel.GuestbookViewModels.UserName">
+            <summary>
+            联系人姓名
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.ViewModel.GuestbookViewModels.Phone">
+            <summary>
+            手机
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.ViewModel.GuestbookViewModels.QQ">
+            <summary>
+            QQ
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.ViewModel.GuestbookViewModels.Body">
+            <summary>
+            留言内容
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.ViewModel.GuestbookViewModels.IP">
+            <summary>
+            ip地址
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.ViewModel.GuestbookViewModels.IsShow">
+            <summary>
+            是否显示在前台,0否1是
+            </summary>
+        </member>
+        <member name="T:Demo.Core.Api.Model.ViewModel.LoginInfoViewModels">
+            <summary>
+            登陆信息
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.ViewModel.LoginInfoViewModels.LoginName">
+            <summary>
+            登陆名称
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.ViewModel.LoginInfoViewModels.LoginPwd">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.ViewModel.LoginInfoViewModels.Code">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.ViewModel.LoginInfoViewModels.IsMember">
+            <summary>
+            是否是会员
+            </summary>
+        </member>
+        <member name="T:Demo.Core.Api.Model.ViewModel.SidebarMenuViewModel">
+            <summary>
+            菜单展示model
+            </summary>
+        </member>
+        <member name="T:Demo.Core.Api.Model.ViewModel.TopgbViewModels">
+            <summary>
+            留言排名展示类
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.ViewModel.TopgbViewModels.BlogId">
+            <summary>
+            博客Id
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.ViewModel.TopgbViewModels.Counts">
+            <summary>
+            评论数量
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.Model.ViewModel.TopgbViewModels.Title">
+            <summary>
+            博客标题
+            </summary>
+        </member>
+    </members>
+</doc>

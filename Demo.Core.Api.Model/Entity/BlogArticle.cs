@@ -31,7 +31,7 @@ namespace Demo.Core.Api.Model.Entity
         /// <summary>
         /// 内容
         /// </summary>
-        public string Bcontent { get; set; }
+        public string Content { get; set; }
 
         /// <summary>
         /// 访问量

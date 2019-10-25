@@ -2,6 +2,9 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
     </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+      <DocumentationFile>..\Demo.Core.Api.WebApi\Demo.Core.Api.Model.xml</DocumentationFile>
+    </PropertyGroup>
     <ItemGroup>
       <Folder Include="ReqModel\" />
     </ItemGroup>

@@ -30,6 +30,7 @@ E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.Model\obj\Debug\netstandard2.0\Demo.Cor
 E:\persion\Blog\Demo.Core.Api.Model\bin\Debug\netstandard2.0\Demo.Core.Api.Model.deps.json
 E:\persion\Blog\Demo.Core.Api.Model\bin\Debug\netstandard2.0\Demo.Core.Api.Model.dll
 E:\persion\Blog\Demo.Core.Api.Model\bin\Debug\netstandard2.0\Demo.Core.Api.Model.pdb
+E:\persion\Blog\Demo.Core.Api.Model\bin\Debug\netstandard2.0\Demo.Core.Api.Model.xml
 E:\persion\Blog\Demo.Core.Api.Model\bin\Debug\netstandard2.0\Demo.Core.Api.Core.dll
 E:\persion\Blog\Demo.Core.Api.Model\bin\Debug\netstandard2.0\Demo.Core.Api.Core.pdb
 E:\persion\Blog\Demo.Core.Api.Model\obj\Debug\netstandard2.0\Demo.Core.Api.Model.csprojAssemblyReference.cache

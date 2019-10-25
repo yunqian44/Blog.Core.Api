@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Demo.Core.Api.WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:Demo.Core.Api.WebApi.AOP.BlogCacheAOP">
+            <summary>
+            面向切面的缓存使用
+            </summary>
+        </member>
+        <member name="T:Demo.Core.Api.WebApi.AOP.BlogLogAOP">
+            <summary>
+            拦截器BlogLogAOP 继承IInterceptor接口
+            </summary>
+        </member>
+        <member name="M:Demo.Core.Api.WebApi.AOP.BlogLogAOP.Intercept(Castle.DynamicProxy.IInvocation)">
+            <summary>
+            实例化IInterceptor唯一方法 
+            </summary>
+            <param name="invocation">包含被拦截方法的信息</param>
+        </member>
+        <member name="T:Demo.Core.Api.WebApi.AOP.BlogRedisCacheAOP">
+            <summary>
+            面向切面的缓存使用
+            </summary>
+        </member>
+        <member name="M:Demo.Core.Api.WebApi.AOP.CacheAOPbase.Intercept(Castle.DynamicProxy.IInvocation)">
+            <summary>
+            AOP的拦截方法
+            </summary>
+            <param name="invocation"></param>
+        </member>
+        <member name="M:Demo.Core.Api.WebApi.AOP.CacheAOPbase.CustomCacheKey(Castle.DynamicProxy.IInvocation)">
+            <summary>
+            自定义缓存的key
+            </summary>
+            <param name="invocation"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Demo.Core.Api.WebApi.AOP.CacheAOPbase.GetArgumentValue(System.Object)">
+            <summary>
+            object 转 string
+            </summary>
+            <param name="arg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Demo.Core.Api.WebApi.AuthHelper.OverWrite.JwtHelper.IssueJwt(Demo.Core.Api.WebApi.AuthHelper.OverWrite.TokenModelJwt)">
+            <summary>
+            颁发JWT字符串
+            </summary>
+            <param name="tokenModel">令牌</param>
+            <returns></returns>
+        </member>
+        <member name="M:Demo.Core.Api.WebApi.AuthHelper.OverWrite.JwtHelper.SerializeJwt(System.String)">
+            <summary>
+            解析
+            </summary>
+            <param name="jwtStr"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Demo.Core.Api.WebApi.AuthHelper.OverWrite.TokenModelJwt">
+            <summary>
+            令牌
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.WebApi.AuthHelper.OverWrite.TokenModelJwt.Uid">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.WebApi.AuthHelper.OverWrite.TokenModelJwt.Role">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.WebApi.AuthHelper.OverWrite.TokenModelJwt.Work">
+            <summary>
+            职能
+            </summary>
+        </member>
+        <member name="M:Demo.Core.Api.WebApi.AutoMapper.CustomProfile.#ctor">
+            <summary>
+            配置构造函数，用来创建关系映射
+            </summary>
+        </member>
+        <member name="M:Demo.Core.Api.WebApi.Controllers.BlogController.#ctor(Demo.Core.Api.IService.IAdvertisementService,Demo.Core.Api.IService.IBlogArticleService,Demo.Core.Api.Data.IRedisCacheManager)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="advertisementService"></param>
+            <param name="blogArticleService"></param>
+            <param name="redisCacheManager"></param>
+        </member>
+        <member name="M:Demo.Core.Api.WebApi.Controllers.BlogController.GetBlogs">
+            <summary>
+            获取博客列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Demo.Core.Api.WebApi.Controllers.BlogController.Get(System.Int32,System.Int32)">
+            <summary>
+            Sum接口
+            </summary>
+            <param name="i">参数i</param>
+            <param name="j">参数j</param>
+            <returns></returns>
+        </member>
+        <member name="T:Demo.Core.Api.WebApi.Controllers.LoginController">
+            <summary>
+            登陆管理
+            </summary>
+        </member>
+        <member name="M:Demo.Core.Api.WebApi.Controllers.LoginController.GetJwtStr(System.String,System.String)">
+            <summary>
+            获取令牌
+            </summary>
+            <param name="name">用户名</param>
+            <param name="pass">密码</param>
+            <returns></returns>
+        </member>
+        <member name="T:Demo.Core.Api.WebApi.Controllers.UserController">
+            <summary>
+            用户管理Api
+            </summary>
+        </member>
+        <member name="M:Demo.Core.Api.WebApi.Controllers.UserController.Get(System.Int64)">
+            <summary>
+            获取单个用户根据主键Id
+            </summary>
+            <param name="id">主键Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Demo.Core.Api.WebApi.Controllers.UserController.Put(Demo.Core.Api.Model.Entity.UserModel)">
+            <summary>
+            修改用户信息
+            </summary>
+            <param name="req">用户信息</param>
+        </member>
+        <member name="M:Demo.Core.Api.WebApi.Controllers.UserController.Delete(System.Int64)">
+            <summary>
+            删除用户信息根据主键Id
+            </summary>
+            <param name="id">主键Id</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\persion\\Blog\\Demo.Core.Console\\Demo.Core.ConsoleDemo.csproj": {}
+    "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Console\\Demo.Core.ConsoleDemo.csproj": {}
   },
   "projects": {
-    "E:\\persion\\Blog\\Demo.Core.Api.Core\\Demo.Core.Api.Core.csproj": {
+    "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Core\\Demo.Core.Api.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\persion\\Blog\\Demo.Core.Api.Core\\Demo.Core.Api.Core.csproj",
+        "projectUniqueName": "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Core\\Demo.Core.Api.Core.csproj",
         "projectName": "Demo.Core.Api.Core",
-        "projectPath": "E:\\persion\\Blog\\Demo.Core.Api.Core\\Demo.Core.Api.Core.csproj",
+        "projectPath": "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Core\\Demo.Core.Api.Core.csproj",
         "packagesPath": "C:\\Users\\yunqian\\.nuget\\packages\\",
-        "outputPath": "E:\\persion\\Blog\\Demo.Core.Api.Core\\obj\\",
+        "outputPath": "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -21,14 +21,14 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.0"
+          "netcoreapp2.2"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard2.0": {
+          "netcoreapp2.2": {
             "projectReferences": {}
           }
         },
@@ -39,7 +39,7 @@
         }
       },
       "frameworks": {
-        "netstandard2.0": {
+        "netcoreapp2.2": {
           "dependencies": {
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
@@ -49,11 +49,15 @@
               "target": "Package",
               "version": "[2.2.0, )"
             },
-            "NETStandard.Library": {
+            "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.0.3, )",
+              "version": "[2.2.0, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
             }
           },
           "imports": [
@@ -70,14 +74,14 @@
         }
       }
     },
-    "E:\\persion\\Blog\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj": {
+    "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\persion\\Blog\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj",
+        "projectUniqueName": "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj",
         "projectName": "Demo.Core.Api.Data",
-        "projectPath": "E:\\persion\\Blog\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj",
+        "projectPath": "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj",
         "packagesPath": "C:\\Users\\yunqian\\.nuget\\packages\\",
-        "outputPath": "E:\\persion\\Blog\\Demo.Core.Api.Data\\obj\\",
+        "outputPath": "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -87,17 +91,17 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.0"
+          "netcoreapp2.2"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard2.0": {
+          "netcoreapp2.2": {
             "projectReferences": {
-              "E:\\persion\\Blog\\Demo.Core.Api.Core\\Demo.Core.Api.Core.csproj": {
-                "projectPath": "E:\\persion\\Blog\\Demo.Core.Api.Core\\Demo.Core.Api.Core.csproj"
+              "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Core\\Demo.Core.Api.Core.csproj": {
+                "projectPath": "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Core\\Demo.Core.Api.Core.csproj"
               }
             }
           }
@@ -109,15 +113,11 @@
         }
       },
       "frameworks": {
-        "netstandard2.0": {
+        "netcoreapp2.2": {
           "dependencies": {
             "Dapper": {
               "target": "Package",
-              "version": "[1.60.1, )"
-            },
-            "Microsoft.AspNetCore": {
-              "target": "Package",
-              "version": "[2.2.0, )"
+              "version": "[2.0.30, )"
             },
             "Microsoft.AspNetCore.SignalR.Core": {
               "target": "Package",
@@ -131,18 +131,14 @@
               "target": "Package",
               "version": "[2.2.0, )"
             },
-            "Microsoft.Extensions.Configuration.FileExtensions": {
-              "target": "Package",
-              "version": "[2.2.0, )"
-            },
             "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
               "version": "[2.2.0, )"
             },
-            "NETStandard.Library": {
+            "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.0.3, )",
+              "version": "[2.2.0, )",
               "autoReferenced": true
             },
             "StackExchange.Redis": {
@@ -168,14 +164,14 @@
         }
       }
     },
-    "E:\\persion\\Blog\\Demo.Core.Api.Model\\Demo.Core.Api.Model.csproj": {
+    "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Model\\Demo.Core.Api.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\persion\\Blog\\Demo.Core.Api.Model\\Demo.Core.Api.Model.csproj",
+        "projectUniqueName": "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Model\\Demo.Core.Api.Model.csproj",
         "projectName": "Demo.Core.Api.Model",
-        "projectPath": "E:\\persion\\Blog\\Demo.Core.Api.Model\\Demo.Core.Api.Model.csproj",
+        "projectPath": "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Model\\Demo.Core.Api.Model.csproj",
         "packagesPath": "C:\\Users\\yunqian\\.nuget\\packages\\",
-        "outputPath": "E:\\persion\\Blog\\Demo.Core.Api.Model\\obj\\",
+        "outputPath": "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -185,17 +181,17 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.0"
+          "netcoreapp2.2"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard2.0": {
+          "netcoreapp2.2": {
             "projectReferences": {
-              "E:\\persion\\Blog\\Demo.Core.Api.Core\\Demo.Core.Api.Core.csproj": {
-                "projectPath": "E:\\persion\\Blog\\Demo.Core.Api.Core\\Demo.Core.Api.Core.csproj"
+              "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Core\\Demo.Core.Api.Core.csproj": {
+                "projectPath": "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Core\\Demo.Core.Api.Core.csproj"
               }
             }
           }
@@ -207,12 +203,12 @@
         }
       },
       "frameworks": {
-        "netstandard2.0": {
+        "netcoreapp2.2": {
           "dependencies": {
-            "NETStandard.Library": {
+            "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.0.3, )",
+              "version": "[2.2.0, )",
               "autoReferenced": true
             },
             "sqlSugarCore": {
@@ -234,14 +230,14 @@
         }
       }
     },
-    "E:\\persion\\Blog\\Demo.Core.Console\\Demo.Core.ConsoleDemo.csproj": {
+    "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Console\\Demo.Core.ConsoleDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\persion\\Blog\\Demo.Core.Console\\Demo.Core.ConsoleDemo.csproj",
+        "projectUniqueName": "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Console\\Demo.Core.ConsoleDemo.csproj",
         "projectName": "Demo.Core.ConsoleDemo",
-        "projectPath": "E:\\persion\\Blog\\Demo.Core.Console\\Demo.Core.ConsoleDemo.csproj",
+        "projectPath": "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Console\\Demo.Core.ConsoleDemo.csproj",
         "packagesPath": "C:\\Users\\yunqian\\.nuget\\packages\\",
-        "outputPath": "E:\\persion\\Blog\\Demo.Core.Console\\obj\\",
+        "outputPath": "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Console\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -260,11 +256,11 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "E:\\persion\\Blog\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj": {
-                "projectPath": "E:\\persion\\Blog\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj"
+              "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj": {
+                "projectPath": "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj"
               },
-              "E:\\persion\\Blog\\Demo.Core.Api.Model\\Demo.Core.Api.Model.csproj": {
-                "projectPath": "E:\\persion\\Blog\\Demo.Core.Api.Model\\Demo.Core.Api.Model.csproj"
+              "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Model\\Demo.Core.Api.Model.csproj": {
+                "projectPath": "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Model\\Demo.Core.Api.Model.csproj"
               }
             }
           }

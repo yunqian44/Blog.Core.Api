@@ -1,17 +1,19 @@
-<Project Sdk="Microsoft.NET.Sdk">
-    <PropertyGroup>
-        <TargetFramework>netstandard2.0</TargetFramework>
-    </PropertyGroup>
-    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-      <DocumentationFile>..\Demo.Core.Api.WebApi\Demo.Core.Api.Model.xml</DocumentationFile>
-    </PropertyGroup>
-    <ItemGroup>
-      <Folder Include="ReqModel\" />
-    </ItemGroup>
-    <ItemGroup>
-      <PackageReference Include="sqlSugarCore" Version="5.0.0.10" />
-    </ItemGroup>
-    <ItemGroup>
-      <ProjectReference Include="..\Demo.Core.Api.Core\Demo.Core.Api.Core.csproj" />
-    </ItemGroup>
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>..\Demo.Core.Api.WebApi\Demo.Core.Api.Model.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="sqlSugarCore" Version="5.0.0.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Demo.Core.Api.Core\Demo.Core.Api.Core.csproj" />
+  </ItemGroup>
+
 </Project>

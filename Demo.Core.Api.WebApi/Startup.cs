@@ -340,7 +340,7 @@ namespace Demo.Core.Api.WebApi
             app.UseStaticFiles();
 
             //跳转https
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             //使用cookie
             app.UseCookiePolicy();

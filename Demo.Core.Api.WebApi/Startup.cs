@@ -61,7 +61,7 @@ namespace Demo.Core.Api.WebApi
                 //返回xml格式 asp.net core 默认提供的是json格式
                 //options.OutputFormatters.Add(new XmlDataContractSerializerOutputFormatter());
             }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-            
+
             // log日志注入
             services.AddSingleton<ILoggerHelper, LogHelper>();
 
@@ -266,7 +266,7 @@ namespace Demo.Core.Api.WebApi
             {
                 throw new Exception("※※★※※ 如果你是第一次下载项目，请先对整个解决方案dotnet build（F6编译），然后再对api层 dotnet run（F5执行），\n因为解耦了，如果你是发布的模式，请检查bin文件夹是否存在Repository.dll和service.dll ※※★※※" + ex.Message + "\n" + ex.InnerException);
             }
-           
+
             #endregion
 
 

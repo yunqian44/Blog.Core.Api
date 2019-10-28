@@ -2,7 +2,6 @@
 using Demo.Core.Api.IService;
 using Demo.Core.Api.Model;
 using Demo.Core.Api.Model.Seed;
-using Demo.Core.Api.Repository;
 using SqlSugar;
 using System;
 using System.Collections.Generic;

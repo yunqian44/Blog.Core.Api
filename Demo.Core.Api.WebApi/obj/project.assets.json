@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.2": {
-      "Autofac/4.9.4": {
+      "Autofac/4.9.1": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Autofac.dll": {}
@@ -5602,7 +5602,6 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
-          "Microsoft.Extensions.Configuration": "2.2.0",
           "Microsoft.Extensions.Configuration.Json": "2.2.0",
           "Newtonsoft.Json": "12.0.2"
         },
@@ -5621,7 +5620,6 @@
           "Demo.Core.Api.Core": "1.0.0",
           "Microsoft.AspNetCore.SignalR.Core": "1.1.0",
           "Microsoft.Extensions.Caching.Abstractions": "2.2.0",
-          "Microsoft.Extensions.Configuration": "2.2.0",
           "Microsoft.Extensions.Configuration.Json": "2.2.0",
           "StackExchange.Redis": "2.0.601",
           "log4net": "2.0.8"
@@ -5631,6 +5629,19 @@
         },
         "runtime": {
           "bin/placeholder/Demo.Core.Api.Data.dll": {}
+        }
+      },
+      "Demo.Core.Api.IRepository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "Demo.Core.Api.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Demo.Core.Api.IRepository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Demo.Core.Api.IRepository.dll": {}
         }
       },
       "Demo.Core.Api.IService/1.0.0": {
@@ -5659,18 +5670,50 @@
         "runtime": {
           "bin/placeholder/Demo.Core.Api.Model.dll": {}
         }
+      },
+      "Demo.Core.Api.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "Demo.Core.Api.IRepository": "1.0.0",
+          "Demo.Core.Api.Model": "1.0.0",
+          "sqlSugarCore": "5.0.0.10"
+        },
+        "compile": {
+          "bin/placeholder/Demo.Core.Api.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Demo.Core.Api.Repository.dll": {}
+        }
+      },
+      "Demo.Core.Api.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "AutoMapper": "9.0.0",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
+          "Demo.Core.Api.IRepository": "1.0.0",
+          "Demo.Core.Api.IService": "1.0.0",
+          "Demo.Core.Api.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Demo.Core.Api.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Demo.Core.Api.Service.dll": {}
+        }
       }
     }
   },
   "libraries": {
-    "Autofac/4.9.4": {
-      "sha512": "dYiDG4yoV7GDCoOc66d1sqMmg2gwDyomHKgATuMfhFzYxVpWEltToHVHXI3I9vOEvIXE55S4OZPY0ldiZmZtpA==",
+    "Autofac/4.9.1": {
+      "sha512": "L92DMQxpy4Xw3IypXxL8Z4NHt+qIkB1e0NB2OJ9u105Xp5sVsZSJ04YtYyubmM3KG8aC+WpyBhN14XcjPx5gLg==",
       "type": "package",
-      "path": "autofac/4.9.4",
+      "path": "autofac/4.9.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "autofac.4.9.4.nupkg.sha512",
+        "autofac.4.9.1.nupkg.sha512",
         "autofac.nuspec",
         "lib/net45/Autofac.dll",
         "lib/net45/Autofac.pdb",
@@ -15308,6 +15351,11 @@
       "path": "../Demo.Core.Api.Data/Demo.Core.Api.Data.csproj",
       "msbuildProject": "../Demo.Core.Api.Data/Demo.Core.Api.Data.csproj"
     },
+    "Demo.Core.Api.IRepository/1.0.0": {
+      "type": "project",
+      "path": "../Demo.Core.Api.IRepository/Demo.Core.Api.IRepository.csproj",
+      "msbuildProject": "../Demo.Core.Api.IRepository/Demo.Core.Api.IRepository.csproj"
+    },
     "Demo.Core.Api.IService/1.0.0": {
       "type": "project",
       "path": "../Demo.Core.Api.IService/Demo.Core.Api.IService.csproj",
@@ -15317,18 +15365,29 @@
       "type": "project",
       "path": "../Demo.Core.Api.Model/Demo.Core.Api.Model.csproj",
       "msbuildProject": "../Demo.Core.Api.Model/Demo.Core.Api.Model.csproj"
+    },
+    "Demo.Core.Api.Repository/1.0.0": {
+      "type": "project",
+      "path": "../Demo.Core.Api.Repository/Demo.Core.Api.Repository.csproj",
+      "msbuildProject": "../Demo.Core.Api.Repository/Demo.Core.Api.Repository.csproj"
+    },
+    "Demo.Core.Api.Service/1.0.0": {
+      "type": "project",
+      "path": "../Demo.Core.Api.Service/Demo.Core.Api.Service.csproj",
+      "msbuildProject": "../Demo.Core.Api.Service/Demo.Core.Api.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
       "AutoMapper >= 9.0.0",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 7.0.0",
-      "Autofac >= 4.9.4",
       "Autofac.Extensions.DependencyInjection >= 5.0.1",
       "Autofac.Extras.DynamicProxy >= 4.5.0",
       "Demo.Core.Api.Data >= 1.0.0",
+      "Demo.Core.Api.IRepository >= 1.0.0",
       "Demo.Core.Api.IService >= 1.0.0",
-      "Demo.Core.Api.Model >= 1.0.0",
+      "Demo.Core.Api.Repository >= 1.0.0",
+      "Demo.Core.Api.Service >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
@@ -15371,11 +15430,17 @@
             "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj": {
               "projectPath": "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj"
             },
+            "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.IRepository\\Demo.Core.Api.IRepository.csproj": {
+              "projectPath": "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.IRepository\\Demo.Core.Api.IRepository.csproj"
+            },
             "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.IService\\Demo.Core.Api.IService.csproj": {
               "projectPath": "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.IService\\Demo.Core.Api.IService.csproj"
             },
-            "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Model\\Demo.Core.Api.Model.csproj": {
-              "projectPath": "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Model\\Demo.Core.Api.Model.csproj"
+            "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Repository\\Demo.Core.Api.Repository.csproj": {
+              "projectPath": "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Repository\\Demo.Core.Api.Repository.csproj"
+            },
+            "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Service\\Demo.Core.Api.Service.csproj": {
+              "projectPath": "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Service\\Demo.Core.Api.Service.csproj"
             }
           }
         }
@@ -15396,10 +15461,6 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
             "version": "[7.0.0, )"
-          },
-          "Autofac": {
-            "target": "Package",
-            "version": "[4.9.4, )"
           },
           "Autofac.Extensions.DependencyInjection": {
             "target": "Package",

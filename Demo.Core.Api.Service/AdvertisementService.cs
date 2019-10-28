@@ -1,7 +1,6 @@
 ﻿using Demo.Core.Api.IRepository;
 using Demo.Core.Api.IService;
 using Demo.Core.Api.Model.Entity;
-using Demo.Core.Api.Repository;
 using System;
 
 namespace Demo.Core.Api.Service

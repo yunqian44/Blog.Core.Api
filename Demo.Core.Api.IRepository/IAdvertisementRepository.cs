@@ -1,5 +1,4 @@
-﻿using Demo.Core.Api.IService;
-using Demo.Core.Api.Model.Entity;
+﻿using Demo.Core.Api.Model.Entity;
 using System;
 
 namespace Demo.Core.Api.IRepository

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Demo.Core.Api.Core.CachingAttribute;
 using Demo.Core.Api.Data;
-using Demo.Core.Api.IService;
+using Demo.Core.Api.IServices;
 using Demo.Core.Api.Model.Entity;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;

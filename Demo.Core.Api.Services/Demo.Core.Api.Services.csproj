@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\Demo.Core.Api.WebApi\bin\Debug\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Demo.Core.Api.IRepository\Demo.Core.Api.IRepository.csproj" />
+    <ProjectReference Include="..\Demo.Core.Api.IServices\Demo.Core.Api.IServices.csproj" />
+    <ProjectReference Include="..\Demo.Core.Api.Model\Demo.Core.Api.Model.csproj" />
+  </ItemGroup>
+
+</Project>

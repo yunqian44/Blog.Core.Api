@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using Demo.Core.Api.Core.Common;
 using Demo.Core.Api.Model;
 using Newtonsoft.Json;
+using Demo.Core.Api.Data.LogHelper;
 
 namespace Demo.Core.Api.WebApi.App_Start
 {
@@ -28,6 +29,7 @@ namespace Demo.Core.Api.WebApi.App_Start
 
                     };
                 }
+                LogLock.OutSql2Log("ApiErrorHandleFilter", new string[] { context.Exception.Message });
             }
             context.ExceptionHandled = true; //异常已处理了
         }

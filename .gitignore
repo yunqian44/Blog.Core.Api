@@ -57,3 +57,7 @@ Demo.Core.Console/obj/
 /Demo.Core.Console/obj/Debug/netcoreapp2.2/Demo.Core.Console.assets.cache
 
 /Demo.Core.Api.IService/bin/Release/netcoreapp2.2
+/Demo.Core.Api.IRepository/bin/Release/netcoreapp2.2
+/Demo.Core.Api.IServices/bin
+/Demo.Core.Api.IServices/obj
+/Demo.Core.Api.Services/obj

@@ -9,6 +9,7 @@
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
       <DocumentationFile>..\Demo.Core.Api.WebApi\Demo.Core.Api.WebApi.xml</DocumentationFile>
       <GenerateDocumentationFile>true</GenerateDocumentationFile>
+      <PlatformTarget>AnyCPU</PlatformTarget>
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="5.0.1" />
@@ -25,8 +26,6 @@
     <ItemGroup>
         <ProjectReference Include="..\Demo.Core.Api.Data\Demo.Core.Api.Data.csproj" />
         <ProjectReference Include="..\Demo.Core.Api.IRepository\Demo.Core.Api.IRepository.csproj" />
-        <ProjectReference Include="..\Demo.Core.Api.IService\Demo.Core.Api.IService.csproj" />
-        <ProjectReference Include="..\Demo.Core.Api.Repository\Demo.Core.Api.Repository.csproj" />
-        <ProjectReference Include="..\Demo.Core.Api.Service\Demo.Core.Api.Service.csproj" />
+        <ProjectReference Include="..\Demo.Core.Api.IServices\Demo.Core.Api.IServices.csproj" />
     </ItemGroup>
 </Project>

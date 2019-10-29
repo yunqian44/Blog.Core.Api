@@ -21,9 +21,6 @@ D:\persion\Core\Demo.Core.Api\Demo.Core.Api.WebApi\obj\Release\netcoreapp2.2\Dem
 D:\persion\Core\Demo.Core.Api\Demo.Core.Api.WebApi\obj\Release\netcoreapp2.2\Demo.Core.Api.WebApi.dll
 D:\persion\Core\Demo.Core.Api\Demo.Core.Api.WebApi\obj\Release\netcoreapp2.2\Demo.Core.Api.WebApi.xml
 D:\persion\Core\Demo.Core.Api\Demo.Core.Api.WebApi\obj\Release\netcoreapp2.2\Demo.Core.Api.WebApi.pdb
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\appsettings.Development.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\appsettings.json
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Properties\launchSettings.json
 E:\persion\Blog\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.WebApi.deps.json
 E:\persion\Blog\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.WebApi.runtimeconfig.json
 E:\persion\Blog\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.WebApi.runtimeconfig.dev.json
@@ -32,10 +29,8 @@ E:\persion\Blog\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.Web
 E:\persion\Blog\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.WebApi.xml
 E:\persion\Blog\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.Core.dll
 E:\persion\Blog\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.Data.dll
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.IService.dll
 E:\persion\Blog\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.Model.dll
 E:\persion\Blog\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.Data.pdb
-E:\persion\Blog\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.IService.pdb
 E:\persion\Blog\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.Model.pdb
 E:\persion\Blog\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.Core.pdb
 E:\persion\Blog\Demo.Core.Api.WebApi\obj\Release\netcoreapp2.2\Demo.Core.Api.WebApi.csprojAssemblyReference.cache
@@ -75,3 +70,8 @@ E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\obj\Release\netcoreapp2.2\Demo.C
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\obj\Release\netcoreapp2.2\Demo.Core.Api.WebApi.dll
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\obj\Release\netcoreapp2.2\Demo.Core.Api.WebApi.xml
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\obj\Release\netcoreapp2.2\Demo.Core.Api.WebApi.pdb
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.IRepository.dll
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.IRepository.pdb
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.IServices.dll
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.IServices.pdb
+E:\persion\Blog\Demo.Core.Api.WebApi\obj\Release\netcoreapp2.2\Demo.Core.Api.WebApi.csproj.CoreCompileInputs.cache

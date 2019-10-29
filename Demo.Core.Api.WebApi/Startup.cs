@@ -13,7 +13,7 @@ using Demo.Core.Api.Data;
 using Demo.Core.Api.Data.Hubs;
 using Demo.Core.Api.Data.LogHelper;
 using Demo.Core.Api.Data.MemoryCache;
-using Demo.Core.Api.IService;
+using Demo.Core.Api.IServices;
 using Demo.Core.Api.Model.Seed;
 using Demo.Core.Api.WebApi.AOP;
 using Demo.Core.Api.WebApi.App_Start;
@@ -32,15 +32,29 @@ using Microsoft.IdentityModel.Tokens;
 using Swashbuckle.AspNetCore.Swagger;
 using Demo.Core.Api.Core.Extension;
 using AutoMapper;
+using log4net;
+using log4net.Config;
+using log4net.Repository;
 
 namespace Demo.Core.Api.WebApi
 {
     public class Startup
     {
+        /// <summary>
+        /// log4net 仓储库
+        /// </summary>
+        public static ILoggerRepository Repository { get; set; }
+
         public Startup(IConfiguration configuration, IHostingEnvironment env)
         {
             Configuration = configuration;
             Env = env;
+            //log4net
+            Repository = LogManager.CreateRepository(Configuration["Logging:Log4Net:Name"]);
+            //指定配置文件，如果这里你遇到问题，应该是使用了InProcess模式，请查看Blog.Core.csproj,并删之
+            var contentPath = env.ContentRootPath;
+            var log4Config = Path.Combine(contentPath, "log4net.config");
+            XmlConfigurator.Configure(Repository, new FileInfo(log4Config));
         }
 
         public IConfiguration Configuration { get; }
@@ -61,6 +75,8 @@ namespace Demo.Core.Api.WebApi
                 //返回xml格式 asp.net core 默认提供的是json格式
                 //options.OutputFormatters.Add(new XmlDataContractSerializerOutputFormatter());
             }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            // Redis注入
+            services.AddSingleton<IRedisCacheManager, RedisCacheManager>();
 
             // log日志注入
             services.AddSingleton<ILoggerHelper, LogHelper>();
@@ -109,6 +125,9 @@ namespace Demo.Core.Api.WebApi
             #endregion
 
             #region Swagger
+
+            var basePath = Microsoft.DotNet.PlatformAbstractions.ApplicationEnvironment.ApplicationBasePath;
+
             services.AddSwaggerGen(c =>
                {
                    c.SwaggerDoc($"{ApiName}",
@@ -126,12 +145,12 @@ namespace Demo.Core.Api.WebApi
                            }
                        });
 
-                   #region 获取xml
-                   // Set the comments path for the Swagger JSON and UI.
-                   var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-                   var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-                   c.IncludeXmlComments(xmlPath, true);//默认的第二个参数是false，这个是controller的注释，记得修改 
-                   #endregion
+                   //就是这里
+                   var xmlPath = Path.Combine(basePath, "Demo.Core.Api.WebApi.xml");//这个就是刚刚配置的xml文件名
+                   c.IncludeXmlComments(xmlPath, true);//默认的第二个参数是false，这个是controller的注释，记得修改
+
+                   var xmlModelPath = Path.Combine(basePath, "Demo.Core.Api.Model.xml");//这个就是Model层的xml文件名
+                   c.IncludeXmlComments(xmlModelPath,false);
 
                    #region Token绑定到ConfigureServices
                    //添加header验证信息
@@ -200,12 +219,9 @@ namespace Demo.Core.Api.WebApi
             #endregion
 
             services.AddSingleton(new Appsettings(Env.ContentRootPath));
-            services.AddSingleton<IRedisCacheManager, RedisCacheManager>();
+            services.AddSingleton(new LogLock(Env.ContentRootPath));
 
             #region AutoFac DI
-
-            var basePath = Microsoft.DotNet.PlatformAbstractions.ApplicationEnvironment.ApplicationBasePath;
-
             //实例化 AutoFac  容器   
             var builder = new ContainerBuilder();
 
@@ -224,9 +240,10 @@ namespace Demo.Core.Api.WebApi
             //获取项目绝对路径，请注意，这个是实现类的dll文件，不是接口 IService.dll ，注入容器当然是Activatore
             try
             {
-                var servicesDllFile = Path.Combine(basePath, "Demo.Core.Api.Service.dll");
+                var servicesDllFile = Path.Combine(basePath, "Demo.Core.Api.Services.dll");
                 var assemblysServices = Assembly.LoadFrom(servicesDllFile);//直接采用加载文件的方法  ※※★※※ 如果你是第一次下载项目，请先F6编译，然后再F5执行，※※★※※
 
+                //var assemblysServices = Assembly.Load("Demo.Core.Api.Service");//要记得!!!这个注入的是实现类层，不是接口层！不是 
                 //builder.RegisterAssemblyTypes(assemblysServices).AsImplementedInterfaces();//指定已扫描程序集中的类型注册为提供所有其实现的接口。
 
 
@@ -297,30 +314,29 @@ namespace Demo.Core.Api.WebApi
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-
-                #region Swagger
-                // Enable middleware to serve generated Swagger as a JSON endpoint.
-                app.UseSwagger();
-
-                // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), 
-                // specifying the Swagger JSON endpoint.
-                app.UseSwaggerUI(c =>
-                {
-                    c.SwaggerEndpoint($"/swagger/{ApiName}/swagger.json", $"{ApiName}");
-
-                    // 将swagger设置成首页
-                    c.RoutePrefix = "";
-                    //路径配置，设置为空，表示直接访问该文件，
-                    //路径配置，设置为空，表示直接在根域名（localhost:8001）访问该文件,注意localhost:8001/swagger是访问不到的，
-                    //这个时候去launchSettings.json中把"launchUrl": "swagger/index.html"去掉， 然后直接访问localhost:8001/index.html即可
-                });
-                #endregion
             }
             else
             {
+                app.UseExceptionHandler("/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
+                //app.UseHsts();
             }
+
+
+            #region Swagger
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint($"/swagger/{ApiName}/swagger.json", $"{ApiName}");
+
+                // 将swagger设置成首页
+                c.RoutePrefix = "";
+                //路径配置，设置为空，表示直接访问该文件，
+                //路径配置，设置为空，表示直接在根域名（localhost:8001）访问该文件,注意localhost:8001/swagger是访问不到的，
+                //这个时候去launchSettings.json中把"launchUrl": "swagger/index.html"去掉， 然后直接访问localhost:8001/index.html即可
+
+            });
+            #endregion
 
             #region CORS(跨越资源共享)
             //跨域第一种版本，启用跨域策略  不推荐使用

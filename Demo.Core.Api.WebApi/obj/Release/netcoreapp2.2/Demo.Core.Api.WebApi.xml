@@ -84,7 +84,7 @@
             配置构造函数，用来创建关系映射
             </summary>
         </member>
-        <member name="M:Demo.Core.Api.WebApi.Controllers.BlogController.#ctor(Demo.Core.Api.IService.IAdvertisementService,Demo.Core.Api.IService.IBlogArticleService,Demo.Core.Api.Data.IRedisCacheManager)">
+        <member name="M:Demo.Core.Api.WebApi.Controllers.BlogController.#ctor(Demo.Core.Api.IServices.IAdvertisementService,Demo.Core.Api.IServices.IBlogArticleService,Demo.Core.Api.Data.IRedisCacheManager)">
             <summary>
             构造函数
             </summary>
@@ -143,6 +143,11 @@
             </summary>
             <param name="id">主键Id</param>
             <returns></returns>
+        </member>
+        <member name="P:Demo.Core.Api.WebApi.Startup.Repository">
+            <summary>
+            log4net 仓储库
+            </summary>
         </member>
     </members>
 </doc>

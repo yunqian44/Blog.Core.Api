@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Console\\Demo.Core.ConsoleDemo.csproj": {}
+    "E:\\persion\\Blog\\Demo.Core.Console\\Demo.Core.ConsoleDemo.csproj": {}
   },
   "projects": {
-    "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Core\\Demo.Core.Api.Core.csproj": {
+    "E:\\persion\\Blog\\Demo.Core.Api.Core\\Demo.Core.Api.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Core\\Demo.Core.Api.Core.csproj",
+        "projectUniqueName": "E:\\persion\\Blog\\Demo.Core.Api.Core\\Demo.Core.Api.Core.csproj",
         "projectName": "Demo.Core.Api.Core",
-        "projectPath": "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Core\\Demo.Core.Api.Core.csproj",
+        "projectPath": "E:\\persion\\Blog\\Demo.Core.Api.Core\\Demo.Core.Api.Core.csproj",
         "packagesPath": "C:\\Users\\yunqian\\.nuget\\packages\\",
-        "outputPath": "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Core\\obj\\",
+        "outputPath": "E:\\persion\\Blog\\Demo.Core.Api.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -70,14 +70,14 @@
         }
       }
     },
-    "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj": {
+    "E:\\persion\\Blog\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj",
+        "projectUniqueName": "E:\\persion\\Blog\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj",
         "projectName": "Demo.Core.Api.Data",
-        "projectPath": "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj",
+        "projectPath": "E:\\persion\\Blog\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj",
         "packagesPath": "C:\\Users\\yunqian\\.nuget\\packages\\",
-        "outputPath": "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Data\\obj\\",
+        "outputPath": "E:\\persion\\Blog\\Demo.Core.Api.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -96,8 +96,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Core\\Demo.Core.Api.Core.csproj": {
-                "projectPath": "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Core\\Demo.Core.Api.Core.csproj"
+              "E:\\persion\\Blog\\Demo.Core.Api.Core\\Demo.Core.Api.Core.csproj": {
+                "projectPath": "E:\\persion\\Blog\\Demo.Core.Api.Core\\Demo.Core.Api.Core.csproj"
               }
             }
           }
@@ -156,14 +156,14 @@
         }
       }
     },
-    "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Model\\Demo.Core.Api.Model.csproj": {
+    "E:\\persion\\Blog\\Demo.Core.Api.Model\\Demo.Core.Api.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Model\\Demo.Core.Api.Model.csproj",
+        "projectUniqueName": "E:\\persion\\Blog\\Demo.Core.Api.Model\\Demo.Core.Api.Model.csproj",
         "projectName": "Demo.Core.Api.Model",
-        "projectPath": "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Model\\Demo.Core.Api.Model.csproj",
+        "projectPath": "E:\\persion\\Blog\\Demo.Core.Api.Model\\Demo.Core.Api.Model.csproj",
         "packagesPath": "C:\\Users\\yunqian\\.nuget\\packages\\",
-        "outputPath": "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Model\\obj\\",
+        "outputPath": "E:\\persion\\Blog\\Demo.Core.Api.Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -182,8 +182,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Core\\Demo.Core.Api.Core.csproj": {
-                "projectPath": "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Core\\Demo.Core.Api.Core.csproj"
+              "E:\\persion\\Blog\\Demo.Core.Api.Core\\Demo.Core.Api.Core.csproj": {
+                "projectPath": "E:\\persion\\Blog\\Demo.Core.Api.Core\\Demo.Core.Api.Core.csproj"
               }
             }
           }
@@ -222,14 +222,14 @@
         }
       }
     },
-    "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Console\\Demo.Core.ConsoleDemo.csproj": {
+    "E:\\persion\\Blog\\Demo.Core.Console\\Demo.Core.ConsoleDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Console\\Demo.Core.ConsoleDemo.csproj",
+        "projectUniqueName": "E:\\persion\\Blog\\Demo.Core.Console\\Demo.Core.ConsoleDemo.csproj",
         "projectName": "Demo.Core.ConsoleDemo",
-        "projectPath": "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Console\\Demo.Core.ConsoleDemo.csproj",
+        "projectPath": "E:\\persion\\Blog\\Demo.Core.Console\\Demo.Core.ConsoleDemo.csproj",
         "packagesPath": "C:\\Users\\yunqian\\.nuget\\packages\\",
-        "outputPath": "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Console\\obj\\",
+        "outputPath": "E:\\persion\\Blog\\Demo.Core.Console\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -248,11 +248,11 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj": {
-                "projectPath": "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj"
+              "E:\\persion\\Blog\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj": {
+                "projectPath": "E:\\persion\\Blog\\Demo.Core.Api.Data\\Demo.Core.Api.Data.csproj"
               },
-              "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Model\\Demo.Core.Api.Model.csproj": {
-                "projectPath": "E:\\Code\\Core\\Core.Bolg.Api\\Demo.Core.Api.Model\\Demo.Core.Api.Model.csproj"
+              "E:\\persion\\Blog\\Demo.Core.Api.Model\\Demo.Core.Api.Model.csproj": {
+                "projectPath": "E:\\persion\\Blog\\Demo.Core.Api.Model\\Demo.Core.Api.Model.csproj"
               }
             }
           }

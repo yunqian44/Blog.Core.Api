@@ -20,8 +20,9 @@ namespace Demo.Core.Api.WebApi
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             //使用预配置的默认值初始化 Microsoft.AspNetCore.Hosting.WebHostBuilder 类的新实例。aa
             WebHost.CreateDefaultBuilder(args)
-            //.UseKestrel()
-            //.UseIISIntegration()
+                            //.UseKestrel()
+                            //.UseIISIntegration()
+                            .UseUrls("http://localhost:8081")
                 .UseStartup<Startup>();
     }
 }

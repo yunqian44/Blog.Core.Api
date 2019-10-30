@@ -94,6 +94,23 @@ namespace Demo.Core.Api.WebApi
             services.AddAutoMapper(typeof(Startup));//这是AutoMapper的2.0新特性
             #endregion
 
+            #region MiniProfiler
+
+            services.AddMiniProfiler(options =>
+            {
+                options.RouteBasePath = "/profiler";
+                //(options.Storage as MemoryCacheStorage).CacheDuration = TimeSpan.FromMinutes(10);
+                options.PopupRenderPosition = StackExchange.Profiling.RenderPosition.Left;
+                options.PopupShowTimeWithChildren = true;
+
+                // 可以增加权限
+                //options.ResultsAuthorize = request => request.HttpContext.User.IsInRole("Admin");
+                //options.UserIdProvider = request => request.HttpContext.User.Identity.Name;
+            }
+            );
+
+            #endregion
+
             #region CORS
             //跨域第二种方法，声明策略，记得下边app中配置
             services.AddCors(c =>
@@ -364,6 +381,12 @@ namespace Demo.Core.Api.WebApi
             //返回错误码
             app.UseStatusCodePages();//将错误码返回给前台，比如404 
             #endregion
+
+
+            #region MiniProfiler
+            app.UseMiniProfiler();
+            #endregion
+
 
             #region 开启认证中间件
             //自定义认证中间件

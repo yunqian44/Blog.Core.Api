@@ -3,37 +3,112 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Demo.Core.Api.Core.CachingAttribute;
+using Demo.Core.Api.Core.Helper;
 using Demo.Core.Api.Data;
 using Demo.Core.Api.IServices;
 using Demo.Core.Api.Model.Entity;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using StackExchange.Profiling;
 
 namespace Demo.Core.Api.WebApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/Blog")]
     [ApiController]
-    [Authorize(Policy = "Admin")]
+    [Authorize]
     public class BlogController : ControllerBase
     {
-        readonly IAdvertisementService _advertisementService;
         readonly IRedisCacheManager _redisCacheManager;
         readonly IBlogArticleService _blogArticleService;
 
         /// <summary>
         /// 构造函数
         /// </summary>
-        /// <param name="advertisementService"></param>
         /// <param name="blogArticleService"></param>
         /// <param name="redisCacheManager"></param>
-        public BlogController(IAdvertisementService advertisementService,
-            IBlogArticleService blogArticleService,
+        public BlogController(IBlogArticleService blogArticleService,
             IRedisCacheManager redisCacheManager)
         {
-            _advertisementService = advertisementService;
             _blogArticleService = blogArticleService;
             _redisCacheManager = redisCacheManager;
+        }
+
+        /// <summary>
+        /// 获取博客列表【无权限】
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="page"></param>
+        /// <param name="category"></param>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [AllowAnonymous]
+        public async Task<object> Get(int id, int page = 1, string category = "技术博文", string key = "")
+        {
+            int intTotalCount = 6;
+            int total;
+            int totalCount = 1;
+            List<BlogArticle> blogArticleList = new List<BlogArticle>();
+            if (string.IsNullOrEmpty(key) || string.IsNullOrWhiteSpace(key))
+            {
+                key = "";
+            }
+
+            using (MiniProfiler.Current.Step("开始加载数据："))
+            {
+                try
+                {
+                    if (_redisCacheManager.Get<object>("Redis.Blog") != null)
+                    {
+                        MiniProfiler.Current.Step("从Redis服务器中加载数据：");
+                        blogArticleList = _redisCacheManager.Get<List<BlogArticle>>("Redis.Blog");
+                    }
+                    else
+                    {
+                        MiniProfiler.Current.Step("从MySql服务器中加载数据：");
+                        blogArticleList = await _blogArticleService.Query(a => a.Category == category && a.IsDeleted == false);
+                        _redisCacheManager.Set("Redis.Blog", blogArticleList, TimeSpan.FromHours(2));
+                    }
+
+                }
+                catch (Exception e)
+                {
+                    MiniProfiler.Current.CustomTiming("Errors：", "Redis服务未启用" + e.Message);
+                    blogArticleList = await _blogArticleService.Query(a => a.Category == category && a.IsDeleted == false);
+                }
+            }
+
+            blogArticleList = blogArticleList.Where(d => (d.Title != null && d.Title.Contains(key)) || (d.Content != null && d.Content.Contains(key))).ToList();
+            total = blogArticleList.Count();
+            totalCount = blogArticleList.Count() / intTotalCount;
+
+            using (MiniProfiler.Current.Step("获取成功后，开始处理最终数据"))
+            {
+                blogArticleList = blogArticleList.OrderByDescending(d => d.Id).Skip((page - 1) * intTotalCount).Take(intTotalCount).ToList();
+
+                foreach (var item in blogArticleList)
+                {
+                    if (!string.IsNullOrEmpty(item.Content))
+                    {
+                        item.Remark = (HtmlHelper.ReplaceHtmlTag(item.Content)).Length >= 200 ? (HtmlHelper.ReplaceHtmlTag(item.Content)).Substring(0, 200) : (HtmlHelper.ReplaceHtmlTag(item.Content));
+                        int totalLength = 500;
+                        if (item.Content.Length > totalLength)
+                        {
+                            item.Content = item.Content.Substring(0, totalLength);
+                        }
+                    }
+                }
+            }
+
+            return Ok(new
+            {
+                success = true,
+                page,
+                total,
+                pageCount = totalCount,
+                data = blogArticleList
+            });
         }
 
         /// <summary>
@@ -68,9 +143,11 @@ namespace Demo.Core.Api.WebApi.Controllers
         /// <param name="j">参数j</param>
         /// <returns></returns>
         [HttpGet]
+        [Route("Sum")]
         public int Get(int i, int j)
         {
-            return _advertisementService.Sum(i, j);
+            //return _advertisementService.Sum(i, j);
+            return 5;
         }
 
         // GET: api/Blog/5
@@ -88,6 +165,7 @@ namespace Demo.Core.Api.WebApi.Controllers
         [HttpPost]
         public void Post([FromBody] string value)
         {
+
         }
 
         // PUT: api/Blog/5

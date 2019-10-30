@@ -91,7 +91,6 @@ E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Core.
 E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Model.pdb
 E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Model.xml
 E:\persion\Blog\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.csprojAssemblyReference.cache
-E:\persion\Blog\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.csproj.CoreCompileInputs.cache
 E:\persion\Blog\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.RazorAssemblyInfo.cache
 E:\persion\Blog\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.RazorAssemblyInfo.cs
 E:\persion\Blog\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.AssemblyInfoInputs.cache
@@ -100,3 +99,7 @@ E:\persion\Blog\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebAp
 E:\persion\Blog\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.csproj.CopyComplete
 E:\persion\Blog\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.dll
 E:\persion\Blog\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.pdb
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Log4net.config
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\appsettings.Development.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\appsettings.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Properties\launchSettings.json

@@ -61,3 +61,5 @@ Demo.Core.Console/obj/
 /Demo.Core.Api.IServices/bin
 /Demo.Core.Api.IServices/obj
 /Demo.Core.Api.Services/obj
+/Demo.Core.Api.WebApi/Log
+/PublishFiles

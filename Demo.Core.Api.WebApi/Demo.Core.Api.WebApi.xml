@@ -84,13 +84,22 @@
             配置构造函数，用来创建关系映射
             </summary>
         </member>
-        <member name="M:Demo.Core.Api.WebApi.Controllers.BlogController.#ctor(Demo.Core.Api.IServices.IAdvertisementService,Demo.Core.Api.IServices.IBlogArticleService,Demo.Core.Api.Data.IRedisCacheManager)">
+        <member name="M:Demo.Core.Api.WebApi.Controllers.BlogController.#ctor(Demo.Core.Api.IServices.IBlogArticleService,Demo.Core.Api.Data.IRedisCacheManager)">
             <summary>
             构造函数
             </summary>
-            <param name="advertisementService"></param>
             <param name="blogArticleService"></param>
             <param name="redisCacheManager"></param>
+        </member>
+        <member name="M:Demo.Core.Api.WebApi.Controllers.BlogController.Get(System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            获取博客列表【无权限】
+            </summary>
+            <param name="id"></param>
+            <param name="page"></param>
+            <param name="category"></param>
+            <param name="key"></param>
+            <returns></returns>
         </member>
         <member name="M:Demo.Core.Api.WebApi.Controllers.BlogController.GetBlogs">
             <summary>

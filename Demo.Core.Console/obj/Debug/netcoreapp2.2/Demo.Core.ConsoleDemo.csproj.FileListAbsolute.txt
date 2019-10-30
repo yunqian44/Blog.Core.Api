@@ -46,7 +46,6 @@ E:\persion\Blog\Demo.Core.Console\bin\Debug\netcoreapp2.2\Demo.Core.Api.Model.pd
 E:\persion\Blog\Demo.Core.Console\bin\Debug\netcoreapp2.2\Demo.Core.Api.Model.xml
 E:\persion\Blog\Demo.Core.Console\bin\Debug\netcoreapp2.2\Demo.Core.Api.Core.pdb
 E:\persion\Blog\Demo.Core.Console\obj\Debug\netcoreapp2.2\Demo.Core.ConsoleDemo.csprojAssemblyReference.cache
-E:\persion\Blog\Demo.Core.Console\obj\Debug\netcoreapp2.2\Demo.Core.ConsoleDemo.csproj.CoreCompileInputs.cache
 E:\persion\Blog\Demo.Core.Console\obj\Debug\netcoreapp2.2\Demo.Core.ConsoleDemo.AssemblyInfoInputs.cache
 E:\persion\Blog\Demo.Core.Console\obj\Debug\netcoreapp2.2\Demo.Core.ConsoleDemo.AssemblyInfo.cs
 E:\persion\Blog\Demo.Core.Console\obj\Debug\netcoreapp2.2\Demo.Core.ConsoleDemo.csproj.CopyComplete

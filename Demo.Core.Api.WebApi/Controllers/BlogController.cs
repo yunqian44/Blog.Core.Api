@@ -151,7 +151,11 @@ namespace Demo.Core.Api.WebApi.Controllers
         }
 
         // GET: api/Blog/5
-
+        /// <summary>
+        /// 获取详情
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}", Name = "Get")]
         public async Task<object> Get(int id)
         {

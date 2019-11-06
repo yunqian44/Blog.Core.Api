@@ -63,3 +63,9 @@ Demo.Core.Console/obj/
 /Demo.Core.Api.Services/obj
 /Demo.Core.Api.WebApi/Log
 /PublishFiles
+.vs/Demo.Core.Api/DesignTimeBuild/.dtbcache
+.vs/Demo.Core.Api/DesignTimeBuild/.dtbcache
+Demo.Core.Api.WebApi/obj/Debug/netcoreapp2.2/Demo.Core.Api.WebApi.assets.cache
+Demo.Core.Api.WebApi/obj/Debug/netcoreapp2.2/Demo.Core.Api.WebApi.assets.cache
+Demo.Core.Api.WebApi/obj/Debug/netcoreapp2.2/project.razor.json
+Demo.Core.Console/obj/Debug/netcoreapp2.2/Demo.Core.ConsoleDemo.assets.cache

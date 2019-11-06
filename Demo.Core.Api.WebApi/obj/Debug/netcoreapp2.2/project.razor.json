@@ -2954,6 +2954,207 @@
           "Runtime.Name": "ITagHelper",
           "Common.TypeName": "Microsoft.AspNetCore.SpaServices.Prerendering.PrerenderTagHelper"
         }
+      },
+      {
+        "Kind": "ITagHelper",
+        "Name": "StackExchange.Profiling.MiniProfilerScriptTagHelper",
+        "AssemblyName": "MiniProfiler.AspNetCore.Mvc",
+        "Documentation": "\n            <summary>\n            Tag helper to render MiniProfiler in ASP.NET Core views, e.g. &lt;mini-profiler position=\"Right\" /&gt;\n            </summary>\n        ",
+        "TagOutputHint": null,
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "mini-profiler",
+            "ParentTag": null,
+            "TagStructure": 2,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "ITagHelper",
+            "Name": "view-context",
+            "TypeName": "Microsoft.AspNetCore.Mvc.Rendering.ViewContext",
+            "IsEnum": false,
+            "IndexerNamePrefix": null,
+            "IndexerTypeName": null,
+            "Documentation": "\n            <summary>\n            The view context of this tag helper, for accessing HttpContext on render.\n            </summary>\n        ",
+            "Diagnostics": [],
+            "Metadata": {
+              "Common.PropertyName": "ViewContext"
+            },
+            "BoundAttributeParameters": []
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "position",
+            "TypeName": "StackExchange.Profiling.RenderPosition?",
+            "IsEnum": false,
+            "IndexerNamePrefix": null,
+            "IndexerTypeName": null,
+            "Documentation": "\n            <summary>\n            The UI position to render the profiler in (defaults to <see cref=\"P:StackExchange.Profiling.Internal.MiniProfilerBaseOptions.PopupRenderPosition\" />).\n            </summary>\n        ",
+            "Diagnostics": [],
+            "Metadata": {
+              "Common.PropertyName": "Position"
+            },
+            "BoundAttributeParameters": []
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "show-trivial",
+            "TypeName": "System.Boolean?",
+            "IsEnum": false,
+            "IndexerNamePrefix": null,
+            "IndexerTypeName": null,
+            "Documentation": "\n            <summary>\n            Whether to show trivial timings column initially or not (defaults to <see cref=\"P:StackExchange.Profiling.Internal.MiniProfilerBaseOptions.PopupShowTrivial\" />).\n            </summary>\n        ",
+            "Diagnostics": [],
+            "Metadata": {
+              "Common.PropertyName": "ShowTrivial"
+            },
+            "BoundAttributeParameters": []
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "show-time-with-children",
+            "TypeName": "System.Boolean?",
+            "IsEnum": false,
+            "IndexerNamePrefix": null,
+            "IndexerTypeName": null,
+            "Documentation": "\n            <summary>\n            Whether to show time with children column initially or not (defaults to <see cref=\"P:StackExchange.Profiling.Internal.MiniProfilerBaseOptions.PopupShowTimeWithChildren\" />).\n            </summary>\n        ",
+            "Diagnostics": [],
+            "Metadata": {
+              "Common.PropertyName": "ShowTimeWithChildren"
+            },
+            "BoundAttributeParameters": []
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "max-traces",
+            "TypeName": "System.Int32?",
+            "IsEnum": false,
+            "IndexerNamePrefix": null,
+            "IndexerTypeName": null,
+            "Documentation": "\n            <summary>\n            The maximum number of profilers to show (before the oldest is removed - defaults to <see cref=\"P:StackExchange.Profiling.Internal.MiniProfilerBaseOptions.PopupMaxTracesToShow\" />).\n            </summary>\n        ",
+            "Diagnostics": [],
+            "Metadata": {
+              "Common.PropertyName": "MaxTraces"
+            },
+            "BoundAttributeParameters": []
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "show-controls",
+            "TypeName": "System.Boolean?",
+            "IsEnum": false,
+            "IndexerNamePrefix": null,
+            "IndexerTypeName": null,
+            "Documentation": "\n            <summary>\n            Whether to show the controls (defaults to <see cref=\"P:StackExchange.Profiling.Internal.MiniProfilerBaseOptions.ShowControls\" />).\n            </summary>\n        ",
+            "Diagnostics": [],
+            "Metadata": {
+              "Common.PropertyName": "ShowControls"
+            },
+            "BoundAttributeParameters": []
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "start-hidden",
+            "TypeName": "System.Boolean?",
+            "IsEnum": false,
+            "IndexerNamePrefix": null,
+            "IndexerTypeName": null,
+            "Documentation": "\n            <summary>\n            Whether to start hidden (defaults to <see cref=\"P:StackExchange.Profiling.Internal.MiniProfilerBaseOptions.PopupStartHidden\" />).\n            </summary>\n        ",
+            "Diagnostics": [],
+            "Metadata": {
+              "Common.PropertyName": "StartHidden"
+            },
+            "BoundAttributeParameters": []
+          }
+        ],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "StackExchange.Profiling.MiniProfilerScriptTagHelper"
+        }
+      },
+      {
+        "Kind": "ITagHelper",
+        "Name": "StackExchange.Profiling.ProfileScriptTagHelper",
+        "AssemblyName": "MiniProfiler.AspNetCore.Mvc",
+        "Documentation": "\n            <summary>\n            Tag helper to profile script execution in ASP.NET Core views, e.g. \n            &lt;profile-script name=\"My Step\" /&gt;\n            ...script blocks...\n            &lt;/profile-script&gt;\n            Include as self closing to provide initialization only.\n            </summary>\n        ",
+        "TagOutputHint": null,
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "profile-script",
+            "ParentTag": null,
+            "TagStructure": 1,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "ITagHelper",
+            "Name": "name",
+            "TypeName": "System.String",
+            "IsEnum": false,
+            "IndexerNamePrefix": null,
+            "IndexerTypeName": null,
+            "Documentation": "\n            <summary>\n            The name of this <see cref=\"T:StackExchange.Profiling.MiniProfiler\" /> step.\n            </summary>\n        ",
+            "Diagnostics": [],
+            "Metadata": {
+              "Common.PropertyName": "Name"
+            },
+            "BoundAttributeParameters": []
+          }
+        ],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "StackExchange.Profiling.ProfileScriptTagHelper"
+        }
+      },
+      {
+        "Kind": "ITagHelper",
+        "Name": "StackExchange.Profiling.ProfileTagHelper",
+        "AssemblyName": "MiniProfiler.AspNetCore.Mvc",
+        "Documentation": "\n            <summary>\n            Tag helper to profile child contents in ASP.NET Core views, e.g. \n            &lt;profile name=\"My Step\" /&gt;\n            ...child content...\n            &lt;/profile&gt;\n            </summary>\n        ",
+        "TagOutputHint": null,
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "profile",
+            "ParentTag": null,
+            "TagStructure": 1,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "ITagHelper",
+            "Name": "name",
+            "TypeName": "System.String",
+            "IsEnum": false,
+            "IndexerNamePrefix": null,
+            "IndexerTypeName": null,
+            "Documentation": "\n            <summary>\n            The name of this <see cref=\"T:StackExchange.Profiling.MiniProfiler\" /> step.\n            </summary>\n        ",
+            "Diagnostics": [],
+            "Metadata": {
+              "Common.PropertyName": "Name"
+            },
+            "BoundAttributeParameters": []
+          }
+        ],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "StackExchange.Profiling.ProfileTagHelper"
+        }
       }
     ],
     "CSharpLanguageVersion": 703

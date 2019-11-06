@@ -35,6 +35,7 @@ using AutoMapper;
 using log4net;
 using log4net.Config;
 using log4net.Repository;
+using static Demo.Core.Api.WebApi.SwaggerHelper.CustomApiVersion;
 
 namespace Demo.Core.Api.WebApi
 {
@@ -147,32 +148,39 @@ namespace Demo.Core.Api.WebApi
 
             services.AddSwaggerGen(c =>
                {
-                   c.SwaggerDoc($"{ApiName}",
-                       new Info
+                   //遍历出全部的版本，做文档信息展示
+                   typeof(ApiVersions).GetEnumNames().ToList().ForEach(version =>
+                   {
+                       c.SwaggerDoc(version, new Info
                        {
-                           Title = "Blog.Core API",
-                           Version = "v1.0",
-                           Description = "框架说明文档",
+                           Title = $"{ApiName}接口文档",
+                           Version = version,
+                           Description = $"{ApiName}框架说明文档"+version,
                            TermsOfService = "None",
-                           Contact = new Contact()
-                           {
+                           Contact = new Contact(){
                                Name = "刺客",
                                Email = "yunqian8@live.com",
                                Url = "暂时没有"
                            }
                        });
+                       // 按相对路径排序
+                       c.OrderActionsBy(o => o.RelativePath);
+                   });
 
                    //就是这里
                    var xmlPath = Path.Combine(basePath, "Demo.Core.Api.WebApi.xml");//这个就是刚刚配置的xml文件名
                    c.IncludeXmlComments(xmlPath, true);//默认的第二个参数是false，这个是controller的注释，记得修改
 
                    var xmlModelPath = Path.Combine(basePath, "Demo.Core.Api.Model.xml");//这个就是Model层的xml文件名
-                   c.IncludeXmlComments(xmlModelPath,false);
+                   c.IncludeXmlComments(xmlModelPath, false);
 
                    #region Token绑定到ConfigureServices
                    //添加header验证信息
                    //c.OperationFilter<SwaggerHeader>();
-                   var security = new Dictionary<string, IEnumerable<string>> { { "Blog.Core", new string[] { } }, };
+
+                   var IssuerName = (Configuration.GetSection("Audience"))["Issuer"];
+                   var security = new Dictionary<string, IEnumerable<string>> { { IssuerName, new string[] { } }, };
+
                    c.AddSecurityRequirement(security);
                    //方案名称“Blog.Core”可自定义，上下一致即可
                    c.AddSecurityDefinition("Blog.Core", new ApiKeyScheme
@@ -344,7 +352,12 @@ namespace Demo.Core.Api.WebApi
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint($"/swagger/{ApiName}/swagger.json", $"{ApiName}");
+                //根据版本名称倒序 遍历展示
+                typeof(ApiVersions).GetEnumNames().OrderByDescending(e => e).ToList().ForEach(version =>
+                {
+                    c.SwaggerEndpoint($"/swagger/{version}/swagger.json", $"{ApiName}{version}");
+                });
+
 
                 // 将swagger设置成首页
                 c.RoutePrefix = "";

@@ -9,6 +9,11 @@ namespace Demo.Core.Api.Model.Entity
     /// </summary>
     public class UserModel
     {
+        public UserModel()
+        {
+            
+        }
+
         public UserModel(string loginName, string loginPwd)
         {
             

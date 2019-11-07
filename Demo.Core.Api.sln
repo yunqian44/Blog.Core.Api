@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.902
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29424.173
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.Core.Api.WebApi", "Demo.Core.Api.WebApi\Demo.Core.Api.WebApi.csproj", "{70EF0FD5-CBEF-4C26-81FB-162EEC4E5AB4}"
 EndProject
@@ -17,9 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.Core.Api.Core", "Demo.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.Core.Api.Data", "Demo.Core.Api.Data\Demo.Core.Api.Data.csproj", "{F038D5E2-877F-484A-9DC1-2F37079711CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Core.Api.IServices", "Demo.Core.Api.IServices\Demo.Core.Api.IServices.csproj", "{8A76F4BE-F7F8-4FD4-9C1B-BE5B081DD4A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.Core.Api.IServices", "Demo.Core.Api.IServices\Demo.Core.Api.IServices.csproj", "{8A76F4BE-F7F8-4FD4-9C1B-BE5B081DD4A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Core.Api.Services", "Demo.Core.Api.Services\Demo.Core.Api.Services.csproj", "{42D9F661-D5AE-46D9-BEC3-47E68CFC11FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.Core.Api.Services", "Demo.Core.Api.Services\Demo.Core.Api.Services.csproj", "{42D9F661-D5AE-46D9-BEC3-47E68CFC11FF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.Core.Api.Repository", "Demo.Core.Api.Repository\Demo.Core.Api.Repository.csproj", "{AA31ED9D-DBB4-40AE-A822-39EF81892C0F}"
 EndProject

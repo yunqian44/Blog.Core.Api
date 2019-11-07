@@ -27,5 +27,15 @@
         <ProjectReference Include="..\Demo.Core.Api.Data\Demo.Core.Api.Data.csproj" />
         <ProjectReference Include="..\Demo.Core.Api.IRepository\Demo.Core.Api.IRepository.csproj" />
         <ProjectReference Include="..\Demo.Core.Api.IServices\Demo.Core.Api.IServices.csproj" />
+        <ProjectReference Include="..\Demo.Core.Api.Repository\Demo.Core.Api.Repository.csproj" />
+        <ProjectReference Include="..\Demo.Core.Api.Services\Demo.Core.Api.Services.csproj" />
+    </ItemGroup>
+    <ItemGroup>
+      <None Update="Demo.Core.Api.Model.xml">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Demo.Core.Api.WebApi.xml">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
     </ItemGroup>
 </Project>

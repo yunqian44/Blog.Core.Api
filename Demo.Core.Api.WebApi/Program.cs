@@ -22,7 +22,7 @@ namespace Demo.Core.Api.WebApi
             WebHost.CreateDefaultBuilder(args)
                             //.UseKestrel()
                             //.UseIISIntegration()
-                            .UseUrls("http://localhost:8081")
+                            //.UseUrls("http://localhost:8081")//部署到docker中不能使用http://localhost:8081
                 .UseStartup<Startup>();
     }
 }

@@ -10,10 +10,9 @@ echo "*************开始编译工程***************"
 dotnet build
 
 cd Demo.Core.Api.WebApi
-
-echo "*************开始发布工程***************"
 dotnet publish -o ..\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\
 
+echo "*************开始发布工程***************"
 md ..\PublishFiles
 
 xcopy ..\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\*.* ..\PublishFiles\ /s /e 

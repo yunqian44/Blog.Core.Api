@@ -1,3 +1,0 @@
-D:\persion\Core\Demo.Core.Api\Demo.Core.Console\obj\Debug\netcoreapp2.2\Demo.Core.Console.csproj.CoreCompileInputs.cache
-D:\persion\Core\Demo.Core.Api\Demo.Core.Console\obj\Debug\netcoreapp2.2\Demo.Core.Console.AssemblyInfoInputs.cache
-D:\persion\Core\Demo.Core.Api\Demo.Core.Console\obj\Debug\netcoreapp2.2\Demo.Core.Console.AssemblyInfo.cs

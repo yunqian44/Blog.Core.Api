@@ -5670,6 +5670,37 @@
         "runtime": {
           "bin/placeholder/Demo.Core.Api.Model.dll": {}
         }
+      },
+      "Demo.Core.Api.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "Demo.Core.Api.IRepository": "1.0.0",
+          "Demo.Core.Api.Model": "1.0.0",
+          "MiniProfiler.AspNetCore.Mvc": "4.1.0"
+        },
+        "compile": {
+          "bin/placeholder/Demo.Core.Api.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Demo.Core.Api.Repository.dll": {}
+        }
+      },
+      "Demo.Core.Api.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
+          "Demo.Core.Api.IRepository": "1.0.0",
+          "Demo.Core.Api.IServices": "1.0.0",
+          "Demo.Core.Api.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Demo.Core.Api.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Demo.Core.Api.Services.dll": {}
+        }
       }
     }
   },
@@ -15352,6 +15383,16 @@
       "type": "project",
       "path": "../Demo.Core.Api.Model/Demo.Core.Api.Model.csproj",
       "msbuildProject": "../Demo.Core.Api.Model/Demo.Core.Api.Model.csproj"
+    },
+    "Demo.Core.Api.Repository/1.0.0": {
+      "type": "project",
+      "path": "../Demo.Core.Api.Repository/Demo.Core.Api.Repository.csproj",
+      "msbuildProject": "../Demo.Core.Api.Repository/Demo.Core.Api.Repository.csproj"
+    },
+    "Demo.Core.Api.Services/1.0.0": {
+      "type": "project",
+      "path": "../Demo.Core.Api.Services/Demo.Core.Api.Services.csproj",
+      "msbuildProject": "../Demo.Core.Api.Services/Demo.Core.Api.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -15363,6 +15404,8 @@
       "Demo.Core.Api.Data >= 1.0.0",
       "Demo.Core.Api.IRepository >= 1.0.0",
       "Demo.Core.Api.IServices >= 1.0.0",
+      "Demo.Core.Api.Repository >= 1.0.0",
+      "Demo.Core.Api.Services >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
@@ -15410,6 +15453,12 @@
             },
             "E:\\persion\\Blog\\Demo.Core.Api.IServices\\Demo.Core.Api.IServices.csproj": {
               "projectPath": "E:\\persion\\Blog\\Demo.Core.Api.IServices\\Demo.Core.Api.IServices.csproj"
+            },
+            "E:\\persion\\Blog\\Demo.Core.Api.Repository\\Demo.Core.Api.Repository.csproj": {
+              "projectPath": "E:\\persion\\Blog\\Demo.Core.Api.Repository\\Demo.Core.Api.Repository.csproj"
+            },
+            "E:\\persion\\Blog\\Demo.Core.Api.Services\\Demo.Core.Api.Services.csproj": {
+              "projectPath": "E:\\persion\\Blog\\Demo.Core.Api.Services\\Demo.Core.Api.Services.csproj"
             }
           }
         }

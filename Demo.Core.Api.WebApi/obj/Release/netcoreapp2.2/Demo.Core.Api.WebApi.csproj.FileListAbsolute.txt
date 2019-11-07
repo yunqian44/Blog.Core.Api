@@ -74,4 +74,12 @@ E:\persion\Blog\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.IRe
 E:\persion\Blog\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.IRepository.pdb
 E:\persion\Blog\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.IServices.dll
 E:\persion\Blog\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.IServices.pdb
-E:\persion\Blog\Demo.Core.Api.WebApi\obj\Release\netcoreapp2.2\Demo.Core.Api.WebApi.csproj.CoreCompileInputs.cache
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Log4net.config
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\appsettings.Development.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\appsettings.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Properties\launchSettings.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.Repository.dll
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.Services.dll
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.Repository.pdb
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.Services.pdb
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.Model.xml

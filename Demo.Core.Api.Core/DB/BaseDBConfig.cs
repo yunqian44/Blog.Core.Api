@@ -33,7 +33,7 @@ namespace Demo.Core.Api.Core.DB
             }
             else
             {
-                return "server=127.0.0.1:3307;uid=root;pwd=qwer1234!;database=BlogDB;Character Set=utf8";
+                return "server=mysql_dc;uid=root;pwd=qwer1234!;database=blogdb;Character Set=utf8";
             }
 
         }

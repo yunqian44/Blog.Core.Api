@@ -1,9 +1,12 @@
-﻿using Demo.Core.Api.IRepository;
+﻿using Dapper;
+using Demo.Core.Api.IRepository;
 using Demo.Core.Api.Model;
 using Demo.Core.Api.Model.Seed;
+using MySql.Data.MySqlClient;
 using SqlSugar;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +15,7 @@ namespace Demo.Core.Api.Repository
 {
     public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : class, new()
     {
+        #region sqlSygarCore
         private MyContext _context;
         private SqlSugarClient _db;
         private SimpleClient<TEntity> _entityDb;
@@ -31,17 +35,38 @@ namespace Demo.Core.Api.Repository
             get { return _entityDb; }
             private set { _entityDb = value; }
         }
+        #endregion
+
+        private MyDbContext _mycontext;
+        private IDbConnection _mydb;
+
+        public MyDbContext MyDbContext
+        {
+            get { return _mycontext; }
+            set { _mycontext = value; }
+        }
+
+        internal IDbConnection MyDb
+        {
+            get { return _mydb; }
+            private set { _mydb = value; }
+        }
+
         public BaseRepository()
         {
             //DbContext.Init(BaseDBConfig.ConnectionString, (DbType)BaseDBConfig.DbType);
             _context = MyContext.GetDbContext();
             _db = _context.Db;
             _entityDb = _context.GetEntityDB<TEntity>(_db);
+
+            MyDbContext = MyDbContext.GetDbContext();
+            _mydb = MyDbContext.Db;
         }
 
         public async Task<TEntity> QueryById(object objId)
         {
-            return await _db.Queryable<TEntity>().In(objId).SingleAsync();
+            //return await _db.Queryable<TEntity>().In(objId).SingleAsync();
+            return await _mydb.QueryFirstAsync<TEntity>("SELECT * FRMO ", new { });
         }
         /// <summary>
         /// 根据ID查询一条数据

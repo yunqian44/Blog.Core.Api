@@ -56,11 +56,9 @@ E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Cor
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Core.dll
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Data.dll
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.IRepository.dll
-E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.IService.dll
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Model.dll
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Data.pdb
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.IRepository.pdb
-E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.IService.pdb
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Core.pdb
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Model.pdb
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Model.xml
@@ -103,3 +101,10 @@ E:\persion\Blog\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebAp
 E:\persion\Blog\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.csproj.CopyComplete
 E:\persion\Blog\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.dll
 E:\persion\Blog\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.pdb
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Log4net.config
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.IServices.dll
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Repository.dll
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Services.dll
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.IServices.pdb
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Repository.pdb
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\Demo.Core.Api.Services.pdb

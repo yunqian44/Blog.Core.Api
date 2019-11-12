@@ -18,7 +18,7 @@ namespace Demo.Core.Api.WebApi.Controllers
 {
     [Route("api/Blog")]
     [ApiController]
-    [Authorize]
+    [Authorize()]
     public class BlogController : ControllerBase
     {
         readonly IRedisCacheManager _redisCacheManager;

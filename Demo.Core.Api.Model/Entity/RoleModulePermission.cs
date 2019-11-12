@@ -5,6 +5,9 @@ using System.Text;
 
 namespace Demo.Core.Api.Model.Entity
 {
+    /// <summary>
+    /// 角色菜单关系
+    /// </summary>
     public class RoleModulePermission
     {
         [SugarColumn(IsNullable = false, IsPrimaryKey = true, IsIdentity = true)]

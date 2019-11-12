@@ -54,10 +54,8 @@ E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.C
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.WebApi.xml
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.Core.dll
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.Data.dll
-E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.IService.dll
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.Model.dll
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.Data.pdb
-E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.IService.pdb
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.Model.pdb
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.Core.pdb
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\obj\Release\netcoreapp2.2\Demo.Core.Api.WebApi.csprojAssemblyReference.cache
@@ -83,3 +81,13 @@ E:\persion\Blog\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.Ser
 E:\persion\Blog\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.Repository.pdb
 E:\persion\Blog\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.Services.pdb
 E:\persion\Blog\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.Model.xml
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Log4net.config
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.Model.xml
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.IRepository.dll
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.IServices.dll
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.Repository.dll
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.Services.dll
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.IRepository.pdb
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.IServices.pdb
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.Repository.pdb
+E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.Services.pdb

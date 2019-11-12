@@ -65,8 +65,8 @@ namespace Demo.Core.Api.Repository
 
         public async Task<TEntity> QueryById(object objId)
         {
-            //return await _db.Queryable<TEntity>().In(objId).SingleAsync();
-            return await _mydb.QueryFirstAsync<TEntity>("SELECT * FRMO ", new { });
+            return await _db.Queryable<TEntity>().In(objId).SingleAsync();
+            //return await _mydb.QueryFirstAsync<TEntity>("SELECT * FRMO ", new { });
         }
         /// <summary>
         /// 根据ID查询一条数据

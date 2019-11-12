@@ -554,6 +554,11 @@
             修改时间
             </summary>
         </member>
+        <member name="T:Demo.Core.Api.Model.Entity.RoleModulePermission">
+            <summary>
+            角色菜单关系
+            </summary>
+        </member>
         <member name="P:Demo.Core.Api.Model.Entity.RoleModulePermission.IsDeleted">
              <summary>
             获取或设置是否禁用，逻辑上的删除，非物理删除

@@ -18,7 +18,7 @@ namespace Demo.Core.Api.WebApi.Controllers
 {
     [Route("api/Blog")]
     [ApiController]
-    [Authorize()]
+    [Authorize]
     public class BlogController : ControllerBase
     {
         readonly IRedisCacheManager _redisCacheManager;
@@ -164,6 +164,24 @@ namespace Demo.Core.Api.WebApi.Controllers
             var model = await _blogArticleService.getBlogDetails(id);//调用该方法
             var data = new { success = true, data = model };
             return data;
+        }
+
+        /// <summary>
+        /// 获取详情【无权限】
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("DetailNuxtNoPer")]
+        [AllowAnonymous]
+        public async Task<object> DetailNuxtNoPer(int id)
+        {
+            var model = await _blogArticleService.getBlogDetails(id);
+            return Ok(new
+            {
+                success = true,
+                data = model
+            });
         }
 
 

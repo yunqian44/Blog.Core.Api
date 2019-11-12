@@ -45,6 +45,29 @@
             <param name="arg"></param>
             <returns></returns>
         </member>
+        <member name="T:Demo.Core.Api.WebApi.App_Start.ApiErrorHandleFilter">
+            <summary>
+            全局异常错误日志
+            </summary>
+        </member>
+        <member name="M:Demo.Core.Api.WebApi.App_Start.ApiErrorHandleFilter.WriteLog(System.String,System.Exception)">
+            <summary>
+            自定义返回格式
+            </summary>
+            <param name="throwMsg"></param>
+            <param name="ex"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Demo.Core.Api.WebApi.App_Start.JsonErrorResponse.Message">
+            <summary>
+            生产环境的消息
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.WebApi.App_Start.JsonErrorResponse.DevelopmentMessage">
+            <summary>
+            开发环境的消息
+            </summary>
+        </member>
         <member name="M:Demo.Core.Api.WebApi.AuthHelper.OverWrite.JwtHelper.IssueJwt(Demo.Core.Api.WebApi.AuthHelper.OverWrite.TokenModelJwt)">
             <summary>
             颁发JWT字符串
@@ -120,6 +143,12 @@
             获取详情
             </summary>
             <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Demo.Core.Api.WebApi.Controllers.BlogController.V2_Blogtest">
+            <summary>
+            获取博客测试信息 v2版本
+            </summary>
             <returns></returns>
         </member>
         <member name="T:Demo.Core.Api.WebApi.Controllers.LoginController">

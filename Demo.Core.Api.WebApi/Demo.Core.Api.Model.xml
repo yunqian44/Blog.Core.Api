@@ -956,6 +956,23 @@
             <param name="config">config</param>
             <returns>返回值</returns>
         </member>
+        <member name="P:Demo.Core.Api.Model.Seed.MyDbContext.ConnectionString">
+            <summary>
+            连接字符串 
+            Blog.Core
+            </summary>
+        </member>
+        <member name="M:Demo.Core.Api.Model.Seed.MyDbContext.#ctor">
+            <summary>
+            功能描述:构造函数
+            </summary>
+        </member>
+        <member name="M:Demo.Core.Api.Model.Seed.MyDbContext.GetDbContext">
+            <summary>
+            功能描述:获得一个DbContext
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:Demo.Core.Api.Model.TableModel">
             <summary>
             表格数据，支持分页

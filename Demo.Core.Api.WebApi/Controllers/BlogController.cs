@@ -7,10 +7,12 @@ using Demo.Core.Api.Core.Helper;
 using Demo.Core.Api.Data;
 using Demo.Core.Api.IServices;
 using Demo.Core.Api.Model.Entity;
+using Demo.Core.Api.WebApi.SwaggerHelper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using StackExchange.Profiling;
+using static Demo.Core.Api.WebApi.SwaggerHelper.CustomApiVersion;
 
 namespace Demo.Core.Api.WebApi.Controllers
 {
@@ -182,6 +184,24 @@ namespace Demo.Core.Api.WebApi.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+        }
+
+
+        /// <summary>
+        /// 获取博客测试信息 v2版本
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        ////MVC自带特性 对 api 进行组管理
+        //[ApiExplorerSettings(GroupName = "v2")]
+        ////路径 如果以 / 开头，表示绝对路径，反之相对 controller 的想u地路径
+        //[Route("/api/v2/blog/Blogtest")]
+        //和上边的版本控制以及路由地址都是一样的l
+        [CustomRoute(ApiVersions.v2, "Blogtest")]
+        public async Task<object> V2_Blogtest()
+        {
+            return  Ok(new { status = 220, data = "我是第二版的博客信息" });
+
         }
     }
 }

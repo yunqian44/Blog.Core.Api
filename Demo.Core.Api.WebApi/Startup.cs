@@ -36,6 +36,7 @@ using log4net;
 using log4net.Config;
 using log4net.Repository;
 using static Demo.Core.Api.WebApi.SwaggerHelper.CustomApiVersion;
+using Newtonsoft.Json.Serialization;
 
 namespace Demo.Core.Api.WebApi
 {
@@ -69,13 +70,23 @@ namespace Demo.Core.Api.WebApi
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
 
-            services.AddMvc(options =>
-            {
-                options.Filters.Add<ApiErrorHandleFilter>();
+            #region MVC + GlobalExceptions
 
-                //返回xml格式 asp.net core 默认提供的是json格式
-                //options.OutputFormatters.Add(new XmlDataContractSerializerOutputFormatter());
-            }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            //注入全局异常捕获
+            services.AddMvc(o =>
+            {
+                // 全局异常过滤
+                //o.Filters.Add(typeof(ApiErrorHandleFilter));
+                // 全局路由权限公约
+                //o.Conventions.Insert(0, new GlobalRouteAuthorizeConvention());
+                // 全局路由前缀，统一修改路由
+                //o.Conventions.Insert(0, new GlobalRoutePrefixFilter(new RouteAttribute(RoutePrefix.Name)));
+            }) .SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
+            // 取消默认驼峰
+            .AddJsonOptions(options => { options.SerializerSettings.ContractResolver = new DefaultContractResolver(); });
+
+            #endregion
+
             // Redis注入
             services.AddSingleton<IRedisCacheManager, RedisCacheManager>();
 

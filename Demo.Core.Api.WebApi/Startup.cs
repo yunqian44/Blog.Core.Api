@@ -412,6 +412,9 @@ namespace Demo.Core.Api.WebApi
                 typeof(ApiVersions).GetEnumNames().OrderByDescending(e => e).ToList().ForEach(version =>
                 {
                     c.SwaggerEndpoint($"/swagger/{version}/swagger.json", $"{ApiName}{version}");
+
+                    // 将swagger首页，设置成我们自定义的页面，记得这个字符串的写法：解决方案名.index.html
+                    c.IndexStream = () => GetType().GetTypeInfo().Assembly.GetManifestResourceStream("Demo.Core.Api.WebApi.index.html");
                 });
 
 
@@ -451,11 +454,9 @@ namespace Demo.Core.Api.WebApi
             app.UseStatusCodePages();//将错误码返回给前台，比如404 
             #endregion
 
-
             #region MiniProfiler
             app.UseMiniProfiler();
             #endregion
-
 
             #region 开启认证中间件
             //自定义认证中间件

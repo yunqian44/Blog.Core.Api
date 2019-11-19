@@ -46,7 +46,7 @@ namespace Demo.Core.Api.Model.Entity
         /// <summary>
         /// Action名称
         /// </summary>
-        public string Action { get; set; }
+        public string Action { get; set; } = string.Empty;
 
         /// <summary>
         /// 图标

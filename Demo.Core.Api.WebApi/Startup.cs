@@ -94,10 +94,8 @@ namespace Demo.Core.Api.WebApi
 
             // Redis注入
             services.AddSingleton<IRedisCacheManager, RedisCacheManager>();
-
             // log日志注入
             services.AddSingleton<ILoggerHelper, LogHelper>();
-
             // 缓存注入
             services.AddScoped<ICaching, MemoryCaching>();
 
@@ -302,6 +300,7 @@ namespace Demo.Core.Api.WebApi
 
             services.AddSingleton(new Appsettings(Env.ContentRootPath));
             services.AddSingleton(new LogLock(Env.ContentRootPath));
+            services.AddSingleton(new GetTableData(Env.ContentRootPath));
 
             #region AutoFac DI
             //实例化 AutoFac  容器   

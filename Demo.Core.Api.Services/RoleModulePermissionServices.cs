@@ -15,9 +15,9 @@ namespace Demo.Core.Api.Services
     /// </summary>	
     public class RoleModulePermissionServices : BaseServices<RoleModulePermission>, IRoleModulePermissionServices
     {
-        readonly IRoleModulePermissionRepository _dal;
-        readonly IModuleRepository _moduleRepository;
-        readonly IRoleRepository _roleRepository;
+        IRoleModulePermissionRepository _dal;
+        IModuleRepository _moduleRepository;
+        IRoleRepository _roleRepository;
 
         // 将多个仓储接口注入
         public RoleModulePermissionServices(IRoleModulePermissionRepository dal, IModuleRepository moduleRepository, IRoleRepository roleRepository)

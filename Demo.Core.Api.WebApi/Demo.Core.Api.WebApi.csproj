@@ -12,6 +12,12 @@
       <PlatformTarget>AnyCPU</PlatformTarget>
     </PropertyGroup>
     <ItemGroup>
+      <Content Remove="TableData\Module.json" />
+    </ItemGroup>
+    <ItemGroup>
+      <None Include="TableData\Module.json" />
+    </ItemGroup>
+    <ItemGroup>
         <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="5.0.1" />
         <PackageReference Include="Autofac.Extras.DynamicProxy" Version="4.5.0" />
         <PackageReference Include="AutoMapper" Version="9.0.0" />

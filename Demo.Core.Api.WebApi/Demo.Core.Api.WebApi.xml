@@ -130,7 +130,7 @@
             services 层注入
             </summary>
         </member>
-        <member name="M:Demo.Core.Api.WebApi.AuthHelper.Policys.PermissionHandler.#ctor(Microsoft.AspNetCore.Authentication.IAuthenticationSchemeProvider,Demo.Core.Api.IServices.IRoleModulePermissionServices)">
+        <member name="M:Demo.Core.Api.WebApi.AuthHelper.Policys.PermissionHandler.#ctor(Microsoft.AspNetCore.Authentication.IAuthenticationSchemeProvider,Demo.Core.Api.IServices.IRoleModulePermissionService)">
             <summary>
             构造函数注入
             </summary>

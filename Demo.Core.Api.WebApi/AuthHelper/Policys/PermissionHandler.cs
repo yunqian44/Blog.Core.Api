@@ -28,14 +28,14 @@ namespace Demo.Core.Api.WebApi.AuthHelper.Policys
         /// <summary>
         /// services 层注入
         /// </summary>
-        public IRoleModulePermissionServices RoleModulePermissionServices { get; set; }
+        public IRoleModulePermissionService RoleModulePermissionServices { get; set; }
 
         /// <summary>
         /// 构造函数注入
         /// </summary>
         /// <param name="schemes"></param>
         /// <param name="roleModulePermissionServices"></param>
-        public PermissionHandler(IAuthenticationSchemeProvider schemes, IRoleModulePermissionServices roleModulePermissionServices)
+        public PermissionHandler(IAuthenticationSchemeProvider schemes, IRoleModulePermissionService roleModulePermissionServices)
         {
             Schemes = schemes;
             this.RoleModulePermissionServices = roleModulePermissionServices;

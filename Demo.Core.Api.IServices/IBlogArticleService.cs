@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Demo.Core.Api.IServices
 {
-    public interface IBlogArticleService:IBaseServices<BlogArticle>
+    public interface IBlogArticleService:IBaseService<BlogArticle>
     {
         Task<List<BlogArticle>> getBlogs();
 

@@ -8,7 +8,7 @@ namespace Demo.Core.Api.Services
     /// <summary>
     /// 广告接口实现
     /// </summary>
-    public class AdvertisementService :BaseServices<Advertisement>, IAdvertisementService
+    public class AdvertisementService :BaseService<Advertisement>, IAdvertisementService
     {
         IAdvertisementRepository dal;
 

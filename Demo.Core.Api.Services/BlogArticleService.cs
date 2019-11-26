@@ -12,11 +12,11 @@ using System.Threading.Tasks;
 
 namespace Demo.Core.Api.Services
 {
-    public class BlogArticleServices : BaseServices<BlogArticle>, IBlogArticleService
+    public class BlogArticleService : BaseService<BlogArticle>, IBlogArticleService
     {
         IBlogArticleRepository dal;
         IMapper IMapper;
-        public BlogArticleServices(IBlogArticleRepository dal, IMapper iMapper)
+        public BlogArticleService(IBlogArticleRepository dal, IMapper iMapper)
         {
             this.dal = dal;
             base.BaseDal = dal;

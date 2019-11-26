@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Demo.Core.Api.Services
 {
-    public class BaseServices<TEntity> : IBaseServices<TEntity> where TEntity : class, new()
+    public class BaseService<TEntity> : IBaseService<TEntity> where TEntity : class, new()
     {
         public IBaseRepository<TEntity> BaseDal;
 

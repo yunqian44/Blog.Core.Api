@@ -91,3 +91,5 @@ E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.C
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.IServices.pdb
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.Repository.pdb
 E:\Code\Core\Core.Bolg.Api\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\Demo.Core.Api.Services.pdb
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\TableData\BlogArticle.json
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Release\netcoreapp2.2\appsettings.Production.json

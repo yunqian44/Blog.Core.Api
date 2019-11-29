@@ -6,6 +6,8 @@ services:
         context: .
         dockerfile: Dockerfile
       image: "blog.core.api"
+      environment: 
+        ASPNETCORE_ENVIRONMENT: Production
       container_name: "blog.core.api"
       depends_on:
         - redis

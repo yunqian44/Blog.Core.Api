@@ -43,6 +43,17 @@
         <ProjectReference Include="..\Demo.Core.Api.Services\Demo.Core.Api.Services.csproj" />
     </ItemGroup>
     <ItemGroup>
+      <Content Update="appsettings.Development.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <Content Update="appsettings.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <Content Update="appsettings.Production.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+    <ItemGroup>
       <None Update="Demo.Core.Api.Model.xml">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>

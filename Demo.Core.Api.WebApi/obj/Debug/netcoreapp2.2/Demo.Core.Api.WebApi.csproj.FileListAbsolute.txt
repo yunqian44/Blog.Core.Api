@@ -108,3 +108,4 @@ E:\persion\Blog\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebAp
 E:\persion\Blog\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.csproj.CopyComplete
 E:\persion\Blog\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.dll
 E:\persion\Blog\Demo.Core.Api.WebApi\obj\Debug\netcoreapp2.2\Demo.Core.Api.WebApi.pdb
+E:\persion\Blog\Demo.Core.Api.WebApi\bin\Debug\netcoreapp2.2\appsettings.Production.json

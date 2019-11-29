@@ -45,6 +45,29 @@
             <param name="arg"></param>
             <returns></returns>
         </member>
+        <member name="T:Demo.Core.Api.WebApi.App_Start.ApiErrorHandleFilter">
+            <summary>
+            全局异常错误日志
+            </summary>
+        </member>
+        <member name="M:Demo.Core.Api.WebApi.App_Start.ApiErrorHandleFilter.WriteLog(System.String,System.Exception)">
+            <summary>
+            自定义返回格式
+            </summary>
+            <param name="throwMsg"></param>
+            <param name="ex"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Demo.Core.Api.WebApi.App_Start.JsonErrorResponse.Message">
+            <summary>
+            生产环境的消息
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.WebApi.App_Start.JsonErrorResponse.DevelopmentMessage">
+            <summary>
+            开发环境的消息
+            </summary>
+        </member>
         <member name="M:Demo.Core.Api.WebApi.AuthHelper.OverWrite.JwtHelper.IssueJwt(Demo.Core.Api.WebApi.AuthHelper.OverWrite.TokenModelJwt)">
             <summary>
             颁发JWT字符串
@@ -78,6 +101,116 @@
             <summary>
             职能
             </summary>
+        </member>
+        <member name="T:Demo.Core.Api.WebApi.AuthHelper.Policys.JwtToken">
+            <summary>
+            JWTToken生成类
+            </summary>
+        </member>
+        <member name="M:Demo.Core.Api.WebApi.AuthHelper.Policys.JwtToken.BuildJwtToken(System.Security.Claims.Claim[],Demo.Core.Api.WebApi.AuthHelper.Policys.PermissionRequirement)">
+            <summary>
+            获取基于JWT的Token
+            </summary>
+            <param name="claims">需要在登陆的时候配置</param>
+            <param name="permissionRequirement">在startup中定义的参数</param>
+            <returns></returns>
+        </member>
+        <member name="T:Demo.Core.Api.WebApi.AuthHelper.Policys.PermissionHandler">
+            <summary>
+            权限授权处理器
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.WebApi.AuthHelper.Policys.PermissionHandler.Schemes">
+            <summary>
+            验证方案提供对象
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.WebApi.AuthHelper.Policys.PermissionHandler.RoleModulePermissionServices">
+            <summary>
+            services 层注入
+            </summary>
+        </member>
+        <member name="M:Demo.Core.Api.WebApi.AuthHelper.Policys.PermissionHandler.#ctor(Microsoft.AspNetCore.Authentication.IAuthenticationSchemeProvider,Demo.Core.Api.IServices.IRoleModulePermissionService)">
+            <summary>
+            构造函数注入
+            </summary>
+            <param name="schemes"></param>
+            <param name="roleModulePermissionServices"></param>
+        </member>
+        <member name="T:Demo.Core.Api.WebApi.AuthHelper.Policys.PermissionItem">
+            <summary>
+            用户或角色或其他凭据实体
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.WebApi.AuthHelper.Policys.PermissionItem.Role">
+            <summary>
+            用户或角色或其他凭据名称
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.WebApi.AuthHelper.Policys.PermissionItem.Url">
+            <summary>
+            请求Url
+            </summary>
+        </member>
+        <member name="T:Demo.Core.Api.WebApi.AuthHelper.Policys.PermissionRequirement">
+            <summary>
+            必要参数类，类似一个订单信息
+            继承 IAuthorizationRequirement，用于设计自定义权限处理器PermissionHandler
+            因为AuthorizationHandler 中的泛型参数 TRequirement 必须继承 IAuthorizationRequirement
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.WebApi.AuthHelper.Policys.PermissionRequirement.Permissions">
+            <summary>
+            用户权限集合，一个订单包含了很多详情，
+            同理，一个网站的认证发行中，也有很多权限详情(这里是Role和URL的关系)
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.WebApi.AuthHelper.Policys.PermissionRequirement.DeniedAction">
+            <summary>
+            无权限action
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.WebApi.AuthHelper.Policys.PermissionRequirement.ClaimType">
+            <summary>
+            认证授权类型
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.WebApi.AuthHelper.Policys.PermissionRequirement.LoginPath">
+            <summary>
+            请求路径
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.WebApi.AuthHelper.Policys.PermissionRequirement.Issuer">
+            <summary>
+            发行人
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.WebApi.AuthHelper.Policys.PermissionRequirement.Audience">
+            <summary>
+            订阅人
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.WebApi.AuthHelper.Policys.PermissionRequirement.Expiration">
+            <summary>
+            过期时间
+            </summary>
+        </member>
+        <member name="P:Demo.Core.Api.WebApi.AuthHelper.Policys.PermissionRequirement.SigningCredentials">
+            <summary>
+            签名验证
+            </summary>
+        </member>
+        <member name="M:Demo.Core.Api.WebApi.AuthHelper.Policys.PermissionRequirement.#ctor(System.String,System.Collections.Generic.List{Demo.Core.Api.WebApi.AuthHelper.Policys.PermissionItem},System.String,System.String,System.String,Microsoft.IdentityModel.Tokens.SigningCredentials,System.TimeSpan)">
+            <summary>
+            构造
+            </summary>
+            <param name="deniedAction">拒约请求的url</param>
+            <param name="permissions">权限集合</param>
+            <param name="claimType">声明类型</param>
+            <param name="issuer">发行人</param>
+            <param name="audience">订阅人</param>
+            <param name="signingCredentials">签名验证实体</param>
+            <param name="expiration">过期时间</param>
         </member>
         <member name="M:Demo.Core.Api.WebApi.AutoMapper.CustomProfile.#ctor">
             <summary>
@@ -122,6 +255,19 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="M:Demo.Core.Api.WebApi.Controllers.BlogController.DetailNuxtNoPer(System.Int32)">
+            <summary>
+            获取详情【无权限】
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Demo.Core.Api.WebApi.Controllers.BlogController.V2_Blogtest">
+            <summary>
+            获取博客测试信息 v2版本
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:Demo.Core.Api.WebApi.Controllers.LoginController">
             <summary>
             登陆管理
@@ -133,6 +279,14 @@
             </summary>
             <param name="name">用户名</param>
             <param name="pass">密码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Demo.Core.Api.WebApi.Controllers.LoginController.GetJwtToken3(System.String,System.String)">
+            <summary>
+            获取JWT的方法3：整个系统主要方法
+            </summary>
+            <param name="name"></param>
+            <param name="pass"></param>
             <returns></returns>
         </member>
         <member name="T:Demo.Core.Api.WebApi.Controllers.UserController">

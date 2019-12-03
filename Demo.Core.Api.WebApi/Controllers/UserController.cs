@@ -14,6 +14,7 @@ using Demo.Core.Api.Model.ViewModel;
 using System.Linq.Expressions;
 using Demo.Core.Api.WebApi.AuthHelper.OverWrite;
 using Microsoft.AspNetCore.Authorization;
+using Demo.Core.Api.IServices;
 
 namespace Demo.Core.Api.WebApi.Controllers
 {
@@ -24,6 +25,12 @@ namespace Demo.Core.Api.WebApi.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
+        readonly ISysUserInfoService _sysUserInfoService;
+
+        public UserController(ISysUserInfoService sysUserInfoService)
+        {
+            _sysUserInfoService = sysUserInfoService;
+        }
         private readonly static string userkey = "userList";
 
         #region 01，获取用户列表+HttpResult Get([FromQuery]UserReqQuery reqQuery)
@@ -140,5 +147,35 @@ namespace Demo.Core.Api.WebApi.Controllers
             return new HttpResult();
         }
         #endregion
+
+
+        #region 获取用户详情根据token
+        /// <summary>
+        /// 获取用户详情根据token
+        /// 【无权限】
+        /// </summary>
+        /// <param name="token">令牌</param>
+        /// <returns></returns>
+        [HttpGet]
+        [AllowAnonymous]
+        public async Task<HttpResult> GetInfoByToken(string token)
+        {
+            if (!string.IsNullOrEmpty(token))
+            {
+                var tokenModel = JwtHelper.SerializeJwt(token);
+                if (tokenModel != null && tokenModel.Uid > 0)
+                {
+                    var userInfo = await _sysUserInfoService.QueryById(tokenModel.Uid);
+                    if (userInfo != null)
+                    {
+                        return new HttpResult(userInfo);
+                    }
+                }
+
+            }
+            return new HttpResult(0, "获取数据异常,请稍后再试");
+        } 
+        #endregion
+
     }
 }

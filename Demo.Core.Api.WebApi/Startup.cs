@@ -146,7 +146,7 @@ namespace Demo.Core.Api.WebApi
                 c.AddPolicy("LimitRequests", policy =>
                 {
                     policy
-                    .WithOrigins("http://127.0.0.1:1818", "http://localhost:8080", "http://localhost:8021", "http://localhost:8081", "http://localhost:1818", "http://localhost:8082")//支持多个域名端口，注意端口号后不要带/斜杆：比如localhost:8000/，是错的
+                    .WithOrigins("http://127.0.0.1:1818", "http://localhost:8080", "http://localhost:8021", "http://localhost:8081", "http://localhost:8400", "http://localhost:8500")//支持多个域名端口，注意端口号后不要带/斜杆：比如localhost:8000/，是错的
                     .AllowAnyHeader()//Ensures that the policy allows any header.
                     .AllowAnyMethod();
                 });

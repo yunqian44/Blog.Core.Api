@@ -314,6 +314,14 @@
             <param name="id">主键Id</param>
             <returns></returns>
         </member>
+        <member name="M:Demo.Core.Api.WebApi.Controllers.UserController.GetInfoByToken(System.String)">
+            <summary>
+            获取用户详情根据token
+            【无权限】
+            </summary>
+            <param name="token">令牌</param>
+            <returns></returns>
+        </member>
         <member name="P:Demo.Core.Api.WebApi.Startup.Repository">
             <summary>
             log4net 仓储库

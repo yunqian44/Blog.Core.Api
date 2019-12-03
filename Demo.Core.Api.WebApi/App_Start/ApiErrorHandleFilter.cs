@@ -55,7 +55,7 @@ namespace Demo.Core.Api.WebApi.App_Start
             context.Result = new InternalServerErrorObjectResult(json);
 
             //采用log4net 进行错误日志记录
-            _loggerHelper.Error(json.Message, WriteLog(json.Message, context.Exception));
+            _loggerHelper.Error(json.Message, WriteLog($"当前环境：{Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")}" +json.Message, context.Exception));
         }
 
         /// <summary>

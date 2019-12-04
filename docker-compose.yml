@@ -28,7 +28,8 @@ services:
          '--collation-server=utf8mb4_unicode_ci'
       ]
       volumes: 
-        - mysql-data:/var/lib/mysql:Z
+        - mysql-data:/var/lib/mysql
+        - /var/lib/mysql/cnf/my.cnf:/etc/mysql/my.cnf
   redis:
       container_name: redis_dc
       restart: always
@@ -37,6 +38,7 @@ services:
       ports:
         - 6379:6379
       volumes:
-       - /app/redis/redis.conf:/etc/redis/redis.conf
+       - redis-data:/var/lib/redis:Z
 volumes:
      mysql-data:
+    redis-data:

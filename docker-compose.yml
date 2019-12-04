@@ -28,8 +28,7 @@ services:
          '--collation-server=utf8mb4_unicode_ci'
       ]
       volumes: 
-          - mysql-data:/var/lib/mysql
-        # - "/var/lib/mysql/conf/my.cnf:/etc/my.cnf"
+        - mysql-data:/var/lib/mysql:Z
   redis:
       container_name: redis_dc
       restart: always

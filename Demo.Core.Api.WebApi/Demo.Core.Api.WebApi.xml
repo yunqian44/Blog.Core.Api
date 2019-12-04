@@ -217,7 +217,7 @@
             配置构造函数，用来创建关系映射
             </summary>
         </member>
-        <member name="M:Demo.Core.Api.WebApi.Controllers.BlogController.#ctor(Demo.Core.Api.IServices.IBlogArticleService,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+        <member name="M:Demo.Core.Api.WebApi.Controllers.BlogController.#ctor(Demo.Core.Api.IServices.IBlogArticleService,Demo.Core.Api.Data.IRedisCacheManager,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
             <summary>
             构造函数
             </summary>
@@ -240,12 +240,10 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Demo.Core.Api.WebApi.Controllers.BlogController.Get(System.Int32,System.Int32)">
+        <member name="M:Demo.Core.Api.WebApi.Controllers.BlogController.Get">
             <summary>
-            Sum接口
+            Environment接口
             </summary>
-            <param name="i">参数i</param>
-            <param name="j">参数j</param>
             <returns></returns>
         </member>
         <member name="M:Demo.Core.Api.WebApi.Controllers.BlogController.Get(System.Int32)">

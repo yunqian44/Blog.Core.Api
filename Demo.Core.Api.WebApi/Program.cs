@@ -23,17 +23,20 @@ namespace Demo.Core.Api.WebApi
             {
                 var services = scope.ServiceProvider;
                 var loggerFactory = services.GetRequiredService<ILoggerFactory>();
-
-                try
+                var env = services.GetRequiredService<IHostingEnvironment>();
+                if (env.IsDevelopment())
                 {
-                    // 从 system.IServicec提供程序获取 T 类型的服务。
-                    var myContext = services.GetRequiredService<MyContext>();
-                    DBSeed.SeedAsync(myContext).Wait();
-                }
-                catch (Exception e)
-                {
-                    var logger = loggerFactory.CreateLogger<Program>();
-                    logger.LogError(e, "Error occured seeding the Database.");
+                    try
+                    {
+                        // 从 system.IServicec提供程序获取 T 类型的服务。
+                        var myContext = services.GetRequiredService<MyContext>();
+                        DBSeed.SeedAsync(myContext).Wait();
+                    }
+                    catch (Exception e)
+                    {
+                        var logger = loggerFactory.CreateLogger<Program>();
+                        logger.LogError(e, "Error occured seeding the Database.");
+                    }
                 }
             }
 

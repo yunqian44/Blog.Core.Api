@@ -29,7 +29,7 @@ services:
       ]
       volumes: 
         - mysql-data:/var/lib/mysql
-        - mysql-cnf:/var/lib/mysql/cnf/my.cnf
+        - "./conf/my.cnf:/etc/my.cnf"
   redis:
       container_name: redis_dc
       restart: always
@@ -41,4 +41,3 @@ services:
 volumes:
      mysql-data:
      redis-data:
-     mysql-cnf:

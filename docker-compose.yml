@@ -20,7 +20,7 @@ services:
       environment:
         MYSQL_DATABASE: blogdb
         MYSQL_ROOT_PASSWORD : qwer1234!
-      image: mysql:5.6
+      image: mysql:5.7.28
       ports:
         - "3306:3306"
       command: [
@@ -29,6 +29,7 @@ services:
       ]
       volumes: 
         - mysql-data:/var/lib/mysql
+        - "/var/lib/mysql/conf/my.cnf:/etc/my.cnf"
   redis:
       container_name: redis_dc
       restart: always

@@ -29,16 +29,16 @@ services:
       ]
       volumes: 
         - mysql-data:/var/lib/mysql
-        - /var/lib/mysql/cnf/my.cnf:/etc/mysql/my.cnf
+        - mysql-cnf:/var/lib/mysql/cnf/my.cnf
   redis:
       container_name: redis_dc
       restart: always
       image: redis:5.0
-      command: redis-server /etc/redis/redis.conf
       ports:
         - 6379:6379
       volumes:
        - redis-data:/var/lib/redis:Z
 volumes:
      mysql-data:
-    redis-data:
+     redis-data:
+     mysql-cnf:

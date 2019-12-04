@@ -9,6 +9,7 @@ using Demo.Core.Api.IServices;
 using Demo.Core.Api.Model.Entity;
 using Demo.Core.Api.WebApi.SwaggerHelper;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using StackExchange.Profiling;
@@ -21,6 +22,7 @@ namespace Demo.Core.Api.WebApi.Controllers
     [Authorize]
     public class BlogController : ControllerBase
     {
+        private readonly IHostingEnvironment _env;
         readonly IRedisCacheManager _redisCacheManager;
         readonly IBlogArticleService _blogArticleService;
 
@@ -30,8 +32,10 @@ namespace Demo.Core.Api.WebApi.Controllers
         /// <param name="blogArticleService"></param>
         /// <param name="redisCacheManager"></param>
         public BlogController(IBlogArticleService blogArticleService,
-            IRedisCacheManager redisCacheManager)
+            IRedisCacheManager redisCacheManager,
+            IHostingEnvironment env)
         {
+            _env = env;
             _blogArticleService = blogArticleService;
             _redisCacheManager = redisCacheManager;
         }
@@ -137,19 +141,18 @@ namespace Demo.Core.Api.WebApi.Controllers
         }
 
 
-        // GET: api/Blog
+        // GET: api/Blog/Environment
         /// <summary>
-        /// Sum接口
+        /// Environment接口
         /// </summary>
-        /// <param name="i">参数i</param>
-        /// <param name="j">参数j</param>
         /// <returns></returns>
         [HttpGet]
-        [Route("Sum")]
-        public int Get(int i, int j)
+        [Route("Environment")]
+        [AllowAnonymous]
+        public string Get()
         {
             //return _advertisementService.Sum(i, j);
-            return 5;
+            return $"当前系统处于什么环境，开发:{_env.IsDevelopment()}-----生成环境:{_env.IsProduction()}";
         }
 
         // GET: api/Blog/5
@@ -219,7 +222,6 @@ namespace Demo.Core.Api.WebApi.Controllers
         public async Task<object> V2_Blogtest()
         {
             return  Ok(new { status = 220, data = "我是第二版的博客信息" });
-
         }
     }
 }

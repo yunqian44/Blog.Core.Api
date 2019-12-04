@@ -94,8 +94,10 @@ namespace Demo.Core.Api.WebApi
 
             // Redis注入
             services.AddSingleton<IRedisCacheManager, RedisCacheManager>();
+
             // log日志注入
             services.AddSingleton<ILoggerHelper, LogHelper>();
+
             // 缓存注入
             services.AddScoped<ICaching, MemoryCaching>();
 
@@ -330,10 +332,10 @@ namespace Demo.Core.Api.WebApi
 
                 // AOP 开关，如果想要打开指定的功能，只需要在 appsettigns.json 对应对应 true 就行。
                 var cacheType = new List<Type>();
-                //if (Appsettings.app(new string[] { "AppSettings", "RedisCachingAOP", "Enabled" }).ObjToBool())
-                //{
-                //    cacheType.Add(typeof(BlogRedisCacheAOP));
-                //}
+                if (Appsettings.app(new string[] { "AppSettings", "RedisCachingAOP", "Enabled" }).ObjToBool())
+                {
+                    cacheType.Add(typeof(BlogRedisCacheAOP));
+                }
                 if (Appsettings.app(new string[] { "AppSettings", "MemoryCachingAOP", "Enabled" }).ObjToBool())
                 {
                     cacheType.Add(typeof(BlogCacheAOP));

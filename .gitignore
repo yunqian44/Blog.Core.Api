@@ -304,3 +304,4 @@ Demo.Core.Api.WebApi/obj/Release/netcoreapp2.2/Demo.Core.Api.WebApi.assets.cache
 UnitTest/obj/project.assets.json
 .vs/Demo.Core.Api/DesignTimeBuild/.dtbcache
 Demo.Core.Api.Repository/BaseRepository.cs
+docker-compose-swarm.yml

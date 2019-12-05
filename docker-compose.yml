@@ -14,29 +14,29 @@ services:
         - mysql
       ports:
         - "8300:80"
-  mysql:
-      container_name: mysql_dc
-      restart: always
-      environment:
-        MYSQL_DATABASE: blogdb
-        MYSQL_ROOT_PASSWORD : qwer1234!
-      image: mysql:5.6
-      ports:
-        - "3306:3306"
-      command: [
-         '--character-set-server=utf8mb4',
-         '--collation-server=utf8mb4_unicode_ci'
-      ]
-      volumes: 
-        - mysql-data:/var/lib/mysql:Z
-  redis:
-      container_name: redis_dc
-      restart: always
-      image: redis:5.0
-      # command: redis-server /etc/redis/redis.conf
-      ports:
-        - 6379:6379
-      volumes:
-       - /app/redis/redis.conf:/etc/redis/redis.conf
-volumes:
-     mysql-data:
+#   mysql:
+#       container_name: mysql_dc
+#       restart: always
+#       environment:
+#         MYSQL_DATABASE: blogdb
+#         MYSQL_ROOT_PASSWORD : qwer1234!
+#       image: mysql:5.6
+#       ports:
+#         - "3306:3306"
+#       command: [
+#          '--character-set-server=utf8mb4',
+#          '--collation-server=utf8mb4_unicode_ci'
+#       ]
+#       volumes: 
+#         - mysql-data:/var/lib/mysql:Z
+#   redis:
+#       container_name: redis_dc
+#       restart: always
+#       image: redis:5.0
+#       # command: redis-server /etc/redis/redis.conf
+#       ports:
+#         - 6379:6379
+#       volumes:
+#        - /app/redis/redis.conf:/etc/redis/redis.conf
+# volumes:
+#      mysql-data:

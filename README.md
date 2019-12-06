@@ -1,4 +1,5 @@
 # Net Core 后台接口（redis）
+[![Build status](https://dev.azure.com/yunqian8/Blog.Core.Api/_apis/build/status/Blog.Core.Api-ASP.NET-CI)](https://dev.azure.com/yunqian8/Blog.Core.Api/_build/latest?definitionId=-1)
 
 #### 介绍
 {**以下是码云平台说明，您可以替换此简介**

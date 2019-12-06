@@ -1,5 +1,5 @@
 # 这是第一个指令，必须是FROM这里指定基础构建镜像
-FROM microsoft/dotnet:2.2-sdk AS build-env  
+FROM mcr.microsoft.com/dotnet/core/sdk:3.0 AS build-env  
 #工作目录，即程序运行根目录
 WORKDIR /app
 
@@ -20,7 +20,7 @@ RUN dotnet restore ./Demo.Core.Api.WebApi/Demo.Core.Api.WebApi.csproj --disable-
 COPY . ./
 RUN dotnet publish ./Demo.Core.Api.WebApi/Demo.Core.Api.WebApi.csproj  -c Release -o /out
 
-FROM microsoft/dotnet:2.2-aspnetcore-runtime as runtime
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.0 as runtime
 WORKDIR /app
 COPY --from=build-env /out .
 ENTRYPOINT ["dotnet", "Demo.Core.Api.WebApi.dll"]

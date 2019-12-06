@@ -73,7 +73,7 @@ namespace Demo.Core.Api.WebApi
                     serverOptions.AllowSynchronousIO = true;//启用同步 IO
                 })
                 .UseStartup<Startup>()
-                .UseUrls("http://localhost:8081")
+                //.UseUrls("http://localhost:8081")
                 .ConfigureLogging((hostingContext, builder) =>
                 {
                     builder.ClearProviders();

@@ -18,17 +18,14 @@ using Demo.Core.Api.Model.Seed;
 using Demo.Core.Api.WebApi.AOP;
 using Demo.Core.Api.WebApi.App_Start;
 using Demo.Core.Api.WebApi.AuthHelper.OverWrite;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using Microsoft.IdentityModel.Tokens;
 using Swashbuckle.AspNetCore.Swagger;
 using Demo.Core.Api.Core.Extension;
 using AutoMapper;
@@ -41,6 +38,16 @@ using Demo.Core.Api.WebApi.AuthHelper.Policys;
 using System.Security.Claims;
 using Demo.Core.Api.Core.GlobalVar;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.Extensions.DependencyInjection;
+using Newtonsoft.Json;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Extensions.Hosting;
+using Demo.Core.Api.WebApi.Middlewares;
+using Microsoft.Extensions.Caching.Memory;
+using Microsoft.OpenApi.Models;
+using Swashbuckle.AspNetCore.Filters;
+using Microsoft.AspNetCore.Http;
 
 namespace Demo.Core.Api.WebApi
 {
@@ -50,56 +57,69 @@ namespace Demo.Core.Api.WebApi
         /// log4net 仓储库
         /// </summary>
         public static ILoggerRepository Repository { get; set; }
-
-        public Startup(IConfiguration configuration, IHostingEnvironment env)
+        private static readonly ILog log = LogManager.GetLogger(typeof(ApiErrorHandleFilter));
+        public Startup(IConfiguration configuration, IWebHostEnvironment env)
         {
             Configuration = configuration;
             Env = env;
+            #region 迁移到program.cs 文件中了
             //log4net
-            Repository = LogManager.CreateRepository(Configuration["Logging:Log4Net:Name"]);
-            //指定配置文件，如果这里你遇到问题，应该是使用了InProcess模式，请查看Blog.Core.csproj,并删之
-            var contentPath = env.ContentRootPath;
-            var log4Config = Path.Combine(contentPath, "log4net.config");
-            XmlConfigurator.Configure(Repository, new FileInfo(log4Config));
+            //Repository = LogManager.CreateRepository(Configuration["Logging:Log4Net:Name"]);
+            ////指定配置文件，如果这里你遇到问题，应该是使用了InProcess模式，请查看Blog.Core.csproj,并删之
+            //var contentPath = env.ContentRootPath;
+            //var log4Config = Path.Combine(contentPath, "log4net.config");
+            //XmlConfigurator.Configure(Repository, new FileInfo(log4Config)); 
+            #endregion
         }
 
         public IConfiguration Configuration { get; }
 
-        public IHostingEnvironment Env { get; }
-
+        public IWebHostEnvironment Env { get; }
 
         private const string ApiName = "Blog.Core";
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public IServiceProvider ConfigureServices(IServiceCollection services)
+        public void ConfigureServices(IServiceCollection services)
         {
-
             #region MVC + GlobalExceptions
 
             //注入全局异常捕获
-            services.AddMvc(o =>
+            services.AddControllers(o =>
             {
                 // 全局异常过滤
                 o.Filters.Add(typeof(ApiErrorHandleFilter));
-               
+
                 // 全局路由权限公约
                 //o.Conventions.Insert(0, new GlobalRouteAuthorizeConvention());
                 // 全局路由前缀，统一修改路由
                 //o.Conventions.Insert(0, new GlobalRoutePrefixFilter(new RouteAttribute(RoutePrefix.Name)));
-            }) .SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
-            // 取消默认驼峰
-            .AddJsonOptions(options => { options.SerializerSettings.ContractResolver = new DefaultContractResolver(); });
+            })
+            //全局配置Json序列化处理
+            .AddNewtonsoftJson(options =>
+            {
+                //忽略循环引用
+                options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+
+                options.SerializerSettings.ContractResolver = new DefaultContractResolver();
+            });
 
             #endregion
 
             // Redis注入
             services.AddSingleton<IRedisCacheManager, RedisCacheManager>();
 
-            // log日志注入
-            services.AddSingleton<ILoggerHelper, LogHelper>();
-
             // 缓存注入
             services.AddScoped<ICaching, MemoryCaching>();
+            services.AddSingleton<IMemoryCache>(factory =>
+            {
+                var cache = new MemoryCache(new MemoryCacheOptions());
+                return cache;
+            });
+
+            services.AddSingleton(new Appsettings(Env.ContentRootPath));
+            //log日志注入
+            services.AddSingleton(new LogLock(Env.ContentRootPath));
+            services.AddSingleton(new GetTableData(Env.ContentRootPath));
 
             #region 初始化DB
             services.AddScoped<DBSeed>();
@@ -132,18 +152,6 @@ namespace Demo.Core.Api.WebApi
             //跨域第二种方法，声明策略，记得下边app中配置
             services.AddCors(c =>
             {
-                //↓↓↓↓↓↓↓注意正式环境不要使用这种全开放的处理↓↓↓↓↓↓↓↓↓↓
-                //c.AddPolicy("AllRequests", policy =>
-                //{
-                //    policy
-                //    .AllowAnyOrigin()//允许任何源
-                //    .AllowAnyMethod()//允许任何方式
-                //    .AllowAnyHeader()//允许任何头
-                //    .AllowCredentials();//允许cookie
-                //});
-                //↑↑↑↑↑↑↑注意正式环境不要使用这种全开放的处理↑↑↑↑↑↑↑↑↑↑
-
-
                 //一般采用这种方法
                 c.AddPolicy("LimitRequests", policy =>
                 {
@@ -167,44 +175,53 @@ namespace Demo.Core.Api.WebApi
                    //遍历出全部的版本，做文档信息展示
                    typeof(ApiVersions).GetEnumNames().ToList().ForEach(version =>
                    {
-                       c.SwaggerDoc(version, new Info
+                       c.SwaggerDoc(version, new OpenApiInfo
                        {
-                           Title = $"{ApiName}接口文档",
+                           Title = $"{ApiName}接口文档——Netcore 3.0",
                            Version = version,
-                           Description = $"{ApiName}框架说明文档"+version,
-                           TermsOfService = "None",
-                           Contact = new Contact(){
+                           Description = $"{ApiName}框架说明文档" + version,
+                           Contact = new OpenApiContact()
+                           {
                                Name = "刺客",
                                Email = "yunqian8@live.com",
-                               Url = "暂时没有"
-                           }
+                               Url = new Uri("https://www.xxx.com")
+                           },
+                           License = new OpenApiLicense 
+                           { Name = ApiName, 
+                               Url = new Uri("https://www.xxx.com") }
                        });
                        // 按相对路径排序
                        c.OrderActionsBy(o => o.RelativePath);
                    });
 
-                   //就是这里
-                   var xmlPath = Path.Combine(basePath, "Demo.Core.Api.WebApi.xml");//这个就是刚刚配置的xml文件名
-                   c.IncludeXmlComments(xmlPath, true);//默认的第二个参数是false，这个是controller的注释，记得修改
+                   try
+                   {
+                       //就是这里
+                       var xmlPath = Path.Combine(basePath, "Demo.Core.Api.WebApi.xml");//这个就是刚刚配置的xml文件名
+                       c.IncludeXmlComments(xmlPath, true);//默认的第二个参数是false，这个是controller的注释，记得修改
 
-                   var xmlModelPath = Path.Combine(basePath, "Demo.Core.Api.Model.xml");//这个就是Model层的xml文件名
-                   c.IncludeXmlComments(xmlModelPath, false);
+                       var xmlModelPath = Path.Combine(basePath, "Demo.Core.Api.Model.xml");//这个就是Model层的xml文件名
+                       c.IncludeXmlComments(xmlModelPath);
+                   }
+                   catch (Exception ex)
+                   {
+                       log.Error("Demo.Core.Api.WebApi.xml和Demo.Core.Api.Model.xml 丢失，请检查并拷贝。\n" + ex.Message);
+                   }
+
+                   c.OperationFilter<AddResponseHeadersFilter>();
+                   c.OperationFilter<AppendAuthorizeToSummaryOperationFilter>();
+
+                   c.OperationFilter<SecurityRequirementsOperationFilter>();
+
 
                    #region Token绑定到ConfigureServices
                    //添加header验证信息
-                   //c.OperationFilter<SwaggerHeader>();
-
-                   var IssuerName = (Configuration.GetSection("Audience"))["Issuer"];
-                   var security = new Dictionary<string, IEnumerable<string>> { { IssuerName, new string[] { } }, };
-
-                   c.AddSecurityRequirement(security);
-                   //方案名称“Blog.Core”可自定义，上下一致即可
-                   c.AddSecurityDefinition("Blog.Core", new ApiKeyScheme
+                   c.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
                    {
                        Description = "JWT授权(数据将在请求头中进行传输) 直接在下框中输入Bearer {token}（注意两者之间是一个空格）\"",
                        Name = "Authorization",//jwt默认的参数名称
-                       In = "header",//jwt默认存放Authorization信息的位置(请求头中)
-                       Type = "apiKey"
+                       In = ParameterLocation.Header,//jwt默认存放Authorization信息的位置(请求头中)
+                       Type = SecuritySchemeType.ApiKey
                    });
                    #endregion
                });
@@ -212,6 +229,13 @@ namespace Demo.Core.Api.WebApi
 
             #region SignalR 通讯
             services.AddSignalR();
+            #endregion
+
+            #region Httpcontext
+
+            // Httpcontext 注入
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
             #endregion
 
             #region Authorize 权限认证
@@ -260,6 +284,20 @@ namespace Demo.Core.Api.WebApi
             #endregion
 
             #region 认证
+            //令牌参数
+            var tokenValidationParameters = new TokenValidationParameters
+            {
+                ValidateIssuerSigningKey = true,
+                IssuerSigningKey = signingKey,
+                ValidateIssuer = true,
+                ValidIssuer = audienceConfig["Issuer"],//发行人
+                ValidateAudience = true,
+                ValidAudience = audienceConfig["Audience"],//订阅人
+                ValidateLifetime = true,
+                ClockSkew = TimeSpan.FromSeconds(30),
+                RequireExpirationTime = true,
+            };
+
             services.AddAuthentication(x =>
                 {
                     //看这个单词熟悉么？没错，就是上边错误里的那个。
@@ -268,19 +306,7 @@ namespace Demo.Core.Api.WebApi
                 })
                  .AddJwtBearer(o =>
                  {
-                     o.TokenValidationParameters = new TokenValidationParameters
-                     {
-                         ValidateIssuerSigningKey = true,//是否验证Issuer
-                         IssuerSigningKey = signingKey,//参数配置在下边
-                         ValidateIssuer = true,//是否验证Issuer
-                         ValidIssuer = audienceConfig["Issuer"],//发行人
-                         ValidateAudience = true,
-                         ValidAudience = audienceConfig["Audience"],//订阅人
-                         ValidateLifetime = true,//是否验证超时
-                         //注意这是缓冲过期时间，总的有效时间等于这个时间加上jwt的过期时间，如果不配置，默认是5分钟
-                         ClockSkew = TimeSpan.FromSeconds(30),
-                         RequireExpirationTime = true,
-                     };
+                     o.TokenValidationParameters = tokenValidationParameters;
                      o.Events = new JwtBearerEvents
                      {
                          OnAuthenticationFailed = context =>
@@ -299,20 +325,19 @@ namespace Demo.Core.Api.WebApi
             services.AddSingleton<IAuthorizationHandler, PermissionHandler>();
             services.AddSingleton(permissionRequirement);
             #endregion
+            //return new AutofacServiceProvider(ApplicationContainer);//第三方IOC接管 core内置DI容器
 
-            services.AddSingleton(new Appsettings(Env.ContentRootPath));
-            services.AddSingleton(new LogLock(Env.ContentRootPath));
-            services.AddSingleton(new GetTableData(Env.ContentRootPath));
+        }
 
+        public void ConfigureContainer(ContainerBuilder builder)
+        {
+            var basePath = Microsoft.DotNet.PlatformAbstractions.ApplicationEnvironment.ApplicationBasePath;
             #region AutoFac DI
-            //实例化 AutoFac  容器   
-            var builder = new ContainerBuilder();
-
             //注册要通过反射创建的组件
 
             //builder.RegisterType<AdvertisementService>().As<IAdvertisementService>();
             builder.RegisterType<BlogCacheAOP>();//可以直接替换其他拦截器
-            //builder.RegisterType<BlogRedisCacheAOP>();//可以直接替换其他拦截器
+            builder.RegisterType<BlogRedisCacheAOP>();//可以直接替换其他拦截器
             builder.RegisterType<BlogLogAOP>();//这样可以注入第二个
 
             // ※※★※※ 如果你是第一次下载项目，请先F6编译，然后再F5执行，※※★※※
@@ -349,11 +374,10 @@ namespace Demo.Core.Api.WebApi
                           .AsImplementedInterfaces()
                           .InstancePerLifetimeScope()
                           .EnableInterfaceInterceptors()
-                          .InterceptedBy(cacheType.ToArray());
                 //引用Autofac.Extras.DynamicProxy;
                 // 如果你想注入两个，就这么写  InterceptedBy(typeof(BlogCacheAOP), typeof(BlogLogAOP));
                 // 如果想使用Redis缓存，请必须开启 redis 服务，端口号我的是6319，如果不一样还是无效，否则请使用memory缓存 BlogCacheAOP
-                //.InterceptedBy(cacheType.ToArray());//允许将拦截器服务的列表分配给注册。 
+                .InterceptedBy(cacheType.ToArray());//允许将拦截器服务的列表分配给注册。 
                 #endregion
 
                 #region Repository.dll 注入，有对应接口
@@ -380,20 +404,34 @@ namespace Demo.Core.Api.WebApi
             #endregion
 
             //将services填充到Autofac容器生成器中
-            builder.Populate(services);
+            //builder.Populate(services);
 
             //使用已进行的组件登记创建新容器
-            var ApplicationContainer = builder.Build();
-
+            //var ApplicationContainer = builder.Build();
             #endregion
-
-            return new AutofacServiceProvider(ApplicationContainer);//第三方IOC接管 core内置DI容器
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
+            #region RecordAllLogs
+
+            if (Appsettings.app("AppSettings", "Middleware_RecordAllLogs", "Enabled").ObjToBool())
+            {
+                loggerFactory.AddLog4Net();//记录所有的访问记录
+            }
+
+            #endregion
+
+            #region ReuestResponseLog
+
+            if (Appsettings.app("AppSettings", "Middleware_RequestResponse", "Enabled").ObjToBool())
+            {
+                app.UseReuestResponseLog();//记录请求与返回数据 
+            }
+
+            #endregion
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -414,15 +452,12 @@ namespace Demo.Core.Api.WebApi
                 typeof(ApiVersions).GetEnumNames().OrderByDescending(e => e).ToList().ForEach(version =>
                 {
                     c.SwaggerEndpoint($"/swagger/{version}/swagger.json", $"{ApiName}{version}");
-
-                    // 将swagger首页，设置成我们自定义的页面，记得这个字符串的写法：解决方案名.index.html
-                    c.IndexStream = () => GetType().GetTypeInfo().Assembly.GetManifestResourceStream("Demo.Core.Api.WebApi.index.html");
                 });
 
-
-                // 将swagger设置成首页
+                // 将swagger首页，设置成我们自定义的页面，记得这个字符串的写法：解决方案名.index.html
+                c.IndexStream = () => GetType().GetTypeInfo().Assembly.GetManifestResourceStream("Demo.Core.Api.WebApi.index.html");
+                //路径配置，设置为空，表示直接在根域名（localhost:8001）访问该文件,注意localhost:8001/swagger是访问不到的，去launchSettings.json把launchUrl去掉，如果你想换一个路径，直接写名字即可，比如直接写c.RoutePrefix = "doc";
                 c.RoutePrefix = "";
-                //路径配置，设置为空，表示直接访问该文件，
                 //路径配置，设置为空，表示直接在根域名（localhost:8001）访问该文件,注意localhost:8001/swagger是访问不到的，
                 //这个时候去launchSettings.json中把"launchUrl": "swagger/index.html"去掉， 然后直接访问localhost:8001/index.html即可
 
@@ -460,6 +495,8 @@ namespace Demo.Core.Api.WebApi
             app.UseMiniProfiler();
             #endregion
 
+            app.UseRouting();//路由中间件
+
             #region 开启认证中间件
             //自定义认证中间件
             //app.UseJwtTokenAuth(); //也可以app.UseMiddleware<JwtTokenAuth>();//注意此授权方法已经放弃 
@@ -467,8 +504,15 @@ namespace Demo.Core.Api.WebApi
             //如果你想使用官方认证，必须在上边ConfigureService 中，配置JWT的认证服务 (.AddAuthentication 和 .AddJwtBearer 二者缺一不可)
             app.UseAuthentication();
             #endregion
+            app.UseAuthorization();
 
-            app.UseMvc();
+            // 短路中间件，配置Controller路由
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
+            });
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using Dapper;
-using Demo.Core.Api.IRepository;
+﻿using Demo.Core.Api.IRepository;
 using Demo.Core.Api.Model;
 using Demo.Core.Api.Model.Seed;
 using MySql.Data.MySqlClient;
@@ -37,14 +36,7 @@ namespace Demo.Core.Api.Repository
         }
         #endregion
 
-        private MyDbContext _mycontext;
         private IDbConnection _mydb;
-
-        public MyDbContext MyDbContext
-        {
-            get { return _mycontext; }
-            set { _mycontext = value; }
-        }
 
         internal IDbConnection MyDb
         {
@@ -59,8 +51,6 @@ namespace Demo.Core.Api.Repository
             _db = _context.Db;
             _entityDb = _context.GetEntityDB<TEntity>(_db);
 
-            MyDbContext = MyDbContext.GetDbContext();
-            _mydb = MyDbContext.Db;
         }
 
         public async Task<TEntity> QueryById(object objId)

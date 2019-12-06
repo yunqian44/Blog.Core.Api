@@ -12,17 +12,19 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Hosting;
 using StackExchange.Profiling;
 using static Demo.Core.Api.WebApi.SwaggerHelper.CustomApiVersion;
 
 namespace Demo.Core.Api.WebApi.Controllers
 {
-    [Route("api/Blog")]
+    
     [ApiController]
+    [Route("api/Blog")]
     [Authorize]
     public class BlogController : ControllerBase
     {
-        private readonly IHostingEnvironment _env;
+        private readonly IWebHostEnvironment _env;
         readonly IRedisCacheManager _redisCacheManager;
         readonly IBlogArticleService _blogArticleService;
 
@@ -33,7 +35,7 @@ namespace Demo.Core.Api.WebApi.Controllers
         /// <param name="redisCacheManager"></param>
         public BlogController(IBlogArticleService blogArticleService,
             IRedisCacheManager redisCacheManager,
-            IHostingEnvironment env)
+            IWebHostEnvironment env)
         {
             _env = env;
             _blogArticleService = blogArticleService;

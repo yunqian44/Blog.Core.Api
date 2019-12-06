@@ -305,3 +305,11 @@ UnitTest/obj/project.assets.json
 .vs/Demo.Core.Api/DesignTimeBuild/.dtbcache
 Demo.Core.Api.Repository/BaseRepository.cs
 docker-compose-swarm.yml
+*.pdb
+/Demo.Core.Api.Services/bin/Debug/netcoreapp3.0/Demo.Core.Api.IRepository.dll
+/Demo.Core.Api.Services/bin/Debug/netcoreapp3.0/Demo.Core.Api.IServices.dll
+/Demo.Core.Api.Services/bin/Debug/netcoreapp3.0/Demo.Core.Api.Model.dll
+/Demo.Core.Api.Services/bin/Debug/netcoreapp3.0/Demo.Core.Api.Core.dll
+/Demo.Core.Api.Services/bin/Debug/netcoreapp3.0/Demo.Core.Api.Services.deps.json
+*.dll
+/Demo.Core.Api.Services/bin/Debug/netcoreapp3.0/Demo.Core.Api.Model.xml

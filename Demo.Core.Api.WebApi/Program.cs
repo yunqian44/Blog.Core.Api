@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
+using System.Xml;
+using Autofac.Extensions.DependencyInjection;
 using Demo.Core.Api.Model.Seed;
+using log4net;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
 namespace Demo.Core.Api.WebApi
@@ -16,14 +21,23 @@ namespace Demo.Core.Api.WebApi
     {
         public static void Main(string[] args)
         {
-            var host= CreateWebHostBuilder(args).Build();
+            XmlDocument log4netConfig = new XmlDocument();
+            log4netConfig.Load(File.OpenRead("Log4net.config"));
+
+            var repo = LogManager.CreateRepository(
+                Assembly.GetEntryAssembly(), typeof(log4net.Repository.Hierarchy.Hierarchy));
+
+            log4net.Config.XmlConfigurator.Configure(repo, log4netConfig["log4net"]);
+
+            // 生成承载 web 应用程序的 Microsoft.AspNetCore.Hosting.IWebHost。Build是WebHostBuilder最终的目的，将返回一个构造的WebHost，最终生成宿主。
+            var host = CreateHostBuilder(args).Build();
 
             // 创建可用于解析作用域服务的新 Microsoft.Extensions.DependencyInjection.IServiceScope。
             using (var scope = host.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;
                 var loggerFactory = services.GetRequiredService<ILoggerFactory>();
-                var env = services.GetRequiredService<IHostingEnvironment>();
+                var env = services.GetRequiredService<IWebHostEnvironment>();
                 if (env.IsDevelopment())
                 {
                     try
@@ -47,12 +61,27 @@ namespace Demo.Core.Api.WebApi
             host.Run();
         }
 
-        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-            //使用预配置的默认值初始化 Microsoft.AspNetCore.Hosting.WebHostBuilder 类的新实例。aa
-            WebHost.CreateDefaultBuilder(args)
-                            //.UseKestrel()
-                            //.UseIISIntegration()
-                            //.UseUrls("http://localhost:8081")//部署到docker中不能使用http://localhost:8081
-                .UseStartup<Startup>();
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+           //使用预配置的默认值初始化 Microsoft.AspNetCore.Hosting.WebHostBuilder 类的新实例。aa
+           Host.CreateDefaultBuilder(args)
+            .UseServiceProviderFactory(new AutofacServiceProviderFactory()) //<--NOTE THIS
+            .ConfigureWebHostDefaults(webBuilder =>
+            {
+                webBuilder
+                .ConfigureKestrel(serverOptions =>
+                {
+                    serverOptions.AllowSynchronousIO = true;//启用同步 IO
+                })
+                .UseStartup<Startup>()
+                .UseUrls("http://localhost:8081")
+                .ConfigureLogging((hostingContext, builder) =>
+                {
+                    builder.ClearProviders();
+                    builder.SetMinimumLevel(LogLevel.Trace);
+                    builder.AddConfiguration(hostingContext.Configuration.GetSection("Logging"));
+                    builder.AddConsole();
+                    builder.AddDebug();
+                });
+            });
     }
 }

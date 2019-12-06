@@ -7,6 +7,9 @@ using Demo.Core.Api.Model;
 using Newtonsoft.Json;
 using Demo.Core.Api.Data.LogHelper;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using log4net;
 
 namespace Demo.Core.Api.WebApi.App_Start
 {
@@ -15,16 +18,16 @@ namespace Demo.Core.Api.WebApi.App_Start
     /// </summary>
     public class ApiErrorHandleFilter : IFilterMetadata, IExceptionFilter
     {
-        private readonly IHostingEnvironment _env;
-        private readonly ILoggerHelper _loggerHelper;
-        public ApiErrorHandleFilter(IHostingEnvironment env, ILoggerHelper loggerHelper)
+        private readonly IWebHostEnvironment _env;
+        
+        public ApiErrorHandleFilter(IWebHostEnvironment env)
         {
             _env = env;
-            _loggerHelper = loggerHelper;
         }
 
         public void OnException(ExceptionContext context)
         {
+            #region MyRegion
             // if (context.ExceptionHandled == false)
             // {
             //     if (context.Exception is RequestException)
@@ -43,8 +46,8 @@ namespace Demo.Core.Api.WebApi.App_Start
             //     }
             //     LogLock.OutSql2Log("ApiErrorHandleFilter", new string[] { context.Exception.Message });
             // }
-            // context.ExceptionHandled = true; //异常已处理了
-
+            // context.ExceptionHandled = true; //异常已处理了 
+            #endregion
 
             var json = new JsonErrorResponse();
             json.Message = context.Exception.Message;//错误信息
@@ -53,9 +56,9 @@ namespace Demo.Core.Api.WebApi.App_Start
                 json.DevelopmentMessage = context.Exception.StackTrace;//堆栈信息
             }
             context.Result = new InternalServerErrorObjectResult(json);
-
             //采用log4net 进行错误日志记录
-            _loggerHelper.Error(json.Message, WriteLog($"当前环境：{Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")}" +json.Message, context.Exception));
+            LogLock.OutSql2Log("GlobalExcepLogs", new string[] { WriteLog(json.Message, context.Exception) });
+
         }
 
         /// <summary>

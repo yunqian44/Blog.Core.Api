@@ -1,20 +1,25 @@
 # Net Core 后台接口（redis）
 [![Build status](https://dev.azure.com/yunqian8/Blog.Core.Api/_apis/build/status/Blog.Core.Api-ASP.NET%20Core-CI)](https://dev.azure.com/yunqian8/Blog.Core.Api/_build/latest?definitionId=4)[![Build status](https://github.com/yunqian007/Demo.Core.Api/workflows/.NET%20Core/badge.svg)](https://github.com/yunqian007/Demo.Core.Api/actions)
 #### 介绍
-{**以下是码云平台说明，您可以替换此简介**
-码云是开源中国推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用码云实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
+从零开始搭建自己的前后端分离【 .NET Core3.0 Api 】框架。
 
 #### 软件架构
 软件架构说明
-改项目使用DotNet Core 2.2版本
+该项目使用DotNet Core 3.0版本
 
 
 #### 安装教程
 
-1. 安装DotNet Core SDK   建议2.2以上
-2. xxxx
-3. xxxx
+1. 安装DotNet Core SDK 3.0
+2. 更新VS2019 16.3
+
+#### 部署说明
+1，IIS部署  这里暂时先不说了
+2，Windows 服务部署   暂定
+3，docker单节点部署， （先安装docker）
+    请参考根目录下的dockerfile文件，先进行项目镜像打包
+4，docker-compose 部署   
+    请参考docker-compose 文件
 
 #### 使用说明
 

@@ -1,5 +1,5 @@
 # Net Core 后台接口（redis）
-
+[![Build status](https://dev.azure.com/yunqian8/Blog.Core.Api/_apis/build/status/Blog.Core.Api-ASP.NET%20Core-CI)](https://dev.azure.com/yunqian8/Blog.Core.Api/_build/latest?definitionId=4)[![Build status](https://github.com/yunqian007/Demo.Core.Api/workflows/.NET%20Core/badge.svg)](https://github.com/yunqian007/Demo.Core.Api/actions)
 #### 介绍
 {**以下是码云平台说明，您可以替换此简介**
 码云是开源中国推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Demo.Core.Api.IServices
 {
-    public interface IUserRoleServices : IBaseService<UserRole>
+    public interface IUserRoleService : IBaseService<UserRole>
     {
         Task<UserRole> SaveUserRole(int uId, int rId);
 

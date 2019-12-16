@@ -1,4 +1,5 @@
-﻿using Demo.Core.Api.IRepository;
+﻿using Demo.Core.Api.Core.Extension;
+using Demo.Core.Api.IRepository;
 using Demo.Core.Api.IServices;
 using Demo.Core.Api.Model.Entity;
 using System;
@@ -11,7 +12,6 @@ namespace Demo.Core.Api.Services
 {
     public class SysUserInfoService : BaseService<UserModel>, ISysUserInfoService
     {
-
         ISysUserInfoRepository _dal;
         IUserRoleService _userRoleService;
         IRoleRepository _roleRepository;

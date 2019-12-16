@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Demo.Core.Api.Core.CachingAttribute;
 using Demo.Core.Api.IRepository;
 using Demo.Core.Api.IServices;
 using Demo.Core.Api.Model.Entity;
@@ -92,6 +93,7 @@ namespace Demo.Core.Api.Services
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
+        [Caching(AbsoluteExpiration = 10)]
         public async Task<List<BlogArticle>> getBlogs()
         {
             var bloglist = await dal.Query(a => a.Id > 0, a => a.Id);

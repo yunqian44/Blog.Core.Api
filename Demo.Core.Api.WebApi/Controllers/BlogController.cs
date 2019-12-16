@@ -24,9 +24,9 @@ namespace Demo.Core.Api.WebApi.Controllers
     [Authorize]
     public class BlogController : ControllerBase
     {
-        private readonly IWebHostEnvironment _env;
-        readonly IRedisCacheManager _redisCacheManager;
-        readonly IBlogArticleService _blogArticleService;
+         private readonly IWebHostEnvironment _env;
+         readonly IRedisCacheManager _redisCacheManager;
+         readonly IBlogArticleService _blogArticleService;
 
         /// <summary>
         /// 构造函数

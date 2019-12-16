@@ -25,7 +25,7 @@ namespace Demo.Core.Api.Model.Entity
 
         public string SectendDetail { get; set; }
 
-        public bool? IsDeleted { get; set; }
+        public bool IsDeleted { get; set; } = false;
 
         public int Read { get; set; }
 

@@ -15,17 +15,23 @@ using System.Linq.Expressions;
 using Demo.Core.Api.WebApi.AuthHelper.OverWrite;
 using Microsoft.AspNetCore.Authorization;
 using Demo.Core.Api.IServices;
+using Demo.Core.Api.Data.HttpContextUser;
 
 namespace Demo.Core.Api.WebApi.Controllers
 {
     /// <summary>
     /// 用户管理Api
     /// </summary>
+    [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
+    [AllowAnonymous]
     public class UserController : ControllerBase
     {
         readonly ISysUserInfoService _sysUserInfoService;
+        readonly IUserRoleService _userRoleServices;
+        readonly IRoleService _roleServices;
+        private readonly IUser _user;
 
         public UserController(ISysUserInfoService sysUserInfoService)
         {

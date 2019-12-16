@@ -1,4 +1,5 @@
 ﻿using Demo.Core.Api.Core.CachingAttribute;
+using Demo.Core.Api.Core.Extension;
 using Demo.Core.Api.IRepository;
 using Demo.Core.Api.IServices;
 using Demo.Core.Api.Model.Entity;
@@ -48,9 +49,9 @@ namespace Demo.Core.Api.Services
 
 
         [Caching(AbsoluteExpiration = 30)]
-        public async Task<int> GetRoleIdByUid(int uid)
+        public async Task<int> GetRoleIdByUId(int uid)
         {
-            return ((await base.Query(d => d.UserId == uid)).OrderByDescending(d => d.Id).LastOrDefault()?.RoleId).ObjToInt();
+            return ((await base.Query(d => d.UserId == uid)).OrderByDescending(d => d.Id).LastOrDefault()?.RoleId).ToInt();
         }
     }
 }

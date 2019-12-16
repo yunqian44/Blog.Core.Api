@@ -47,7 +47,7 @@ namespace Demo.Core.Api.Services
         }
 
         [Caching(AbsoluteExpiration = 30)]
-        public async Task<string> GetRoleNameByRid(int rid)
+        public async Task<string> GetRoleNameByRId(int rid)
         {
             return ((await base.QueryById(rid))?.Name);
         }

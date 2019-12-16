@@ -291,12 +291,27 @@
             <param name="pass">密码</param>
             <returns></returns>
         </member>
+        <member name="M:Demo.Core.Api.WebApi.Controllers.LoginController.GetJwtStrForNuxt(System.String,System.String)">
+            <summary>
+            获取JWT的方法2：给Nuxt提供
+            </summary>
+            <param name="name"></param>
+            <param name="pass"></param>
+            <returns></returns>
+        </member>
         <member name="M:Demo.Core.Api.WebApi.Controllers.LoginController.GetJwtToken3(System.String,System.String)">
             <summary>
             获取JWT的方法3：整个系统主要方法
             </summary>
             <param name="name"></param>
             <param name="pass"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Demo.Core.Api.WebApi.Controllers.LoginController.RefreshToken(System.String)">
+            <summary>
+            请求刷新Token（以旧换新）
+            </summary>
+            <param name="token"></param>
             <returns></returns>
         </member>
         <member name="T:Demo.Core.Api.WebApi.Controllers.UserController">
@@ -330,6 +345,43 @@
             【无权限】
             </summary>
             <param name="token">令牌</param>
+            <returns></returns>
+        </member>
+        <member name="T:Demo.Core.Api.WebApi.Controllers.UserRoleController">
+            <summary>
+            用户角色关系
+            【无权限】
+            </summary>
+        </member>
+        <member name="M:Demo.Core.Api.WebApi.Controllers.UserRoleController.#ctor(Demo.Core.Api.IServices.ISysUserInfoService,Demo.Core.Api.IServices.IUserRoleService,Demo.Core.Api.IServices.IRoleService)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="sysUserInfoServices"></param>
+            <param name="userRoleServices"></param>
+            <param name="roleServices"></param>
+        </member>
+        <member name="M:Demo.Core.Api.WebApi.Controllers.UserRoleController.AddUser(System.String,System.String)">
+            <summary>
+            新建用户
+            </summary>
+            <param name="loginName"></param>
+            <param name="loginPwd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Demo.Core.Api.WebApi.Controllers.UserRoleController.AddRole(System.String)">
+            <summary>
+            新建Role
+            </summary>
+            <param name="roleName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Demo.Core.Api.WebApi.Controllers.UserRoleController.AddUserRole(System.Int32,System.Int32)">
+            <summary>
+            新建用户角色关系
+            </summary>
+            <param name="uid"></param>
+            <param name="rid"></param>
             <returns></returns>
         </member>
         <member name="T:Demo.Core.Api.WebApi.Middlewares.RequRespLogMildd">

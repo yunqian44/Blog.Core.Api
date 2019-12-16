@@ -339,6 +339,7 @@ namespace Demo.Core.Api.WebApi
             builder.RegisterType<BlogCacheAOP>();//可以直接替换其他拦截器
             builder.RegisterType<BlogRedisCacheAOP>();//可以直接替换其他拦截器
             builder.RegisterType<BlogLogAOP>();//这样可以注入第二个
+            builder.RegisterType<BlogTranAOP>();
 
             // ※※★※※ 如果你是第一次下载项目，请先F6编译，然后再F5执行，※※★※※
 
@@ -368,6 +369,10 @@ namespace Demo.Core.Api.WebApi
                 if (Appsettings.app(new string[] { "AppSettings", "LogAOP", "Enabled" }).ObjToBool())
                 {
                     cacheType.Add(typeof(BlogLogAOP));
+                }
+                if (Appsettings.app(new string[] { "AppSettings", "TranAOP", "Enabled" }).ObjToBool())
+                {
+                    cacheType.Add(typeof(BlogTranAOP));
                 }
 
                 builder.RegisterAssemblyTypes(assemblysServices)

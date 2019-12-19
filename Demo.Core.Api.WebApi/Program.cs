@@ -6,6 +6,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using System.Xml;
 using Autofac.Extensions.DependencyInjection;
+using Demo.Core.Api.Core.Extension;
 using Demo.Core.Api.Model.Seed;
 using log4net;
 using Microsoft.AspNetCore;
@@ -43,8 +44,12 @@ namespace Demo.Core.Api.WebApi
                     try
                     {
                         // 从 system.IServicec提供程序获取 T 类型的服务。
-                        var myContext = services.GetRequiredService<MyContext>();
-                        DBSeed.SeedAsync(myContext).Wait();
+                        var configuration = services.GetRequiredService<IConfiguration>();
+                        if (configuration.GetSection("AppSettings")["SeedDBEnabled"].ObjToBool() || configuration.GetSection("AppSettings")["SeedDBDataEnabled"].ObjToBool())
+                        {
+                            var myContext = services.GetRequiredService<MyContext>();
+                            DBSeed.SeedAsync(myContext).Wait();
+                        }
                     }
                     catch (Exception e)
                     {
@@ -73,7 +78,7 @@ namespace Demo.Core.Api.WebApi
                     serverOptions.AllowSynchronousIO = true;//启用同步 IO
                 })
                 .UseStartup<Startup>()
-                //.UseUrls("http://localhost:8081")
+                .UseUrls("http://*:8300")
                 .ConfigureLogging((hostingContext, builder) =>
                 {
                     builder.ClearProviders();

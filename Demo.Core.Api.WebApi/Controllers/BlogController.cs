@@ -42,6 +42,7 @@ namespace Demo.Core.Api.WebApi.Controllers
             _redisCacheManager = redisCacheManager;
         }
 
+        #region 01，获取博客列表【无权限】+async Task<object> Get(int id, int page = 1, string category = "技术博文", string key = "")
         /// <summary>
         /// 获取博客列表【无权限】
         /// </summary>
@@ -118,7 +119,9 @@ namespace Demo.Core.Api.WebApi.Controllers
                 data = blogArticleList
             });
         }
+        #endregion
 
+        #region 02，获取博客列表+async Task<List<BlogArticle>> GetBlogs()
         /// <summary>
         /// 获取博客列表
         /// </summary>
@@ -140,7 +143,8 @@ namespace Demo.Core.Api.WebApi.Controllers
             }
 
             return blogArticleList;
-        }
+        } 
+        #endregion
 
 
         // GET: api/Blog/Environment

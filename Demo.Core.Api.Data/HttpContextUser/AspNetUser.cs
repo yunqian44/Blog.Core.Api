@@ -26,7 +26,6 @@ namespace Demo.Core.Api.Data.HttpContextUser
             return _accessor.HttpContext.User.Identity.IsAuthenticated;
         }
 
-
         public string GetToken()
         {
             return _accessor.HttpContext.Request.Headers["Authorization"].ObjToString().Replace("Bearer ", "");

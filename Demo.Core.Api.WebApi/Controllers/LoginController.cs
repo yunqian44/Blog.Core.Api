@@ -12,6 +12,7 @@ using Demo.Core.Api.WebApi.AuthHelper.OverWrite;
 using Demo.Core.Api.WebApi.AuthHelper.Policys;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Demo.Core.Api.WebApi.Controllers
@@ -168,7 +169,7 @@ namespace Demo.Core.Api.WebApi.Controllers
         }
         #endregion
 
-
+        #region 04，请求刷新Token（以旧换新）+async Task<object> RefreshToken(string token = "")
         /// <summary>
         /// 请求刷新Token（以旧换新）
         /// </summary>
@@ -209,5 +210,48 @@ namespace Demo.Core.Api.WebApi.Controllers
 
             return new JsonResult(0, "认证失败");
         }
+        #endregion
+
+        #region 05，获取JWT的方法4：给 JSONP 测试+void Getjsonp(string callBack, long id = 1, string sub = "Admin", int expiresSliding = 30, int expiresAbsoulute = 30)
+        /// <summary>
+        /// 获取JWT的方法4：给 JSONP 测试
+        /// </summary>
+        /// <param name="callBack"></param>
+        /// <param name="id"></param>
+        /// <param name="sub"></param>
+        /// <param name="expiresSliding"></param>
+        /// <param name="expiresAbsoulute"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("jsonp")]
+        public void Getjsonp(string callBack, long id = 1, string sub = "Admin", int expiresSliding = 30, int expiresAbsoulute = 30)
+        {
+            TokenModelJwt tokenModel = new TokenModelJwt
+            {
+                Uid = id,
+                Role = sub
+            };
+
+            string jwtStr = JwtHelper.IssueJwt(tokenModel);
+
+            string response = string.Format("\"value\":\"{0}\"", jwtStr);
+            string call = callBack + "({" + response + "})";
+            Response.WriteAsync(call);
+        }
+        #endregion
+
+        #region 06，测试 MD5 加密字符串+string Md5Password(string password = "")
+        /// <summary>
+        /// 测试 MD5 加密字符串
+        /// </summary>
+        /// <param name="password">密码</param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("Md5Password")]
+        public string Md5Password(string password = "")
+        {
+            return MD5Helper.MD5Encrypt32(password);
+        } 
+        #endregion
     }
 }

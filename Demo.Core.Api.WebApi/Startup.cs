@@ -48,6 +48,7 @@ using Microsoft.Extensions.Caching.Memory;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.Filters;
 using Microsoft.AspNetCore.Http;
+using Demo.Core.Api.WebApi.Extensions;
 
 namespace Demo.Core.Api.WebApi
 {
@@ -81,7 +82,7 @@ namespace Demo.Core.Api.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            #region MVC + GlobalExceptions
+            #region MVC + ApiErrorHandleFilter
 
             //注入全局异常捕获
             services.AddControllers(o =>
@@ -99,132 +100,46 @@ namespace Demo.Core.Api.WebApi
             {
                 //忽略循环引用
                 options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
-
+                //不使用驼峰样式的key
                 options.SerializerSettings.ContractResolver = new DefaultContractResolver();
             });
 
             #endregion
 
-            // Redis注入
             services.AddSingleton<IRedisCacheManager, RedisCacheManager>();
-
-            // 缓存注入
-            services.AddScoped<ICaching, MemoryCaching>();
-            services.AddSingleton<IMemoryCache>(factory =>
-            {
-                var cache = new MemoryCache(new MemoryCacheOptions());
-                return cache;
-            });
-
             services.AddSingleton(new Appsettings(Env.ContentRootPath));
-            //log日志注入
             services.AddSingleton(new LogLock(Env.ContentRootPath));
-            services.AddSingleton(new GetTableData(Env.ContentRootPath));
+
+            services.AddMemoryCacheSetup();
+            services.AddSqlsugarSetup();
+            services.AddDbSetup();
+            services.AddAutoMapperSetup();
+            services.AddCorsSetup();
+            services.AddMiniProfilerSetup();
+            services.AddSwaggerSetup();
+            services.AddHttpContextSetup();
+            services.AddAuthorizationSetup();
+
+            services.AddSignalR();
 
             #region 初始化DB
-            services.AddScoped<DBSeed>();
-            services.AddScoped<MyContext>();
 
             #endregion
 
             #region Automapper
-            services.AddAutoMapper(typeof(Startup));//这是AutoMapper的2.0新特性
+
             #endregion
 
             #region MiniProfiler
 
-            services.AddMiniProfiler(options =>
-            {
-                options.RouteBasePath = "/profiler";
-                //(options.Storage as MemoryCacheStorage).CacheDuration = TimeSpan.FromMinutes(10);
-                options.PopupRenderPosition = StackExchange.Profiling.RenderPosition.Left;
-                options.PopupShowTimeWithChildren = true;
-
-                // 可以增加权限
-                //options.ResultsAuthorize = request => request.HttpContext.User.IsInRole("Admin");
-                //options.UserIdProvider = request => request.HttpContext.User.Identity.Name;
-            }
-            );
-
             #endregion
 
             #region CORS
-            //跨域第二种方法，声明策略，记得下边app中配置
-            services.AddCors(c =>
-            {
-                //一般采用这种方法
-                c.AddPolicy("LimitRequests", policy =>
-                {
-                    policy
-                    .WithOrigins("http://127.0.0.1:1818", "http://localhost:8080", "http://localhost:8021", "http://localhost:8081", "http://localhost:8400", "http://localhost:8500")//支持多个域名端口，注意端口号后不要带/斜杆：比如localhost:8000/，是错的
-                    .AllowAnyHeader()//Ensures that the policy allows any header.
-                    .AllowAnyMethod();
-                });
-            });
 
-            //跨域第一种办法，注意下边 Configure 中进行配置 
-            //services.AddCors();
             #endregion
 
             #region Swagger
 
-            var basePath = Microsoft.DotNet.PlatformAbstractions.ApplicationEnvironment.ApplicationBasePath;
-
-            services.AddSwaggerGen(c =>
-               {
-                   //遍历出全部的版本，做文档信息展示
-                   typeof(ApiVersions).GetEnumNames().ToList().ForEach(version =>
-                   {
-                       c.SwaggerDoc(version, new OpenApiInfo
-                       {
-                           Title = $"{ApiName}接口文档——Netcore 3.0",
-                           Version = version,
-                           Description = $"{ApiName}框架说明文档" + version,
-                           Contact = new OpenApiContact()
-                           {
-                               Name = "刺客",
-                               Email = "yunqian8@live.com",
-                               Url = new Uri("https://www.xxx.com")
-                           },
-                           License = new OpenApiLicense 
-                           { Name = ApiName, 
-                               Url = new Uri("https://www.xxx.com") }
-                       });
-                       // 按相对路径排序
-                       c.OrderActionsBy(o => o.RelativePath);
-                   });
-
-                   try
-                   {
-                       //就是这里
-                       var xmlPath = Path.Combine(basePath, "Demo.Core.Api.WebApi.xml");//这个就是刚刚配置的xml文件名
-                       c.IncludeXmlComments(xmlPath, true);//默认的第二个参数是false，这个是controller的注释，记得修改
-
-                       var xmlModelPath = Path.Combine(basePath, "Demo.Core.Api.Model.xml");//这个就是Model层的xml文件名
-                       c.IncludeXmlComments(xmlModelPath);
-                   }
-                   catch (Exception ex)
-                   {
-                       log.Error("Demo.Core.Api.WebApi.xml和Demo.Core.Api.Model.xml 丢失，请检查并拷贝。\n" + ex.Message);
-                   }
-
-                   c.OperationFilter<AddResponseHeadersFilter>();
-                   c.OperationFilter<AppendAuthorizeToSummaryOperationFilter>();
-
-                   c.OperationFilter<SecurityRequirementsOperationFilter>();
-
-
-                   #region Token绑定到ConfigureServices
-                   //添加header验证信息
-                   c.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
-                   {
-                       Description = "JWT授权(数据将在请求头中进行传输) 直接在下框中输入Bearer {token}（注意两者之间是一个空格）\"",
-                       Name = "Authorization",//jwt默认的参数名称
-                       In = ParameterLocation.Header,//jwt默认存放Authorization信息的位置(请求头中)
-                       Type = SecuritySchemeType.ApiKey
-                   });
-                   #endregion
-               });
             #endregion
 
             #region SignalR 通讯
@@ -233,99 +148,11 @@ namespace Demo.Core.Api.WebApi
 
             #region Httpcontext
 
-            // Httpcontext 注入
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-
             #endregion
 
             #region Authorize 权限认证
 
-            #region 基于策略的简单授权
-            services.AddAuthorization(option =>
-            {
-                option.AddPolicy("Admin", policy => policy.RequireRole("Admin").Build());
-            });
             #endregion
-
-            #region 复杂策略授权
-
-            #region 参数
-            //读取配置文件
-            var audienceConfig = Configuration.GetSection("Audience");
-            var symmetricKeyAsBase64 = audienceConfig["Secret"];
-            var keyByteArray = Encoding.ASCII.GetBytes(symmetricKeyAsBase64);
-            var signingKey = new SymmetricSecurityKey(keyByteArray);
-
-            var signingCredentials = new SigningCredentials(signingKey, SecurityAlgorithms.HmacSha256);
-
-
-            // 如果要数据库动态绑定，这里先留个空，后边处理器里动态赋值
-            var permission = new List<PermissionItem>();
-
-            // 角色与接口的权限要求参数
-            var permissionRequirement = new PermissionRequirement(
-                "/api/denied",// 拒绝授权的跳转地址（目前无用）
-                permission,
-                ClaimTypes.Role,//基于角色的授权
-                audienceConfig["Issuer"],//发行人
-                audienceConfig["Audience"],//听众
-                signingCredentials,//签名凭据
-                expiration: TimeSpan.FromSeconds(60 * 60)//接口的过期时间
-                );
-
-            //【授权】
-            services.AddAuthorization(options =>
-            {
-                options.AddPolicy(Permissions.Name,
-                         policy => policy.Requirements.Add(permissionRequirement));
-            });
-            #endregion
-
-            #endregion
-
-            #region 认证
-            //令牌参数
-            var tokenValidationParameters = new TokenValidationParameters
-            {
-                ValidateIssuerSigningKey = true,
-                IssuerSigningKey = signingKey,
-                ValidateIssuer = true,
-                ValidIssuer = audienceConfig["Issuer"],//发行人
-                ValidateAudience = true,
-                ValidAudience = audienceConfig["Audience"],//订阅人
-                ValidateLifetime = true,
-                ClockSkew = TimeSpan.FromSeconds(30),
-                RequireExpirationTime = true,
-            };
-
-            services.AddAuthentication(x =>
-                {
-                    //看这个单词熟悉么？没错，就是上边错误里的那个。
-                    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-                })
-                 .AddJwtBearer(o =>
-                 {
-                     o.TokenValidationParameters = tokenValidationParameters;
-                     o.Events = new JwtBearerEvents
-                     {
-                         OnAuthenticationFailed = context =>
-                         {
-                             // 如果过期，则把<是否过期>添加到，返回头信息中
-                             if (context.Exception.GetType() == typeof(SecurityTokenExpiredException))
-                             {
-                                 context.Response.Headers.Add("Token-Expired", "true");
-                             }
-                             return Task.CompletedTask;
-                         }
-                     };
-                 });
-            #endregion
-
-            services.AddSingleton<IAuthorizationHandler, PermissionHandler>();
-            services.AddSingleton(permissionRequirement);
-            #endregion
-            //return new AutofacServiceProvider(ApplicationContainer);//第三方IOC接管 core内置DI容器
 
         }
 

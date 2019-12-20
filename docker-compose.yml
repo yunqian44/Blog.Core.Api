@@ -10,9 +10,9 @@ services:
        # ASPNETCORE_ENVIRONMENT: Production
         ASPNETCORE_ENVIRONMENT: Development
       container_name: "blog.core.api"
-      depends_on:
-        - redis
-        - mysql
+      # depends_on:
+      #   - redis
+      #   - mysql
       ports:
         - "8300:8300"
 #   mysql:

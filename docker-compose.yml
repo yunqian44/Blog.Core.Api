@@ -13,7 +13,7 @@ services:
       #   - redis
       #   - mysql
       ports:
-        - "8300:8300"
+        - "7001:7001"
 #   mysql:
 #       container_name: mysql_dc
 #       restart: always

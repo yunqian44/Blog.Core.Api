@@ -78,7 +78,7 @@ namespace Demo.Core.Api.WebApi
                     serverOptions.AllowSynchronousIO = true;//启用同步 IO
                 })
                 .UseStartup<Startup>()
-                .UseUrls("http://*:8300")
+                .UseUrls("http://*:7001")
                 .ConfigureLogging((hostingContext, builder) =>
                 {
                     builder.ClearProviders();

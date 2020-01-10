@@ -23,5 +23,5 @@ RUN dotnet publish ./Demo.Core.Api.WebApi/Demo.Core.Api.WebApi.csproj  -c Releas
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 as runtime
 WORKDIR /app
 COPY --from=build-env /out .
-EXPOSE 8300
+EXPOSE 7001
 ENTRYPOINT ["dotnet", "Demo.Core.Api.WebApi.dll"]

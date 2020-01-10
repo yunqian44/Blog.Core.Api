@@ -1,9 +1,11 @@
-﻿using Demo.Core.Api.Core.GlobalVar;
+﻿using Demo.Core.Api.Core.Extension;
+using Demo.Core.Api.Core.GlobalVar;
 using Demo.Core.Api.Core.Helper;
 using Demo.Core.Api.WebApi.AuthHelper.Policys;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System;
@@ -89,31 +91,43 @@ namespace Demo.Core.Api.WebApi.Extensions
                 RequireExpirationTime = true,
             };
 
-            services.AddAuthentication(x =>
-            {
-                x.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-                x.DefaultChallengeScheme = nameof(ApiResponseHandler);
-                x.DefaultForbidScheme = nameof(ApiResponseHandler);
-            })
-                 .AddJwtBearer(o =>
-                 {
-                     o.TokenValidationParameters = tokenValidationParameters;
-                     o.Events = new JwtBearerEvents
-                     {
-                         OnAuthenticationFailed = context =>
-                         {
-                             // 如果过期，则把<是否过期>添加到，返回头信息中
-                             if (context.Exception.GetType() == typeof(SecurityTokenExpiredException))
-                             {
-                                 context.Response.Headers.Add("Token-Expired", "true");
-                             }
-                             return Task.CompletedTask;
-                         }
-                     };
-                 })
-                 .AddScheme<AuthenticationSchemeOptions, ApiResponseHandler>(nameof(ApiResponseHandler), o => { }); ;
+            //2.1【认证】，core 自带官方JWT认证
+            #region 【认证】，core 自带官方JWT认证
+            //services.AddAuthentication(x =>
+            //    {
+            //        x.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+            //        x.DefaultChallengeScheme = nameof(ApiResponseHandler);
+            //        x.DefaultForbidScheme = nameof(ApiResponseHandler);
+            //    }).AddJwtBearer(o =>
+            //         {
+            //             o.TokenValidationParameters = tokenValidationParameters;
+            //             o.Events = new JwtBearerEvents
+            //             {
+            //                 OnAuthenticationFailed = context =>
+            //                 {
+            //                     // 如果过期，则把<是否过期>添加到，返回头信息中
+            //                     if (context.Exception.GetType() == typeof(SecurityTokenExpiredException))
+            //                     {
+            //                         context.Response.Headers.Add("Token-Expired", "true");
+            //                     }
+            //                     return Task.CompletedTask;
+            //                 }
+            //             };
+            //         })
+            //         .AddScheme<AuthenticationSchemeOptions, ApiResponseHandler>(nameof(ApiResponseHandler), o => { });
+            #endregion
             #endregion
 
+            //2.2【认证】、IdentityServer4 认证
+            #region IdentityServer4 认证
+            services.AddAuthentication("Bearer")
+                 .AddIdentityServerAuthentication(options =>
+                 {
+                     options.Authority = Appsettings.app(new string[] { "Idp", "AuthorityUrl" });
+                     options.RequireHttpsMetadata = Appsettings.app(new string[] { "Idp", "RequireHttps" }).ObjToBool();
+                     options.ApiName = Appsettings.app(new string[] { "Startup", "ApiName" });
+                 }); 
+            #endregion
             services.AddSingleton<IAuthorizationHandler, PermissionHandler>();
             services.AddSingleton(permissionRequirement);
             #endregion

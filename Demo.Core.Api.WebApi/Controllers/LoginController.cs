@@ -20,6 +20,7 @@ namespace Demo.Core.Api.WebApi.Controllers
     /// <summary>
     /// 登陆管理
     /// </summary>
+    [Produces("application/json")]
     [Route("api/Login")]
     [AllowAnonymous]
     public class LoginController : ControllerBase

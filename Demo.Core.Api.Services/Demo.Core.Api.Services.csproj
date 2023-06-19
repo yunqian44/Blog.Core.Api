@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -9,13 +9,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Demo.Core.Api.IRepository\Demo.Core.Api.IRepository.csproj" />
     <ProjectReference Include="..\Demo.Core.Api.IServices\Demo.Core.Api.IServices.csproj" />
-    <ProjectReference Include="..\Demo.Core.Api.Model\Demo.Core.Api.Model.csproj" />
+    
   </ItemGroup>
 
 </Project>
